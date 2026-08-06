@@ -1,0 +1,9 @@
+{
+  "_comment": "Corrections applied on top of what build_indicators.py infers from the XLSForm. Keys are indicator ids in lower case. Anything you set here wins, and survives a rebuild of the registry.",
+  "indicators": {
+    "ps6": {
+      "direction": "higher",
+      "_why": "Example. The form sets a target of 0 for the % of SEA/SH cases reported through the complaints mechanism, which reads as 'fewer reports is better'. If the intent is the opposite, flip it here."
+    }
+  }
+}

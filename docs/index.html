@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indicateurs BVD — tableau de bord</title>
+<meta name="description" content="Suivi des indicateurs de performance de la riposte, par pilier.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow" id="eyebrow">Riposte BVD · RDC</p>
+      <h1 id="form-title">Indicateurs National OMS BVD</h1>
+      <p class="meta" id="form-meta"></p>
+    </div>
+    <div class="langs" role="group" aria-label="Langue">
+      <button data-lang="fr" aria-pressed="true">FR</button>
+      <button data-lang="en" aria-pressed="false">EN</button>
+      <button data-lang="pt" aria-pressed="false">PT</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div id="notice-slot"></div>
+
+  <div class="controls">
+    <div class="field">
+      <label for="f-period" data-t="period">Période</label>
+      <select id="f-period">
+        <option value="last">last</option>
+        <option value="7" selected>7</option>
+        <option value="30">30</option>
+        <option value="all">all</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-pillar" data-t="pillar">Pilier</label>
+      <select id="f-pillar"><option value="all">—</option></select>
+    </div>
+    <div class="field">
+      <label for="f-status" data-t="status">Statut</label>
+      <select id="f-status">
+        <option value="all">all</option>
+        <option value="off">off</option>
+        <option value="watch">watch</option>
+        <option value="ok">ok</option>
+        <option value="none">none</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="f-search" data-t="search">Rechercher</label>
+      <input type="search" id="f-search" placeholder="S12, contacts, laboratoire…">
+    </div>
+    <div class="spacer"></div>
+    <button class="ghost" id="btn-csv" data-t="export">Exporter CSV</button>
+  </div>
+
+  <section class="summary" id="summary"></section>
+
+  <section class="panel">
+    <h2 data-t="coverageTitle">Complétude du rapportage<span class="sub" id="coverage-sub"></span></h2>
+    <div class="matrix" id="coverage"></div>
+    <div class="legend" id="coverage-legend"></div>
+  </section>
+
+  <div id="pillars"></div>
+
+  <footer>
+    <p id="footer-note"></p>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

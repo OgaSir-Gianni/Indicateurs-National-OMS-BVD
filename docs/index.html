@@ -19,7 +19,6 @@
     <div class="langs" role="group" aria-label="Langue">
       <button data-lang="fr" aria-pressed="true">FR</button>
       <button data-lang="en" aria-pressed="false">EN</button>
-      <button data-lang="pt" aria-pressed="false">PT</button>
     </div>
   </div>
 </header>
@@ -59,7 +58,12 @@
     <button class="ghost" id="btn-csv" data-t="export">Exporter CSV</button>
   </div>
 
-  <section class="summary" id="summary"></section>
+  <section class="summary" id="summary" aria-live="polite"></section>
+
+  <section class="panel">
+    <h2 data-t="attnTitle">Points d'attention<span class="sub" id="attn-sub"></span></h2>
+    <div id="attention"></div>
+  </section>
 
   <section class="panel">
     <h2 data-t="coverageTitle">Complétude du rapportage<span class="sub" id="coverage-sub"></span></h2>
@@ -73,6 +77,8 @@
     <p id="footer-note"></p>
   </footer>
 </main>
+
+<div id="tip" role="tooltip"></div>
 
 <script src="app.js"></script>
 </body>

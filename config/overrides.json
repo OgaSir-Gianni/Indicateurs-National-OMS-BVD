@@ -3,7 +3,45 @@
   "indicators": {
     "ps6": {
       "direction": "higher",
-      "_why": "Example. The form sets a target of 0 for the % of SEA/SH cases reported through the complaints mechanism, which reads as 'fewer reports is better'. If the intent is the opposite, flip it here."
+      "has_target": false,
+      "target": null,
+      "_why": "The form sets a target of 0 for the % of SEA/SH cases reported through the complaints mechanism. A 0-target on a 'reported via the right channel' share would paint any reporting red, which is backwards - reporting through the official channel is the desired behaviour. Until the form states a real target, the indicator is tracked without one."
+    },
+    "s5": {
+      "direction": "lower",
+      "_why": "New health areas affected = geographic spread of the outbreak. Less is better."
+    },
+    "cm10": {
+      "direction": "lower",
+      "_why": "Facilities reporting a power failure that affected critical care: fewer is better."
+    },
+    "ss6": {
+      "direction": "lower",
+      "_why": "Survivors developing a physical illness during the month: fewer is better."
+    },
+    "sl1": {
+      "unit": "percent",
+      "target": 80,
+      "target_scale_suspect": false,
+      "_why": "Coverage of vehicle needs is a share, not a count. The form writes the target as 0.8, meaning 80 %."
+    },
+    "sl2": {
+      "unit": "percent",
+      "target": 100,
+      "target_scale_suspect": false,
+      "_why": "Coverage of motorbike needs: target written as 1, meaning 100 %."
+    },
+    "sl3": {
+      "unit": "percent",
+      "target": 85,
+      "target_scale_suspect": false,
+      "_why": "Coverage of ambulance needs: target written as 0.85, meaning 85 %."
+    },
+    "sl14": {
+      "unit": "percent",
+      "target": 70,
+      "target_scale_suspect": false,
+      "_why": "SDB operational coverage is a share; target written as 0.7, meaning 70 %."
     }
   }
 }

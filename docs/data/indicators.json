@@ -6,7 +6,7 @@
   "default_language": "French",
   "enketo_url": "https://enketo.whonghub.org/x/PlEb7CW2"
  },
- "generated_at": "2026-08-06T10:20:27+00:00",
+ "generated_at": "2026-08-06T11:19:05+00:00",
  "pillars": [
   {
    "id": "pillar_1",
@@ -14,8 +14,7 @@
    "order": 1,
    "label": {
     "fr": "1. Surveillance",
-    "en": "1. Surveillance",
-    "pt": "1. Vigilância"
+    "en": "1. Surveillance"
    }
   },
   {
@@ -24,8 +23,7 @@
    "order": 2,
    "label": {
     "fr": "2. Points d'entrée et points de contrôle sanitaire",
-    "en": "2. Points of entry and health control points",
-    "pt": "2. Pontos de entrada e pontos de controlo sanitário"
+    "en": "2. Points of entry and health control points"
    }
   },
   {
@@ -34,8 +32,7 @@
    "order": 3,
    "label": {
     "fr": "3. Laboratoire",
-    "en": "3. Laboratory",
-    "pt": "3. Laboratório"
+    "en": "3. Laboratory"
    }
   },
   {
@@ -44,8 +41,7 @@
    "order": 4,
    "label": {
     "fr": "4. PCI",
-    "en": "4. IPC",
-    "pt": "4. PCI"
+    "en": "4. IPC"
    }
   },
   {
@@ -54,8 +50,7 @@
    "order": 5,
    "label": {
     "fr": "5. Prise en charge médicale",
-    "en": "5. Case management",
-    "pt": "5. Gestão de casos"
+    "en": "5. Case management"
    }
   },
   {
@@ -64,8 +59,7 @@
    "order": 6,
    "label": {
     "fr": "6. Programme des survivants de la MVB",
-    "en": "6. MVD survivors programme",
-    "pt": "6. Programa de sobreviventes da DVM"
+    "en": "6. MVD survivors programme"
    }
   },
   {
@@ -74,8 +68,7 @@
    "order": 7,
    "label": {
     "fr": "7. CREC",
-    "en": "7. RCCE",
-    "pt": "7. CRCC"
+    "en": "7. RCCE"
    }
   },
   {
@@ -84,8 +77,7 @@
    "order": 8,
    "label": {
     "fr": "8. Opérations de soutien et logistique",
-    "en": "8. Operational support and logistics",
-    "pt": "8. Apoio operacional e logística"
+    "en": "8. Operational support and logistics"
    }
   },
   {
@@ -94,8 +86,7 @@
    "order": 9,
    "label": {
     "fr": "9. Prévention et lutte contre l'exploitation sexuelle, les Abus et le Harcèlement (PRSEAH)",
-    "en": "9. Prevention of and response to sexual exploitation, abuse and harassment (PRSEAH)",
-    "pt": "9. Prevenção e resposta à exploração, abuso e assédio sexual (PRSEAH)"
+    "en": "9. Prevention of and response to sexual exploitation, abuse and harassment (PRSEAH)"
    }
   },
   {
@@ -104,8 +95,7 @@
    "order": 10,
    "label": {
     "fr": "10. Communication externe",
-    "en": "10. External communication",
-    "pt": "10. Comunicação externa"
+    "en": "10. External communication"
    }
   },
   {
@@ -114,8 +104,7 @@
    "order": 11,
    "label": {
     "fr": "11. EDS",
-    "en": "11. EDS",
-    "pt": "11. EDS"
+    "en": "11. EDS"
    }
   }
  ],
@@ -128,8 +117,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Nombre de nouveaux cas confirmés",
-    "en": "Nombre de nouveaux cas confirmés",
-    "pt": "Nombre de nouveaux cas confirmés"
+    "en": "Nombre de nouveaux cas confirmés"
    },
    "value_field": "pillar_1_surveillance/realisation_s1",
    "comment_field": "pillar_1_surveillance/comment_s1",
@@ -149,8 +137,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Nombre de nouveaux cas probables",
-    "en": "Nombre de nouveaux cas probables",
-    "pt": "Nombre de nouveaux cas probables"
+    "en": "Nombre de nouveaux cas probables"
    },
    "value_field": "pillar_1_surveillance/realisation_s2",
    "comment_field": "pillar_1_surveillance/comment_s2",
@@ -170,8 +157,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Nombre cumulé de cas depuis le début de l'épidémie",
-    "en": "Nombre cumulé de cas depuis le début de l'épidémie",
-    "pt": "Nombre cumulé de cas depuis le début de l'épidémie"
+    "en": "Nombre cumulé de cas depuis le début de l'épidémie"
    },
    "value_field": "pillar_1_surveillance/realisation_s3",
    "comment_field": "pillar_1_surveillance/comment_s3",
@@ -191,8 +177,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Nombre de nouveaux cas suspects",
-    "en": "Nombre de nouveaux cas suspects",
-    "pt": "Nombre de nouveaux cas suspects"
+    "en": "Nombre de nouveaux cas suspects"
    },
    "value_field": "pillar_1_surveillance/realisation_s4",
    "comment_field": "pillar_1_surveillance/comment_s4",
@@ -212,18 +197,19 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Nombre de nouvelles aires de santé touchées",
-    "en": "Nombre de nouvelles aires de santé touchées",
-    "pt": "Nombre de nouvelles aires de santé touchées"
+    "en": "Nombre de nouvelles aires de santé touchées"
    },
    "value_field": "pillar_1_surveillance/realisation_s5",
    "comment_field": "pillar_1_surveillance/comment_s5",
    "unit": "count",
-   "direction": "higher",
+   "direction": "lower",
    "target_raw": "—",
    "target": null,
    "target_operator": null,
    "has_target": false,
-   "target_scale_suspect": false
+   "target_scale_suspect": false,
+   "_why": "New health areas affected = geographic spread of the outbreak. Less is better.",
+   "overridden": true
   },
   {
    "id": "s6",
@@ -233,8 +219,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Pourcentage de nouveaux cas probables / confirmés précédemment inscrits sur les listes de contacts",
-    "en": "Pourcentage de nouveaux cas probables / confirmés précédemment inscrits sur les listes de contacts",
-    "pt": "Pourcentage de nouveaux cas probables / confirmés précédemment inscrits sur les listes de contacts"
+    "en": "Pourcentage de nouveaux cas probables / confirmés précédemment inscrits sur les listes de contacts"
    },
    "value_field": "pillar_1_surveillance/realisation_s6",
    "comment_field": "pillar_1_surveillance/comment_s6",
@@ -254,8 +239,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Pourcentage des cas confirmés/probables dont les contacts ont été repertoriés dans les 24 heures",
-    "en": "Pourcentage des cas confirmés/probables dont les contacts ont été repertoriés dans les 24 heures",
-    "pt": "Pourcentage des cas confirmés/probables dont les contacts ont été repertoriés dans les 24 heures"
+    "en": "Pourcentage des cas confirmés/probables dont les contacts ont été repertoriés dans les 24 heures"
    },
    "value_field": "pillar_1_surveillance/realisation_s7",
    "comment_field": "pillar_1_surveillance/comment_s7",
@@ -275,8 +259,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Pourcentage de cas (des cas confirmés + probables) pour lesquels la recherche des contacts a été effectuée (21 jours)",
-    "en": "Pourcentage de cas (des cas confirmés + probables) pour lesquels la recherche des contacts a été effectuée (21 jours)",
-    "pt": "Pourcentage de cas (des cas confirmés + probables) pour lesquels la recherche des contacts a été effectuée (21 jours)"
+    "en": "Pourcentage de cas (des cas confirmés + probables) pour lesquels la recherche des contacts a été effectuée (21 jours)"
    },
    "value_field": "pillar_1_surveillance/realisation_s8",
    "comment_field": "pillar_1_surveillance/comment_s8",
@@ -296,8 +279,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes",
-    "en": "Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes",
-    "pt": "Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes"
+    "en": "Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes"
    },
    "value_field": "pillar_1_surveillance/realisation_s9",
    "comment_field": "pillar_1_surveillance/comment_s9",
@@ -317,8 +299,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Pourcentage de contacts perdus de vue",
-    "en": "Pourcentage de contacts perdus de vue",
-    "pt": "Pourcentage de contacts perdus de vue"
+    "en": "Pourcentage de contacts perdus de vue"
    },
    "value_field": "pillar_1_surveillance/realisation_s10",
    "comment_field": "pillar_1_surveillance/comment_s10",
@@ -338,8 +319,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Pourcentage de contacts ayant terminé la période de suivi de 21 jours",
-    "en": "Pourcentage de contacts ayant terminé la période de suivi de 21 jours",
-    "pt": "Pourcentage de contacts ayant terminé la période de suivi de 21 jours"
+    "en": "Pourcentage de contacts ayant terminé la période de suivi de 21 jours"
    },
    "value_field": "pillar_1_surveillance/realisation_s11",
    "comment_field": "pillar_1_surveillance/comment_s11",
@@ -359,8 +339,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Pourcentage de contacts actifs perdus de vue",
-    "en": "Pourcentage de contacts actifs perdus de vue",
-    "pt": "Pourcentage de contacts actifs perdus de vue"
+    "en": "Pourcentage de contacts actifs perdus de vue"
    },
    "value_field": "pillar_1_surveillance/realisation_s12",
    "comment_field": "pillar_1_surveillance/comment_s12",
@@ -380,8 +359,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion des cas suspects parmi les contacts",
-    "en": "Proportion des cas suspects parmi les contacts",
-    "pt": "Proportion des cas suspects parmi les contacts"
+    "en": "Proportion des cas suspects parmi les contacts"
    },
    "value_field": "pillar_1_surveillance/realisation_s13",
    "comment_field": "pillar_1_surveillance/comment_s13",
@@ -401,8 +379,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion des cas confirmés parmi les contacts",
-    "en": "Proportion des cas confirmés parmi les contacts",
-    "pt": "Proportion des cas confirmés parmi les contacts"
+    "en": "Proportion des cas confirmés parmi les contacts"
    },
    "value_field": "pillar_1_surveillance/realisation_s14",
    "comment_field": "pillar_1_surveillance/comment_s14",
@@ -422,8 +399,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Taux de suivi de contacts",
-    "en": "Taux de suivi de contacts",
-    "pt": "Taux de suivi de contacts"
+    "en": "Taux de suivi de contacts"
    },
    "value_field": "pillar_1_surveillance/realisation_s15",
    "comment_field": "pillar_1_surveillance/comment_s15",
@@ -443,8 +419,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees)",
-    "en": "% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees)",
-    "pt": "% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees)"
+    "en": "% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees)"
    },
    "value_field": "pillar_1_surveillance/realisation_s16",
    "comment_field": "pillar_1_surveillance/comment_s16",
@@ -464,8 +439,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion d'alertes signalées par rapport aux prévisions (alertes attendues)",
-    "en": "Proportion d'alertes signalées par rapport aux prévisions (alertes attendues)",
-    "pt": "Proportion d'alertes signalées par rapport aux prévisions (alertes attendues)"
+    "en": "Proportion d'alertes signalées par rapport aux prévisions (alertes attendues)"
    },
    "value_field": "pillar_1_surveillance/realisation_s17",
    "comment_field": "pillar_1_surveillance/comment_s17",
@@ -485,8 +459,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées)",
-    "en": "Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées)",
-    "pt": "Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées)"
+    "en": "Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées)"
    },
    "value_field": "pillar_1_surveillance/realisation_s18",
    "comment_field": "pillar_1_surveillance/comment_s18",
@@ -506,8 +479,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification",
-    "en": "Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification",
-    "pt": "Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification"
+    "en": "Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification"
    },
    "value_field": "pillar_1_surveillance/realisation_s19",
    "comment_field": "pillar_1_surveillance/comment_s19",
@@ -527,8 +499,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion d'alertes validées (évacuées vers le CTE)",
-    "en": "Proportion d'alertes validées (évacuées vers le CTE)",
-    "pt": "Proportion d'alertes validées (évacuées vers le CTE)"
+    "en": "Proportion d'alertes validées (évacuées vers le CTE)"
    },
    "value_field": "pillar_1_surveillance/realisation_s20",
    "comment_field": "pillar_1_surveillance/comment_s20",
@@ -548,8 +519,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées",
-    "en": "Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées",
-    "pt": "Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées"
+    "en": "Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées"
    },
    "value_field": "pillar_1_surveillance/realisation_s21",
    "comment_field": "pillar_1_surveillance/comment_s21",
@@ -569,8 +539,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion cas suspects vivants prelevés au CT/CTE normées dans les 24 hrs",
-    "en": "Proportion cas suspects vivants prelevés au CT/CTE normées dans les 24 hrs",
-    "pt": "Proportion cas suspects vivants prelevés au CT/CTE normées dans les 24 hrs"
+    "en": "Proportion cas suspects vivants prelevés au CT/CTE normées dans les 24 hrs"
    },
    "value_field": "pillar_1_surveillance/realisation_s22",
    "comment_field": "pillar_1_surveillance/comment_s22",
@@ -590,8 +559,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Délai moyen entre l'apparition des symptomes et la détection (date de notification)",
-    "en": "Délai moyen entre l'apparition des symptomes et la détection (date de notification)",
-    "pt": "Délai moyen entre l'apparition des symptomes et la détection (date de notification)"
+    "en": "Délai moyen entre l'apparition des symptomes et la détection (date de notification)"
    },
    "value_field": "pillar_1_surveillance/realisation_s23",
    "comment_field": "pillar_1_surveillance/comment_s23",
@@ -611,8 +579,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion de rapports d'investigation avec resumés narratifs",
-    "en": "Proportion de rapports d'investigation avec resumés narratifs",
-    "pt": "Proportion de rapports d'investigation avec resumés narratifs"
+    "en": "Proportion de rapports d'investigation avec resumés narratifs"
    },
    "value_field": "pillar_1_surveillance/realisation_s24",
    "comment_field": "pillar_1_surveillance/comment_s24",
@@ -632,8 +599,7 @@
    "group": "pillar_1_surveillance",
    "label": {
     "fr": "Proportion de rapports de situation (sitreps) produits",
-    "en": "Proportion de rapports de situation (sitreps) produits",
-    "pt": "Proportion de rapports de situation (sitreps) produits"
+    "en": "Proportion de rapports de situation (sitreps) produits"
    },
    "value_field": "pillar_1_surveillance/realisation_s25",
    "comment_field": "pillar_1_surveillance/comment_s25",
@@ -653,8 +619,7 @@
    "group": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire",
    "label": {
     "fr": "Pourcentage des voyageurs examinés aux PoE / PoC",
-    "en": "Pourcentage des voyageurs examinés aux PoE / PoC",
-    "pt": "Pourcentage des voyageurs examinés aux PoE / PoC"
+    "en": "Pourcentage des voyageurs examinés aux PoE / PoC"
    },
    "value_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/realisation_pe1",
    "comment_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/comment_pe1",
@@ -674,8 +639,7 @@
    "group": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire",
    "label": {
     "fr": "Proportion des personnes sensibilisées au point d'entrée/point de contrôle",
-    "en": "Proportion des personnes sensibilisées au point d'entrée/point de contrôle",
-    "pt": "Proportion des personnes sensibilisées au point d'entrée/point de contrôle"
+    "en": "Proportion des personnes sensibilisées au point d'entrée/point de contrôle"
    },
    "value_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/realisation_pe2",
    "comment_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/comment_pe2",
@@ -695,8 +659,7 @@
    "group": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire",
    "label": {
     "fr": "Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE",
-    "en": "Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE",
-    "pt": "Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE"
+    "en": "Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE"
    },
    "value_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/realisation_pe3",
    "comment_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/comment_pe3",
@@ -716,8 +679,7 @@
    "group": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire",
    "label": {
     "fr": "Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours",
-    "en": "Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours",
-    "pt": "Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours"
+    "en": "Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours"
    },
    "value_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/realisation_pe4",
    "comment_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/comment_pe4",
@@ -737,8 +699,7 @@
    "group": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire",
    "label": {
     "fr": "Nombre des contacts interceptés au point d'entrée/point de contrôle",
-    "en": "Nombre des contacts interceptés au point d'entrée/point de contrôle",
-    "pt": "Nombre des contacts interceptés au point d'entrée/point de contrôle"
+    "en": "Nombre des contacts interceptés au point d'entrée/point de contrôle"
    },
    "value_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/realisation_pe5",
    "comment_field": "pillar_2_points_d_entr_e_et_points_de_contr_le_sanitaire/comment_pe5",
@@ -758,8 +719,7 @@
    "group": "pillar_3_laboratoire",
    "label": {
     "fr": "Taux de positivité (nombre de nouveaux cas confirmés positifs/nombre des tests effectués-nouveaux échantillons)",
-    "en": "Taux de positivité (nombre de nouveaux cas confirmés positifs/nombre des tests effectués-nouveaux échantillons)",
-    "pt": "Taux de positivité (nombre de nouveaux cas confirmés positifs/nombre des tests effectués-nouveaux échantillons)"
+    "en": "Taux de positivité (nombre de nouveaux cas confirmés positifs/nombre des tests effectués-nouveaux échantillons)"
    },
    "value_field": "pillar_3_laboratoire/realisation_l1",
    "comment_field": "pillar_3_laboratoire/comment_l1",
@@ -779,8 +739,7 @@
    "group": "pillar_3_laboratoire",
    "label": {
     "fr": "Pourcentage des résultats de laboratoire disponibles pour tous les cas dans les 48 heures",
-    "en": "Pourcentage des résultats de laboratoire disponibles pour tous les cas dans les 48 heures",
-    "pt": "Pourcentage des résultats de laboratoire disponibles pour tous les cas dans les 48 heures"
+    "en": "Pourcentage des résultats de laboratoire disponibles pour tous les cas dans les 48 heures"
    },
    "value_field": "pillar_3_laboratoire/realisation_l2",
    "comment_field": "pillar_3_laboratoire/comment_l2",
@@ -800,8 +759,7 @@
    "group": "pillar_3_laboratoire",
    "label": {
     "fr": "Proportion des décés dans la communauté ayant donné lieu à un test positif",
-    "en": "Proportion des décés dans la communauté ayant donné lieu à un test positif",
-    "pt": "Proportion des décés dans la communauté ayant donné lieu à un test positif"
+    "en": "Proportion des décés dans la communauté ayant donné lieu à un test positif"
    },
    "value_field": "pillar_3_laboratoire/realisation_l3",
    "comment_field": "pillar_3_laboratoire/comment_l3",
@@ -821,8 +779,7 @@
    "group": "pillar_3_laboratoire",
    "label": {
     "fr": "Nombre d'ncidents biologiques signalés",
-    "en": "Nombre d'ncidents biologiques signalés",
-    "pt": "Nombre d'ncidents biologiques signalés"
+    "en": "Nombre d'ncidents biologiques signalés"
    },
    "value_field": "pillar_3_laboratoire/realisation_l4",
    "comment_field": "pillar_3_laboratoire/comment_l4",
@@ -842,8 +799,7 @@
    "group": "pillar_3_laboratoire",
    "label": {
     "fr": "Taux de rupture de stock (réactifs/EPI)",
-    "en": "Taux de rupture de stock (réactifs/EPI)",
-    "pt": "Taux de rupture de stock (réactifs/EPI)"
+    "en": "Taux de rupture de stock (réactifs/EPI)"
    },
    "value_field": "pillar_3_laboratoire/realisation_l5",
    "comment_field": "pillar_3_laboratoire/comment_l5",
@@ -851,7 +807,7 @@
    "direction": "lower",
    "target_raw": "<5%",
    "target": 5.0,
-   "target_operator": "=",
+   "target_operator": "<=",
    "has_target": true,
    "target_scale_suspect": false
   },
@@ -863,8 +819,7 @@
    "group": "pillar_3_laboratoire",
    "label": {
     "fr": "Proportion de décès dans la communauté testés positifs",
-    "en": "Proportion de décès dans la communauté testés positifs",
-    "pt": "Proportion de décès dans la communauté testés positifs"
+    "en": "Proportion de décès dans la communauté testés positifs"
    },
    "value_field": "pillar_3_laboratoire/realisation_l6",
    "comment_field": "pillar_3_laboratoire/comment_l6",
@@ -884,8 +839,7 @@
    "group": "pillar_4_pci",
    "label": {
     "fr": "Proportion des prestataires de santé de première ligne (PPL) infectés parmi les cas confirmés d'Ebola",
-    "en": "Proportion des prestataires de santé de première ligne (PPL) infectés parmi les cas confirmés d'Ebola",
-    "pt": "Proportion des prestataires de santé de première ligne (PPL) infectés parmi les cas confirmés d'Ebola"
+    "en": "Proportion des prestataires de santé de première ligne (PPL) infectés parmi les cas confirmés d'Ebola"
    },
    "value_field": "pillar_4_pci/realisation_pc1",
    "comment_field": "pillar_4_pci/comment_pc1",
@@ -905,8 +859,7 @@
    "group": "pillar_4_pci",
    "label": {
     "fr": "Proportion d'individus (non PPL) ayant contracté la maladie à virus Ebola (MVE) dans les établissements de soins de santé (ESS)",
-    "en": "Proportion d'individus (non PPL) ayant contracté la maladie à virus Ebola (MVE) dans les établissements de soins de santé (ESS)",
-    "pt": "Proportion d'individus (non PPL) ayant contracté la maladie à virus Ebola (MVE) dans les établissements de soins de santé (ESS)"
+    "en": "Proportion d'individus (non PPL) ayant contracté la maladie à virus Ebola (MVE) dans les établissements de soins de santé (ESS)"
    },
    "value_field": "pillar_4_pci/realisation_pc2",
    "comment_field": "pillar_4_pci/comment_pc2",
@@ -926,8 +879,7 @@
    "group": "pillar_4_pci",
    "label": {
     "fr": "Proportion d'établissements de santé ayant obtenu un score supérieur à 80% sur la fiche d'évaluation PCI",
-    "en": "Proportion d'établissements de santé ayant obtenu un score supérieur à 80% sur la fiche d'évaluation PCI",
-    "pt": "Proportion d'établissements de santé ayant obtenu un score supérieur à 80% sur la fiche d'évaluation PCI"
+    "en": "Proportion d'établissements de santé ayant obtenu un score supérieur à 80% sur la fiche d'évaluation PCI"
    },
    "value_field": "pillar_4_pci/realisation_pc3",
    "comment_field": "pillar_4_pci/comment_pc3",
@@ -947,8 +899,7 @@
    "group": "pillar_4_pci",
    "label": {
     "fr": "Proportion d'établissements de santé ayant reçu des kits PCI",
-    "en": "Proportion d'établissements de santé ayant reçu des kits PCI",
-    "pt": "Proportion d'établissements de santé ayant reçu des kits PCI"
+    "en": "Proportion d'établissements de santé ayant reçu des kits PCI"
    },
    "value_field": "pillar_4_pci/realisation_pc4",
    "comment_field": "pillar_4_pci/comment_pc4",
@@ -968,8 +919,7 @@
    "group": "pillar_4_pci",
    "label": {
     "fr": "Proportion d'établissements unidirectionnel de santé disposant d'un circuit de triage",
-    "en": "Proportion d'établissements unidirectionnel de santé disposant d'un circuit de triage",
-    "pt": "Proportion d'établissements unidirectionnel de santé disposant d'un circuit de triage"
+    "en": "Proportion d'établissements unidirectionnel de santé disposant d'un circuit de triage"
    },
    "value_field": "pillar_4_pci/realisation_pc5",
    "comment_field": "pillar_4_pci/comment_pc5",
@@ -989,8 +939,7 @@
    "group": "pillar_4_pci",
    "label": {
     "fr": "Proportion d'établissements de santé ayant accueilli un cas confirmé décontaminé dans les 48 heures",
-    "en": "Proportion d'établissements de santé ayant accueilli un cas confirmé décontaminé dans les 48 heures",
-    "pt": "Proportion d'établissements de santé ayant accueilli un cas confirmé décontaminé dans les 48 heures"
+    "en": "Proportion d'établissements de santé ayant accueilli un cas confirmé décontaminé dans les 48 heures"
    },
    "value_field": "pillar_4_pci/realisation_pc6",
    "comment_field": "pillar_4_pci/comment_pc6",
@@ -1010,8 +959,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Pourcentage des profesionnels de santé des zone de santé formés ou briefés sur la prise en charge clinique des cas de MVE et les protocoles PCI",
-    "en": "Pourcentage des profesionnels de santé des zone de santé formés ou briefés sur la prise en charge clinique des cas de MVE et les protocoles PCI",
-    "pt": "Pourcentage des profesionnels de santé des zone de santé formés ou briefés sur la prise en charge clinique des cas de MVE et les protocoles PCI"
+    "en": "Pourcentage des profesionnels de santé des zone de santé formés ou briefés sur la prise en charge clinique des cas de MVE et les protocoles PCI"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm1",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm1",
@@ -1031,16 +979,15 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Taux de létalité parmi les cas confirmés admis au centre de traitement Ebola dans les 24 heures",
-    "en": "Taux de létalité parmi les cas confirmés admis au centre de traitement Ebola dans les 24 heures",
-    "pt": "Taux de létalité parmi les cas confirmés admis au centre de traitement Ebola dans les 24 heures"
+    "en": "Taux de létalité parmi les cas confirmés admis au centre de traitement Ebola dans les 24 heures"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm2",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm2",
    "unit": "percent",
-   "direction": "higher",
+   "direction": "lower",
    "target_raw": "<50%",
    "target": 50.0,
-   "target_operator": "=",
+   "target_operator": "<=",
    "has_target": true,
    "target_scale_suspect": false
   },
@@ -1052,16 +999,15 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Taux de létalité parmi les cas suspects admis au centre de traitement Ebola et centre de transit dans les 24 heures",
-    "en": "Taux de létalité parmi les cas suspects admis au centre de traitement Ebola et centre de transit dans les 24 heures",
-    "pt": "Taux de létalité parmi les cas suspects admis au centre de traitement Ebola et centre de transit dans les 24 heures"
+    "en": "Taux de létalité parmi les cas suspects admis au centre de traitement Ebola et centre de transit dans les 24 heures"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm3",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm3",
    "unit": "percent",
-   "direction": "higher",
+   "direction": "lower",
    "target_raw": "<50%",
    "target": 50.0,
-   "target_operator": "=",
+   "target_operator": "<=",
    "has_target": true,
    "target_scale_suspect": false
   },
@@ -1073,8 +1019,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Pourcentage d'échantillon des cas suspects analysés dans les 24 heures",
-    "en": "Pourcentage d'échantillon des cas suspects analysés dans les 24 heures",
-    "pt": "Pourcentage d'échantillon des cas suspects analysés dans les 24 heures"
+    "en": "Pourcentage d'échantillon des cas suspects analysés dans les 24 heures"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm4",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm4",
@@ -1094,16 +1039,15 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Taux de létalité pour tous les cas confirmés admis dans les centres de traitement Ebola",
-    "en": "Taux de létalité pour tous les cas confirmés admis dans les centres de traitement Ebola",
-    "pt": "Taux de létalité pour tous les cas confirmés admis dans les centres de traitement Ebola"
+    "en": "Taux de létalité pour tous les cas confirmés admis dans les centres de traitement Ebola"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm5",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm5",
    "unit": "percent",
-   "direction": "higher",
+   "direction": "lower",
    "target_raw": "< 50%",
    "target": 50.0,
-   "target_operator": "=",
+   "target_operator": "<=",
    "has_target": true,
    "target_scale_suspect": false
   },
@@ -1115,8 +1059,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "% d’établissements transmettant des données quotidiennes complètes sur les admissions, sorties et décès (cas suspects et confirmés), désagrégées par âge et sexe (ou capacité à le faire)",
-    "en": "% d’établissements transmettant des données quotidiennes complètes sur les admissions, sorties et décès (cas suspects et confirmés), désagrégées par âge et sexe (ou capacité à le faire)",
-    "pt": "% d’établissements transmettant des données quotidiennes complètes sur les admissions, sorties et décès (cas suspects et confirmés), désagrégées par âge et sexe (ou capacité à le faire)"
+    "en": "% d’établissements transmettant des données quotidiennes complètes sur les admissions, sorties et décès (cas suspects et confirmés), désagrégées par âge et sexe (ou capacité à le faire)"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm6",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm6",
@@ -1136,8 +1079,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "% de patients bénéficiant d’un examen médical documenté toutes les 24 heures",
-    "en": "% de patients bénéficiant d’un examen médical documenté toutes les 24 heures",
-    "pt": "% de patients bénéficiant d’un examen médical documenté toutes les 24 heures"
+    "en": "% de patients bénéficiant d’un examen médical documenté toutes les 24 heures"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm7",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm7",
@@ -1157,8 +1099,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Médiane du délai entre l’apparition des symptômes et l’arrivée dans un établissement de prise en charge",
-    "en": "Médiane du délai entre l’apparition des symptômes et l’arrivée dans un établissement de prise en charge",
-    "pt": "Médiane du délai entre l’apparition des symptômes et l’arrivée dans un établissement de prise en charge"
+    "en": "Médiane du délai entre l’apparition des symptômes et l’arrivée dans un établissement de prise en charge"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm8",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm8",
@@ -1178,8 +1119,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Établissements disposant d’un stock de 7 jours de médicaments OSOC et d’EPI",
-    "en": "Établissements disposant d’un stock de 7 jours de médicaments OSOC et d’EPI",
-    "pt": "Établissements disposant d’un stock de 7 jours de médicaments OSOC et d’EPI"
+    "en": "Établissements disposant d’un stock de 7 jours de médicaments OSOC et d’EPI"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm9",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm9",
@@ -1199,18 +1139,19 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Proportion d’établissements ayant signalé une panne d’électricité ayant affecté les soins critiques (éclairage, oxygène) pendant plus de 10 minutes au cours des 7 derniers jours",
-    "en": "Proportion d’établissements ayant signalé une panne d’électricité ayant affecté les soins critiques (éclairage, oxygène) pendant plus de 10 minutes au cours des 7 derniers jours",
-    "pt": "Proportion d’établissements ayant signalé une panne d’électricité ayant affecté les soins critiques (éclairage, oxygène) pendant plus de 10 minutes au cours des 7 derniers jours"
+    "en": "Proportion d’établissements ayant signalé une panne d’électricité ayant affecté les soins critiques (éclairage, oxygène) pendant plus de 10 minutes au cours des 7 derniers jours"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm10",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm10",
    "unit": "percent",
-   "direction": "higher",
+   "direction": "lower",
    "target_raw": "—",
    "target": null,
    "target_operator": null,
    "has_target": false,
-   "target_scale_suspect": false
+   "target_scale_suspect": false,
+   "_why": "Facilities reporting a power failure that affected critical care: fewer is better.",
+   "overridden": true
   },
   {
    "id": "cm11",
@@ -1220,8 +1161,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Pourcentage d'enfants de moins de 23 mois qui ont reçu des conseils appropriés sur l'ANJE en situation d'urgence",
-    "en": "Pourcentage d'enfants de moins de 23 mois qui ont reçu des conseils appropriés sur l'ANJE en situation d'urgence",
-    "pt": "Pourcentage d'enfants de moins de 23 mois qui ont reçu des conseils appropriés sur l'ANJE en situation d'urgence"
+    "en": "Pourcentage d'enfants de moins de 23 mois qui ont reçu des conseils appropriés sur l'ANJE en situation d'urgence"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_cm11",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_cm11",
@@ -1241,8 +1181,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit",
-    "en": "Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit",
-    "pt": "Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit"
+    "en": "Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_sm1",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_sm1",
@@ -1262,8 +1201,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche",
-    "en": "Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche",
-    "pt": "Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche"
+    "en": "Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_sm2",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_sm2",
@@ -1283,8 +1221,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial",
-    "en": "Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial",
-    "pt": "Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial"
+    "en": "Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_sm3",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_sm3",
@@ -1304,8 +1241,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Pourcentage d'enfants séparés pris en charge dans la crèche",
-    "en": "Pourcentage d'enfants séparés pris en charge dans la crèche",
-    "pt": "Pourcentage d'enfants séparés pris en charge dans la crèche"
+    "en": "Pourcentage d'enfants séparés pris en charge dans la crèche"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_nut1",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_nut1",
@@ -1325,8 +1261,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Proportion des patients atteints de la MVE (suspectés et confirmés) ayant reçu un soutien nutritionnel approprié",
-    "en": "Proportion des patients atteints de la MVE (suspectés et confirmés) ayant reçu un soutien nutritionnel approprié",
-    "pt": "Proportion des patients atteints de la MVE (suspectés et confirmés) ayant reçu un soutien nutritionnel approprié"
+    "en": "Proportion des patients atteints de la MVE (suspectés et confirmés) ayant reçu un soutien nutritionnel approprié"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_nut2",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_nut2",
@@ -1346,8 +1281,7 @@
    "group": "pillar_5_prise_en_charge_m_dicale",
    "label": {
     "fr": "Proportion de patients instables ayant bénéficié d'un régime alimentaire et/ou nutritionnel spécifique",
-    "en": "Proportion de patients instables ayant bénéficié d'un régime alimentaire et/ou nutritionnel spécifique",
-    "pt": "Proportion de patients instables ayant bénéficié d'un régime alimentaire et/ou nutritionnel spécifique"
+    "en": "Proportion de patients instables ayant bénéficié d'un régime alimentaire et/ou nutritionnel spécifique"
    },
    "value_field": "pillar_5_prise_en_charge_m_dicale/realisation_nut3",
    "comment_field": "pillar_5_prise_en_charge_m_dicale/comment_nut3",
@@ -1367,8 +1301,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Nombre de survivants de la MVB",
-    "en": "Nombre de survivants de la MVB",
-    "pt": "Nombre de survivants de la MVB"
+    "en": "Nombre de survivants de la MVB"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss1",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss1",
@@ -1388,8 +1321,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Taux de suivi mensuel",
-    "en": "Taux de suivi mensuel",
-    "pt": "Taux de suivi mensuel"
+    "en": "Taux de suivi mensuel"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss2",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss2",
@@ -1409,8 +1341,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Exhaustivité des dossiers médicaux (y compris les données psychosociales, biologiques et nutritionnelles)",
-    "en": "Exhaustivité des dossiers médicaux (y compris les données psychosociales, biologiques et nutritionnelles)",
-    "pt": "Exhaustivité des dossiers médicaux (y compris les données psychosociales, biologiques et nutritionnelles)"
+    "en": "Exhaustivité des dossiers médicaux (y compris les données psychosociales, biologiques et nutritionnelles)"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss3",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss3",
@@ -1430,8 +1361,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Nombre des survivants décédés pendant le suivi",
-    "en": "Nombre des survivants décédés pendant le suivi",
-    "pt": "Nombre des survivants décédés pendant le suivi"
+    "en": "Nombre des survivants décédés pendant le suivi"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss4",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss4",
@@ -1451,8 +1381,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Proportion des décès vérifiés pendant le suivi",
-    "en": "Proportion des décès vérifiés pendant le suivi",
-    "pt": "Proportion des décès vérifiés pendant le suivi"
+    "en": "Proportion des décès vérifiés pendant le suivi"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss5",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss5",
@@ -1472,18 +1401,19 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Proportion de survivant atteint d'une maladie physique au cours du mois",
-    "en": "Proportion de survivant atteint d'une maladie physique au cours du mois",
-    "pt": "Proportion de survivant atteint d'une maladie physique au cours du mois"
+    "en": "Proportion de survivant atteint d'une maladie physique au cours du mois"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss6",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss6",
    "unit": "percent",
-   "direction": "higher",
+   "direction": "lower",
    "target_raw": "—",
    "target": null,
    "target_operator": null,
    "has_target": false,
-   "target_scale_suspect": false
+   "target_scale_suspect": false,
+   "_why": "Survivors developing a physical illness during the month: fewer is better.",
+   "overridden": true
   },
   {
    "id": "ss7",
@@ -1493,8 +1423,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Proportion de survivants ayant terminé le suivi psychologique",
-    "en": "Proportion de survivants ayant terminé le suivi psychologique",
-    "pt": "Proportion de survivants ayant terminé le suivi psychologique"
+    "en": "Proportion de survivants ayant terminé le suivi psychologique"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss7",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss7",
@@ -1514,8 +1443,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Proportion de survivants ayant bénéficié d'un accompagnement psychologique pour la prévention et la transmission sexuelle secondaire",
-    "en": "Proportion de survivants ayant bénéficié d'un accompagnement psychologique pour la prévention et la transmission sexuelle secondaire",
-    "pt": "Proportion de survivants ayant bénéficié d'un accompagnement psychologique pour la prévention et la transmission sexuelle secondaire"
+    "en": "Proportion de survivants ayant bénéficié d'un accompagnement psychologique pour la prévention et la transmission sexuelle secondaire"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss8",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss8",
@@ -1535,8 +1463,7 @@
    "group": "pillar_6_programme_des_survivants_de_la_mvb",
    "label": {
     "fr": "Proportion d'enfants de moins de 5 ans ayant fait l'objet d'une évaluation de leur état nutritionnel",
-    "en": "Proportion d'enfants de moins de 5 ans ayant fait l'objet d'une évaluation de leur état nutritionnel",
-    "pt": "Proportion d'enfants de moins de 5 ans ayant fait l'objet d'une évaluation de leur état nutritionnel"
+    "en": "Proportion d'enfants de moins de 5 ans ayant fait l'objet d'une évaluation de leur état nutritionnel"
    },
    "value_field": "pillar_6_programme_des_survivants_de_la_mvb/realisation_ss9",
    "comment_field": "pillar_6_programme_des_survivants_de_la_mvb/comment_ss9",
@@ -1556,8 +1483,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Nombre des réunions de coordination de la CREC organisées",
-    "en": "Nombre des réunions de coordination de la CREC organisées",
-    "pt": "Nombre des réunions de coordination de la CREC organisées"
+    "en": "Nombre des réunions de coordination de la CREC organisées"
    },
    "value_field": "pillar_7_crec/realisation_c1",
    "comment_field": "pillar_7_crec/comment_c1",
@@ -1577,8 +1503,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Nombre des spots radio/émissions télévisées consacrés au virus Ebola",
-    "en": "Nombre des spots radio/émissions télévisées consacrés au virus Ebola",
-    "pt": "Nombre des spots radio/émissions télévisées consacrés au virus Ebola"
+    "en": "Nombre des spots radio/émissions télévisées consacrés au virus Ebola"
    },
    "value_field": "pillar_7_crec/realisation_c2",
    "comment_field": "pillar_7_crec/comment_c2",
@@ -1598,8 +1523,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services",
-    "en": "Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services",
-    "pt": "Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services"
+    "en": "Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services"
    },
    "value_field": "pillar_7_crec/realisation_c3",
    "comment_field": "pillar_7_crec/comment_c3",
@@ -1619,8 +1543,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Nombre d'alertes signalées par les acteurs communautaires",
-    "en": "Nombre d'alertes signalées par les acteurs communautaires",
-    "pt": "Nombre d'alertes signalées par les acteurs communautaires"
+    "en": "Nombre d'alertes signalées par les acteurs communautaires"
    },
    "value_field": "pillar_7_crec/realisation_c4",
    "comment_field": "pillar_7_crec/comment_c4",
@@ -1640,8 +1563,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Pourcentage des cas suspects de la MVE rapidement orientés vers un centre des soins (dans les 24h à 48h)",
-    "en": "Pourcentage des cas suspects de la MVE rapidement orientés vers un centre des soins (dans les 24h à 48h)",
-    "pt": "Pourcentage des cas suspects de la MVE rapidement orientés vers un centre des soins (dans les 24h à 48h)"
+    "en": "Pourcentage des cas suspects de la MVE rapidement orientés vers un centre des soins (dans les 24h à 48h)"
    },
    "value_field": "pillar_7_crec/realisation_c5",
    "comment_field": "pillar_7_crec/comment_c5",
@@ -1661,8 +1583,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Nombre de rumeurs et infodemies collectés, analysés et rapportés",
-    "en": "Nombre de rumeurs et infodemies collectés, analysés et rapportés",
-    "pt": "Nombre de rumeurs et infodemies collectés, analysés et rapportés"
+    "en": "Nombre de rumeurs et infodemies collectés, analysés et rapportés"
    },
    "value_field": "pillar_7_crec/realisation_c6",
    "comment_field": "pillar_7_crec/comment_c6",
@@ -1682,8 +1603,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Pourcentage des commentaires (feedback) de la communauté traités dans un délai défini (24 - 48 hrs)",
-    "en": "Pourcentage des commentaires (feedback) de la communauté traités dans un délai défini (24 - 48 hrs)",
-    "pt": "Pourcentage des commentaires (feedback) de la communauté traités dans un délai défini (24 - 48 hrs)"
+    "en": "Pourcentage des commentaires (feedback) de la communauté traités dans un délai défini (24 - 48 hrs)"
    },
    "value_field": "pillar_7_crec/realisation_c7",
    "comment_field": "pillar_7_crec/comment_c7",
@@ -1703,8 +1623,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Nombre d'acteurs de la communauté briefes/ formés à la prévention du virus Ebola et à l'engagement communautaire",
-    "en": "Nombre d'acteurs de la communauté briefes/ formés à la prévention du virus Ebola et à l'engagement communautaire",
-    "pt": "Nombre d'acteurs de la communauté briefes/ formés à la prévention du virus Ebola et à l'engagement communautaire"
+    "en": "Nombre d'acteurs de la communauté briefes/ formés à la prévention du virus Ebola et à l'engagement communautaire"
    },
    "value_field": "pillar_7_crec/realisation_c8",
    "comment_field": "pillar_7_crec/comment_c8",
@@ -1724,8 +1643,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Proportion des leaders engagés et qui sensibilisent leurs communautés (par ZS)",
-    "en": "Proportion des leaders engagés et qui sensibilisent leurs communautés (par ZS)",
-    "pt": "Proportion des leaders engagés et qui sensibilisent leurs communautés (par ZS)"
+    "en": "Proportion des leaders engagés et qui sensibilisent leurs communautés (par ZS)"
    },
    "value_field": "pillar_7_crec/realisation_c9",
    "comment_field": "pillar_7_crec/comment_c9",
@@ -1745,8 +1663,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "Proportion des personnes sensibilisées qui connaissent au moins 4 symptomes de la MVE (CAP)",
-    "en": "Proportion des personnes sensibilisées qui connaissent au moins 4 symptomes de la MVE (CAP)",
-    "pt": "Proportion des personnes sensibilisées qui connaissent au moins 4 symptomes de la MVE (CAP)"
+    "en": "Proportion des personnes sensibilisées qui connaissent au moins 4 symptomes de la MVE (CAP)"
    },
    "value_field": "pillar_7_crec/realisation_c10",
    "comment_field": "pillar_7_crec/comment_c10",
@@ -1766,8 +1683,7 @@
    "group": "pillar_7_crec",
    "label": {
     "fr": "% des reocommandations de la rechereche qualitative implementees par rapport aux recommandations developpées",
-    "en": "% des reocommandations de la rechereche qualitative implementees par rapport aux recommandations developpées",
-    "pt": "% des reocommandations de la rechereche qualitative implementees par rapport aux recommandations developpées"
+    "en": "% des reocommandations de la rechereche qualitative implementees par rapport aux recommandations developpées"
    },
    "value_field": "pillar_7_crec/realisation_c11",
    "comment_field": "pillar_7_crec/comment_c11",
@@ -1787,18 +1703,19 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Couverture des besoins en véhicules",
-    "en": "Couverture des besoins en véhicules",
-    "pt": "Couverture des besoins en véhicules"
+    "en": "Couverture des besoins en véhicules"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl1",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl1",
-   "unit": "count",
+   "unit": "percent",
    "direction": "higher",
    "target_raw": "0.8",
-   "target": 0.8,
+   "target": 80,
    "target_operator": "=",
    "has_target": true,
-   "target_scale_suspect": false
+   "target_scale_suspect": false,
+   "_why": "Coverage of vehicle needs is a share, not a count. The form writes the target as 0.8, meaning 80 %.",
+   "overridden": true
   },
   {
    "id": "sl2",
@@ -1808,18 +1725,19 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Couverture des besoins en motos",
-    "en": "Couverture des besoins en motos",
-    "pt": "Couverture des besoins en motos"
+    "en": "Couverture des besoins en motos"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl2",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl2",
-   "unit": "count",
+   "unit": "percent",
    "direction": "higher",
    "target_raw": "1",
-   "target": 1.0,
+   "target": 100,
    "target_operator": "=",
    "has_target": true,
-   "target_scale_suspect": false
+   "target_scale_suspect": false,
+   "_why": "Coverage of motorbike needs: target written as 1, meaning 100 %.",
+   "overridden": true
   },
   {
    "id": "sl3",
@@ -1829,18 +1747,19 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Couverture des besoins en ambulances",
-    "en": "Couverture des besoins en ambulances",
-    "pt": "Couverture des besoins en ambulances"
+    "en": "Couverture des besoins en ambulances"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl3",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl3",
-   "unit": "count",
+   "unit": "percent",
    "direction": "higher",
    "target_raw": "0.85",
-   "target": 0.85,
+   "target": 85,
    "target_operator": "=",
    "has_target": true,
-   "target_scale_suspect": false
+   "target_scale_suspect": false,
+   "_why": "Coverage of ambulance needs: target written as 0.85, meaning 85 %.",
+   "overridden": true
   },
   {
    "id": "sl4",
@@ -1850,8 +1769,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Disponibilité de stocks d'équipements et autres matériels d'intervention",
-    "en": "Disponibilité de stocks d'équipements et autres matériels d'intervention",
-    "pt": "Disponibilité de stocks d'équipements et autres matériels d'intervention"
+    "en": "Disponibilité de stocks d'équipements et autres matériels d'intervention"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl4",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl4",
@@ -1871,8 +1789,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Pourcentage des piliers bénéficiant d'apport",
-    "en": "Pourcentage des piliers bénéficiant d'apport",
-    "pt": "Pourcentage des piliers bénéficiant d'apport"
+    "en": "Pourcentage des piliers bénéficiant d'apport"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl5",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl5",
@@ -1892,8 +1809,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "CTE construits conformément aux normes",
-    "en": "CTE construits conformément aux normes",
-    "pt": "CTE construits conformément aux normes"
+    "en": "CTE construits conformément aux normes"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl6",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl6",
@@ -1913,8 +1829,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Taux de disponibilité des articles critiques",
-    "en": "Taux de disponibilité des articles critiques",
-    "pt": "Taux de disponibilité des articles critiques"
+    "en": "Taux de disponibilité des articles critiques"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl7",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl7",
@@ -1922,7 +1837,7 @@
    "direction": "higher",
    "target_raw": ">95%",
    "target": 95.0,
-   "target_operator": "=",
+   "target_operator": ">=",
    "has_target": true,
    "target_scale_suspect": false
   },
@@ -1934,8 +1849,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Nombre de ruptures de stock critiques",
-    "en": "Nombre de ruptures de stock critiques",
-    "pt": "Nombre de ruptures de stock critiques"
+    "en": "Nombre de ruptures de stock critiques"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl8",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl8",
@@ -1955,8 +1869,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Nombre de distributions effectuées",
-    "en": "Nombre de distributions effectuées",
-    "pt": "Nombre de distributions effectuées"
+    "en": "Nombre de distributions effectuées"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl9",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl9",
@@ -1976,8 +1889,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Nombre de partenaires approvisionnés et bénéficiant du support/soutien technique de OSL",
-    "en": "Nombre de partenaires approvisionnés et bénéficiant du support/soutien technique de OSL",
-    "pt": "Nombre de partenaires approvisionnés et bénéficiant du support/soutien technique de OSL"
+    "en": "Nombre de partenaires approvisionnés et bénéficiant du support/soutien technique de OSL"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl10",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl10",
@@ -1997,8 +1909,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Extension des opérations soutenue par les missions terrain et les évaluations techniques",
-    "en": "Extension des opérations soutenue par les missions terrain et les évaluations techniques",
-    "pt": "Extension des opérations soutenue par les missions terrain et les évaluations techniques"
+    "en": "Extension des opérations soutenue par les missions terrain et les évaluations techniques"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl11",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl11",
@@ -2018,8 +1929,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Structures de prise en charge appuyées par l'OSL",
-    "en": "Structures de prise en charge appuyées par l'OSL",
-    "pt": "Structures de prise en charge appuyées par l'OSL"
+    "en": "Structures de prise en charge appuyées par l'OSL"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl12",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl12",
@@ -2039,8 +1949,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Évaluations techniques pour l'extension de la riposte",
-    "en": "Évaluations techniques pour l'extension de la riposte",
-    "pt": "Évaluations techniques pour l'extension de la riposte"
+    "en": "Évaluations techniques pour l'extension de la riposte"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl13",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl13",
@@ -2060,18 +1969,19 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Couverture opérationnelle SDB",
-    "en": "Couverture opérationnelle SDB",
-    "pt": "Couverture opérationnelle SDB"
+    "en": "Couverture opérationnelle SDB"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl14",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl14",
-   "unit": "ratio",
+   "unit": "percent",
    "direction": "higher",
    "target_raw": "0.7",
-   "target": 0.7,
+   "target": 70,
    "target_operator": "=",
    "has_target": true,
-   "target_scale_suspect": true
+   "target_scale_suspect": false,
+   "_why": "SDB operational coverage is a share; target written as 0.7, meaning 70 %.",
+   "overridden": true
   },
   {
    "id": "sl15",
@@ -2081,8 +1991,7 @@
    "group": "pillar_8_op_rations_de_soutien_et_logistique",
    "label": {
     "fr": "Proportion des besoins en personnel OSL déployé (couverts)",
-    "en": "Proportion des besoins en personnel OSL déployé (couverts)",
-    "pt": "Proportion des besoins en personnel OSL déployé (couverts)"
+    "en": "Proportion des besoins en personnel OSL déployé (couverts)"
    },
    "value_field": "pillar_8_op_rations_de_soutien_et_logistique/realisation_sl15",
    "comment_field": "pillar_8_op_rations_de_soutien_et_logistique/comment_sl15",
@@ -2102,8 +2011,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS)",
-    "en": "Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS)",
-    "pt": "Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS)"
+    "en": "Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS)"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps1",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps1",
@@ -2123,8 +2031,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Existence d'une carte des canaux de signalement des cas d'EAS/HS",
-    "en": "Existence d'une carte des canaux de signalement des cas d'EAS/HS",
-    "pt": "Existence d'une carte des canaux de signalement des cas d'EAS/HS"
+    "en": "Existence d'une carte des canaux de signalement des cas d'EAS/HS"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps2",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps2",
@@ -2144,8 +2051,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet",
-    "en": "Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet",
-    "pt": "Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet"
+    "en": "Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps3",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps3",
@@ -2165,8 +2071,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Pourcentage des comités de gestion des plaintes (CBCM) mis en place dans les zones de santé concernees par a reponse",
-    "en": "Pourcentage des comités de gestion des plaintes (CBCM) mis en place dans les zones de santé concernees par a reponse",
-    "pt": "Pourcentage des comités de gestion des plaintes (CBCM) mis en place dans les zones de santé concernees par a reponse"
+    "en": "Pourcentage des comités de gestion des plaintes (CBCM) mis en place dans les zones de santé concernees par a reponse"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps4",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps4",
@@ -2186,8 +2091,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Pourcentage des femmes impliquées dans la gestion/animation des CBCM",
-    "en": "Pourcentage des femmes impliquées dans la gestion/animation des CBCM",
-    "pt": "Pourcentage des femmes impliquées dans la gestion/animation des CBCM"
+    "en": "Pourcentage des femmes impliquées dans la gestion/animation des CBCM"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps5",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps5",
@@ -2207,19 +2111,18 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte",
-    "en": "Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte",
-    "pt": "Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte"
+    "en": "Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps6",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps6",
    "unit": "percent",
    "direction": "higher",
    "target_raw": "0",
-   "target": 0.0,
+   "target": null,
    "target_operator": "=",
-   "has_target": true,
+   "has_target": false,
    "target_scale_suspect": false,
-   "_why": "Example. The form sets a target of 0 for the % of SEA/SH cases reported through the complaints mechanism, which reads as 'fewer reports is better'. If the intent is the opposite, flip it here.",
+   "_why": "The form sets a target of 0 for the % of SEA/SH cases reported through the complaints mechanism. A 0-target on a 'reported via the right channel' share would paint any reporting red, which is backwards - reporting through the official channel is the desired behaviour. Until the form states a real target, the indicator is tracked without one.",
    "overridden": true
   },
   {
@@ -2230,8 +2133,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Pourcentage de survivants d'EAS pris en charge",
-    "en": "Pourcentage de survivants d'EAS pris en charge",
-    "pt": "Pourcentage de survivants d'EAS pris en charge"
+    "en": "Pourcentage de survivants d'EAS pris en charge"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps7",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps7",
@@ -2251,8 +2153,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Pourcentage des agents de santé communautaires sensibilisés aux violences sexuelles et sexistes et aux situations d'urgence humanitaire dans les zones qffectees par la MVE",
-    "en": "Pourcentage des agents de santé communautaires sensibilisés aux violences sexuelles et sexistes et aux situations d'urgence humanitaire dans les zones qffectees par la MVE",
-    "pt": "Pourcentage des agents de santé communautaires sensibilisés aux violences sexuelles et sexistes et aux situations d'urgence humanitaire dans les zones qffectees par la MVE"
+    "en": "Pourcentage des agents de santé communautaires sensibilisés aux violences sexuelles et sexistes et aux situations d'urgence humanitaire dans les zones qffectees par la MVE"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps8",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps8",
@@ -2272,8 +2173,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Pourcentage de répondeurs sensibilisés à l'EAS/HS",
-    "en": "Pourcentage de répondeurs sensibilisés à l'EAS/HS",
-    "pt": "Pourcentage de répondeurs sensibilisés à l'EAS/HS"
+    "en": "Pourcentage de répondeurs sensibilisés à l'EAS/HS"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps9",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps9",
@@ -2293,8 +2193,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Pourcentage des personnes briefées sur la violence sexiste et l'EAS/HS via des activités/Affichages/médias",
-    "en": "Pourcentage des personnes briefées sur la violence sexiste et l'EAS/HS via des activités/Affichages/médias",
-    "pt": "Pourcentage des personnes briefées sur la violence sexiste et l'EAS/HS via des activités/Affichages/médias"
+    "en": "Pourcentage des personnes briefées sur la violence sexiste et l'EAS/HS via des activités/Affichages/médias"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps10",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps10",
@@ -2314,8 +2213,7 @@
    "group": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel",
    "label": {
     "fr": "Nombre de personnes sensibilisées dans la communauté",
-    "en": "Nombre de personnes sensibilisées dans la communauté",
-    "pt": "Nombre de personnes sensibilisées dans la communauté"
+    "en": "Nombre de personnes sensibilisées dans la communauté"
    },
    "value_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/realisation_ps11",
    "comment_field": "pillar_9_pr_vention_et_lutte_contre_l_exploitation_sexuel/comment_ps11",
@@ -2335,8 +2233,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Nombre de produits de communication développés",
-    "en": "Nombre de produits de communication développés",
-    "pt": "Nombre de produits de communication développés"
+    "en": "Nombre de produits de communication développés"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx1",
    "comment_field": "pillar_10_communication_externe/comment_cx1",
@@ -2356,8 +2253,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Nombre de produits validés et transmis à HQ, AFRO et WCO",
-    "en": "Nombre de produits validés et transmis à HQ, AFRO et WCO",
-    "pt": "Nombre de produits validés et transmis à HQ, AFRO et WCO"
+    "en": "Nombre de produits validés et transmis à HQ, AFRO et WCO"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx2",
    "comment_field": "pillar_10_communication_externe/comment_cx2",
@@ -2377,8 +2273,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Nombre de produits publiés",
-    "en": "Nombre de produits publiés",
-    "pt": "Nombre de produits publiés"
+    "en": "Nombre de produits publiés"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx3",
    "comment_field": "pillar_10_communication_externe/comment_cx3",
@@ -2398,8 +2293,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Nombre re missions de terrain couvertes",
-    "en": "Nombre re missions de terrain couvertes",
-    "pt": "Nombre re missions de terrain couvertes"
+    "en": "Nombre re missions de terrain couvertes"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx4",
    "comment_field": "pillar_10_communication_externe/comment_cx4",
@@ -2419,8 +2313,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Communautés mises en valeur",
-    "en": "Communautés mises en valeur",
-    "pt": "Communautés mises en valeur"
+    "en": "Communautés mises en valeur"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx5",
    "comment_field": "pillar_10_communication_externe/comment_cx5",
@@ -2440,8 +2333,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Nombre Piliers de la riposte mis en valeur (publications de la semaine)",
-    "en": "Nombre Piliers de la riposte mis en valeur (publications de la semaine)",
-    "pt": "Nombre Piliers de la riposte mis en valeur (publications de la semaine)"
+    "en": "Nombre Piliers de la riposte mis en valeur (publications de la semaine)"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx6",
    "comment_field": "pillar_10_communication_externe/comment_cx6",
@@ -2461,8 +2353,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Interviews/interventions médiatiques",
-    "en": "Interviews/interventions médiatiques",
-    "pt": "Interviews/interventions médiatiques"
+    "en": "Interviews/interventions médiatiques"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx7",
    "comment_field": "pillar_10_communication_externe/comment_cx7",
@@ -2482,8 +2373,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Performance sur les reseaux sociaux",
-    "en": "Performance sur les reseaux sociaux",
-    "pt": "Performance sur les reseaux sociaux"
+    "en": "Performance sur les reseaux sociaux"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx8",
    "comment_field": "pillar_10_communication_externe/comment_cx8",
@@ -2503,8 +2393,7 @@
    "group": "pillar_10_communication_externe",
    "label": {
     "fr": "Nombre de donateurs mis en valeurs (par mois)",
-    "en": "Nombre de donateurs mis en valeurs (par mois)",
-    "pt": "Nombre de donateurs mis en valeurs (par mois)"
+    "en": "Nombre de donateurs mis en valeurs (par mois)"
    },
    "value_field": "pillar_10_communication_externe/realisation_cx9",
    "comment_field": "pillar_10_communication_externe/comment_cx9",
@@ -2524,8 +2413,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Pourcentage des familles acceptant les EDS",
-    "en": "Pourcentage des familles acceptant les EDS",
-    "pt": "Pourcentage des familles acceptant les EDS"
+    "en": "Pourcentage des familles acceptant les EDS"
    },
    "value_field": "pillar_11_eds/realisation_ed1",
    "comment_field": "pillar_11_eds/comment_ed1",
@@ -2545,8 +2433,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Pourcentage des cas suspects décédés investigués et prelevés/swabés",
-    "en": "Pourcentage des cas suspects décédés investigués et prelevés/swabés",
-    "pt": "Pourcentage des cas suspects décédés investigués et prelevés/swabés"
+    "en": "Pourcentage des cas suspects décédés investigués et prelevés/swabés"
    },
    "value_field": "pillar_11_eds/realisation_ed2",
    "comment_field": "pillar_11_eds/comment_ed2",
@@ -2566,8 +2453,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",
-    "en": "Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",
-    "pt": "Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)"
+    "en": "Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)"
    },
    "value_field": "pillar_11_eds/realisation_ed3",
    "comment_field": "pillar_11_eds/comment_ed3",
@@ -2587,8 +2473,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Nombres d'EDS realise désagrège par lieu de provenance",
-    "en": "Nombres d'EDS realise désagrège par lieu de provenance",
-    "pt": "Nombres d'EDS realise désagrège par lieu de provenance"
+    "en": "Nombres d'EDS realise désagrège par lieu de provenance"
    },
    "value_field": "pillar_11_eds/realisation_ed4",
    "comment_field": "pillar_11_eds/comment_ed4",
@@ -2608,8 +2493,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Nombre d'échecs désagrège par lieu de provenance",
-    "en": "Nombre d'échecs désagrège par lieu de provenance",
-    "pt": "Nombre d'échecs désagrège par lieu de provenance"
+    "en": "Nombre d'échecs désagrège par lieu de provenance"
    },
    "value_field": "pillar_11_eds/realisation_ed5",
    "comment_field": "pillar_11_eds/comment_ed5",
@@ -2629,8 +2513,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Nombre de reports désagrège par lieu de provenance",
-    "en": "Nombre de reports désagrège par lieu de provenance",
-    "pt": "Nombre de reports désagrège par lieu de provenance"
+    "en": "Nombre de reports désagrège par lieu de provenance"
    },
    "value_field": "pillar_11_eds/realisation_ed6",
    "comment_field": "pillar_11_eds/comment_ed6",
@@ -2650,8 +2533,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Nombre de SWAB prélève par lieu de provenance",
-    "en": "Nombre de SWAB prélève par lieu de provenance",
-    "pt": "Nombre de SWAB prélève par lieu de provenance"
+    "en": "Nombre de SWAB prélève par lieu de provenance"
    },
    "value_field": "pillar_11_eds/realisation_ed7",
    "comment_field": "pillar_11_eds/comment_ed7",
@@ -2671,8 +2553,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Causes des échecs ( insuffisamment renseignée)",
-    "en": "Causes des échecs ( insuffisamment renseignée)",
-    "pt": "Causes des échecs ( insuffisamment renseignée)"
+    "en": "Causes des échecs ( insuffisamment renseignée)"
    },
    "value_field": "pillar_11_eds/realisation_ed8",
    "comment_field": "pillar_11_eds/comment_ed8",
@@ -2692,8 +2573,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé",
-    "en": "Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé",
-    "pt": "Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé"
+    "en": "Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé"
    },
    "value_field": "pillar_11_eds/realisation_ed9",
    "comment_field": "pillar_11_eds/comment_ed9",
@@ -2713,8 +2593,7 @@
    "group": "pillar_11_eds",
    "label": {
     "fr": "Nombre d'EDS realisees parrapport au nombre demandes",
-    "en": "Nombre d'EDS realisees parrapport au nombre demandes",
-    "pt": "Nombre d'EDS realisees parrapport au nombre demandes"
+    "en": "Nombre d'EDS realisees parrapport au nombre demandes"
    },
    "value_field": "pillar_11_eds/realisation_ed10",
    "comment_field": "pillar_11_eds/comment_ed10",

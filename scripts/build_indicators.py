@@ -3,8 +3,8 @@
 Build the indicator registry (docs/data/indicators.json) from the XLSForm.
 
 The XLSForm is the single source of truth for what an indicator *is*: its code,
-its pillar, its label in FR/EN/PT, and its target (which is written into the
-`note` label as "Cible : X" / "Target: X" / "Meta: X").
+its pillar, its label in FR/EN, and its target (which is written into the
+`note` label as "Cible : X" / "Target: X").
 
 Re-run this whenever the form is edited and re-deployed:
     python scripts/build_indicators.py form/KPI3_XLSForm_grid_no_question_groups.xlsx
@@ -27,7 +27,7 @@ DEFAULT_FORM = ROOT / "form" / "KPI3_XLSForm_grid_no_question_groups.xlsx"
 OUT = ROOT / "docs" / "data" / "indicators.json"
 OVERRIDES = ROOT / "config" / "overrides.json"
 
-TARGET_MARKERS = {"fr": "Cible", "en": "Target", "pt": "Meta"}
+TARGET_MARKERS = {"fr": "Cible", "en": "Target"}
 
 # --- classification vocabulary -------------------------------------------------
 PERCENT_WORDS = ("pourcentage", "proportion", "taux", "%")
@@ -72,10 +72,16 @@ def parse_target(raw):
     text = raw.replace(",", ".").strip()
     if text in {"—", "-", "–", ""} or deaccent(text).startswith("non defini"):
         return None, None, False
+    # Check two-character operators before the bare "<" / ">" so "<=" is not
+    # read twice; the form writes targets like "<50%" with no equals sign.
     operator = "="
     if any(sym in text for sym in ("≤", "<=", "au plus", "moins de")):
         operator = "<="
     elif any(sym in text for sym in ("≥", ">=", "au moins", "plus de")):
+        operator = ">="
+    elif "<" in text:
+        operator = "<="
+    elif ">" in text:
         operator = ">="
     match = re.search(r"-?\d+(?:\.\d+)?", text)
     if not match:
@@ -136,7 +142,6 @@ def main(form_path):
         row["name"]: {
             "fr": row["label::French"],
             "en": row["label::English"],
-            "pt": row["label::Portuguese"],
         }
         for _, row in choices[choices["list_name"] == "response_pillar"].iterrows()
         if row["name"] != "all"
@@ -171,11 +176,10 @@ def main(form_path):
         if rtype == "note" and str(name).startswith("target_"):
             label_fr, target_fr = split_label(row["label::French"], "fr")
             label_en, target_en = split_label(row["label::English"], "en")
-            label_pt, target_pt = split_label(row["label::Portuguese"], "pt")
             pending = {
                 "note_field": name,
-                "label": {"fr": label_fr, "en": label_en, "pt": label_pt},
-                "target_raw": target_fr or target_en or target_pt,
+                "label": {"fr": label_fr, "en": label_en},
+                "target_raw": target_fr or target_en,
             }
             continue
 

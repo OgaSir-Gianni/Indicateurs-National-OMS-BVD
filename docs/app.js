@@ -7,7 +7,7 @@
 
 const T = {
   fr: {
-    period: "Période", pillar: "Pilier", status: "Statut", search: "Rechercher",
+    period: "Période", pillar: "Pilier", status: "Statut",
     export: "Exporter CSV", last: "Dernier jour rapporté", d7: "7 derniers jours",
     d30: "30 derniers jours", all: "Tout l'historique", allPillars: "Tous les piliers",
     stAll: "Tous", stOk: "Cible atteinte", stWatch: "À surveiller", stOff: "Hors cible",
@@ -34,7 +34,7 @@ const T = {
     footer: "Source : formulaire ONA hébergé sur whonghub.org. Les valeurs sont celles saisies par les points focaux des piliers, sans retraitement.",
   },
   en: {
-    period: "Period", pillar: "Pillar", status: "Status", search: "Search",
+    period: "Period", pillar: "Pillar", status: "Status",
     export: "Export CSV", last: "Latest reported day", d7: "Last 7 days",
     d30: "Last 30 days", all: "Full history", allPillars: "All pillars",
     stAll: "All", stOk: "On target", stWatch: "Watch", stOff: "Off target",
@@ -63,7 +63,7 @@ const T = {
 };
 
 const state = {
-  lang: "fr", period: "7", pillar: "all", status: "all", q: "",
+  lang: "fr", period: "7", pillar: "all", status: "all",
   manual: new Map(),   // pillar id -> user-chosen collapsed state
   openRow: null,
 };
@@ -178,13 +178,8 @@ function reportingPillars(subs, series) {
 }
 
 function visibleIndicators(series) {
-  const q = state.q.trim().toLowerCase();
   return REG.indicators.filter((ind) => {
     if (state.pillar !== "all" && ind.pillar !== state.pillar) return false;
-    if (q) {
-      const hay = `${ind.code} ${ind.label[state.lang] || ind.label.fr}`.toLowerCase();
-      if (!hay.includes(q)) return false;
-    }
     if (state.status !== "all") {
       const list = series[ind.id];
       const last = list && list.length ? list[list.length - 1].value : undefined;
@@ -300,7 +295,8 @@ function renderAttention(series, reporting) {
   items.sort((a, b) => (rank[a.st] - rank[b.st]) || (a.ind.order - b.ind.order));
 
   const offN = items.filter((i) => i.st === "off").length;
-  $("#attn-sub").textContent = items.length
+  const attnSub = $("#attn-sub");
+  if (attnSub) attnSub.textContent = items.length
     ? `${offN} ${t("attnOff")} · ${items.length - offN} ${t("attnWatch")}` : "";
 
   if (!items.length) {
@@ -350,7 +346,8 @@ function renderCoverage(subs, reporting) {
   }).join("");
 
   $("#coverage").innerHTML = `<table>${head}${rows}</table>`;
-  $("#coverage-sub").textContent = t("coverageSub");
+  const covSub = $("#coverage-sub");
+  if (covSub) covSub.textContent = t("coverageSub");
   $("#coverage-legend").innerHTML = ["0", "< 25 %", "25–50 %", "50–75 %", "75–99 %", "100 %"]
     .map((lab, i) => `<span><span class="swatch" style="background:var(--c${i})"></span>${lab}</span>`).join("");
 }
@@ -577,11 +574,6 @@ function bind() {
   $("#f-period").addEventListener("change", (e) => { state.period = e.target.value; render(); });
   $("#f-pillar").addEventListener("change", (e) => { state.pillar = e.target.value; render(); });
   $("#f-status").addEventListener("change", (e) => { state.status = e.target.value; render(); });
-  let timer;
-  $("#f-search").addEventListener("input", (e) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => { state.q = e.target.value; render(); }, 180);
-  });
   $("#btn-csv").addEventListener("click", exportCsv);
   document.querySelectorAll(".langs button").forEach((b) =>
     b.addEventListener("click", () => { state.lang = b.dataset.lang; render(); }));

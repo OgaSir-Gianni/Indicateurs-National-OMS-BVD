@@ -1,4 +1,18 @@
 submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indicator_fr,unit,direction,target,value,comment
+63700169,2026-07-13,2026-08-07T11:04:35,Paul GBADIA,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,98.0,"Menage: 74 ,  ESS: 17 , CTE: 7"
+63700169,2026-07-13,2026-08-07T11:04:35,Paul GBADIA,pillar_11,ED4,Nombres d'EDS realise désagrège par lieu de provenance,count,higher,,78.0,"Menage: 59 , ESS : 12 , CTE:7"
+63700169,2026-07-13,2026-08-07T11:04:35,Paul GBADIA,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,1.0,Manage: 1
+63700169,2026-07-13,2026-08-07T11:04:35,Paul GBADIA,pillar_11,ED7,Nombre de SWAB prélève par lieu de provenance,count,higher,,19.0,"Menage: 14 , ESS : 5"
+63700169,2026-07-13,2026-08-07T11:04:35,Paul GBADIA,pillar_11,ED8,Causes des échecs ( insuffisamment renseignée),count,lower,,1.0,AS de Nizi: Insuffisance d'equipes EDS
+63700169,2026-07-13,2026-08-07T11:04:35,Paul GBADIA,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,79.73,
+63700169,2026-07-13,2026-08-07T11:04:35,Paul GBADIA,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,79.59,Ce % ne prend pas en compte les reports au jour suivant mais il faut noter que un report n'est pas systematiquement  un echec
+63700785,2026-07-14,2026-08-07T11:20:45,Paul GBADIA,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,81.0,Menages: 56   ESS: 10      CTE: 15
+63700785,2026-07-14,2026-08-07T11:20:45,Paul GBADIA,pillar_11,ED4,Nombres d'EDS realise désagrège par lieu de provenance,count,higher,,57.0,Menages: 36   ESS: 8      CTE: 13
+63700785,2026-07-14,2026-08-07T11:20:45,Paul GBADIA,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,0.0,
+63700785,2026-07-14,2026-08-07T11:20:45,Paul GBADIA,pillar_11,ED6,Nombre de reports désagrège par lieu de provenance,count,higher,,24.0,Menages: 20   ESS: 2      CTE: 2
+63700785,2026-07-14,2026-08-07T11:20:45,Paul GBADIA,pillar_11,ED7,Nombre de SWAB prélève par lieu de provenance,count,higher,,39.0,Menages: 35   ESS: 4
+63700785,2026-07-14,2026-08-07T11:20:45,Paul GBADIA,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.6429,
+63700785,2026-07-14,2026-08-07T11:20:45,Paul GBADIA,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,0.7037,
 63589655,2026-07-31,2026-08-03T14:45:53,Islande Georges CADET,pillar_9,PS1,Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS),count,higher,,1.0,Oui - Le circuit de référencement des cas VBG/EAS existe et il a été mis à jour au cours du 2ème trimestre 2026
 63589655,2026-07-31,2026-08-03T14:45:53,Islande Georges CADET,pillar_9,PS2,Existence d'une carte des canaux de signalement des cas d'EAS/HS,count,higher,,1.0,Oui – 2 lignes vertes existent et 12 CBCM sont redynamisés – des boites à suggestions existent à Mongbwalu -Cependant certaines zones manquent de canaux de signalement
 63589655,2026-07-31,2026-08-03T14:45:53,Islande Georges CADET,pillar_9,PS3,Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet,count,higher,,1.0,"L’analyse des risques EAS/HS a été réalisée au début du mois de juin– des facteurs de risques ont été identifiés, ainsi que les mesures de mitigation de ces risques."

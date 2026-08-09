@@ -1,0 +1,125 @@
+﻿Code;Pilier;Indicateur;Unité détectée;Cible;Proposition (rapportage hebdomadaire);À confirmer;Remarque
+S1;P1;Nombre de nouveaux cas confirmés;count;≤ 0.0;Somme de la semaine (total des 7 jours);X;Ou instantané « dernières 24 h » ? (exception évoquée par K. Gausi)
+S2;P1;Nombre de nouveaux cas probables;count;≤ 0.0;Somme de la semaine (total des 7 jours);X;Ou instantané « dernières 24 h » ? (exception évoquée par K. Gausi)
+S3;P1;Nombre cumulé de cas depuis le début de l'épidémie;count;—;État en fin de semaine;;Cumul depuis le début de l'épidémie — valeur au samedi
+S4;P1;Nombre de nouveaux cas suspects;count;—;Somme de la semaine (total des 7 jours);X;Ou instantané « dernières 24 h » ? (exception évoquée par K. Gausi)
+S5;P1;Nombre de nouvelles aires de santé touchées;count;—;Somme de la semaine (total des 7 jours);;
+S6;P1;Pourcentage de nouveaux cas probables / confirmés précédemment inscrits sur les listes de contacts;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+S7;P1;Pourcentage des cas confirmés/probables dont les contacts ont été repertoriés dans les 24 heures;percent;≥ 100.0;Valeur pour la semaine (%);;
+S8;P1;Pourcentage de cas (des cas confirmés + probables) pour lesquels la recherche des contacts a été effectuée (21 jours);percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+S9;P1;Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes;percent;≥ 1.0;Valeur pour la semaine (%);X;Le libellé parle des « 24 heures précédentes » — moyenne sur la semaine ? · Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+S10;P1;Pourcentage de contacts perdus de vue;percent;≤ 0.0;Valeur pour la semaine (%);;
+S11;P1;Pourcentage de contacts ayant terminé la période de suivi de 21 jours;percent;—;Valeur pour la semaine (%);;
+S12;P1;Pourcentage de contacts actifs perdus de vue;percent;—;Valeur pour la semaine (%);;
+S13;P1;Proportion des cas suspects parmi les contacts;percent;—;Valeur pour la semaine (%);;
+S14;P1;Proportion des cas confirmés parmi les contacts;percent;≥ 100.0;Valeur pour la semaine (%);;
+S15;P1;Taux de suivi de contacts;percent;≥ 90.0;Valeur pour la semaine (%);;
+S16;P1;% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees);percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+S17;P1;Proportion d'alertes signalées par rapport aux prévisions (alertes attendues);percent;≥ 80.0;Valeur pour la semaine (%);;
+S18;P1;Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées);percent;≥ 90.0;Valeur pour la semaine (%);;
+S19;P1;Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification;percent;≥ 90.0;Valeur pour la semaine (%);;
+S20;P1;Proportion d'alertes validées (évacuées vers le CTE);percent;≥ 100.0;Valeur pour la semaine (%);;
+S21;P1;Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées;percent;≥ 100.0;Valeur pour la semaine (%);;
+S22;P1;Proportion cas suspects vivants prelevés au CT/CTE normées dans les 24 hrs;percent;—;Valeur pour la semaine (%);;
+S23;P1;Délai moyen entre l'apparition des symptomes et la détection (date de notification);days;≤ 4.0;Moyenne / médiane de la semaine;;
+S24;P1;Proportion de rapports d'investigation avec resumés narratifs;percent;≥ 80.0;Valeur pour la semaine (%);;
+S25;P1;Proportion de rapports de situation (sitreps) produits;percent;≥ 100.0;Valeur pour la semaine (%);;
+PE1;P2;Pourcentage des voyageurs examinés aux PoE / PoC;percent;≥ 0.9;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PE2;P2;Proportion des personnes sensibilisées au point d'entrée/point de contrôle;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PE3;P2;Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE;count;≥ 80.0;Somme de la semaine (total des 7 jours);;
+PE4;P2;Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours;count;≥ 1.0;État en fin de semaine;;Déjà formulé sur les 7 derniers jours — oui = 1 / non = 0 ?
+PE5;P2;Nombre des contacts interceptés au point d'entrée/point de contrôle;count;—;Somme de la semaine (total des 7 jours);;
+L1;P3;Taux de positivité (nombre de nouveaux cas confirmés positifs/nombre des tests effectués-nouveaux échantillons);percent;≤ 0.0;Valeur pour la semaine (%);;
+L2;P3;Pourcentage des résultats de laboratoire disponibles pour tous les cas dans les 48 heures;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+L3;P3;Proportion des décés dans la communauté ayant donné lieu à un test positif;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+L4;P3;Nombre d'ncidents biologiques signalés;count;≤ 0.0;Somme de la semaine (total des 7 jours);;
+L5;P3;Taux de rupture de stock (réactifs/EPI);percent;≤ 5.0;Valeur pour la semaine (%);;
+L6;P3;Proportion de décès dans la communauté testés positifs;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PC1;P4;Proportion des prestataires de santé de première ligne (PPL) infectés parmi les cas confirmés d'Ebola;percent;≤ 0.0;Valeur pour la semaine (%);;
+PC2;P4;Proportion d'individus (non PPL) ayant contracté la maladie à virus Ebola (MVE) dans les établissements de soins de santé (ESS);percent;≤ 0.0;Valeur pour la semaine (%);;
+PC3;P4;Proportion d'établissements de santé ayant obtenu un score supérieur à 80% sur la fiche d'évaluation PCI;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PC4;P4;Proportion d'établissements de santé ayant reçu des kits PCI;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PC5;P4;Proportion d'établissements unidirectionnel de santé disposant d'un circuit de triage;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PC6;P4;Proportion d'établissements de santé ayant accueilli un cas confirmé décontaminé dans les 48 heures;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+CM1;P5;Pourcentage des profesionnels de santé des zone de santé formés ou briefés sur la prise en charge clinique des cas de MVE et les protocoles PCI;percent;≥ 0.9;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+CM2;P5;Taux de létalité parmi les cas confirmés admis au centre de traitement Ebola dans les 24 heures;percent;≤ 50.0;Valeur pour la semaine (%);;
+CM3;P5;Taux de létalité parmi les cas suspects admis au centre de traitement Ebola et centre de transit dans les 24 heures;percent;≤ 50.0;Valeur pour la semaine (%);;
+CM4;P5;Pourcentage d'échantillon des cas suspects analysés dans les 24 heures;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+CM5;P5;Taux de létalité pour tous les cas confirmés admis dans les centres de traitement Ebola;percent;≤ 50.0;Valeur pour la semaine (%);;
+CM6;P5;% d’établissements transmettant des données quotidiennes complètes sur les admissions, sorties et décès (cas suspects et confirmés), désagrégées par âge et sexe (ou capacité à le faire);percent;—;Valeur pour la semaine (%);;
+CM7;P5;% de patients bénéficiant d’un examen médical documenté toutes les 24 heures;percent;—;Valeur pour la semaine (%);;
+CM8;P5;Médiane du délai entre l’apparition des symptômes et l’arrivée dans un établissement de prise en charge;days;—;Moyenne / médiane de la semaine;;
+CM9;P5;Établissements disposant d’un stock de 7 jours de médicaments OSOC et d’EPI;count;—;État en fin de semaine;X;Nombre d'établissements ou oui/non ?
+CM10;P5;Proportion d’établissements ayant signalé une panne d’électricité ayant affecté les soins critiques (éclairage, oxygène) pendant plus de 10 minutes au cours des 7 derniers jours;percent;—;Valeur pour la semaine (%);;
+CM11;P5;Pourcentage d'enfants de moins de 23 mois qui ont reçu des conseils appropriés sur l'ANJE en situation d'urgence;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+SM1;P5;Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+SM2;P5;Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+SM3;P5;Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+NUT1;P5;Pourcentage d'enfants séparés pris en charge dans la crèche;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+NUT2;P5;Proportion des patients atteints de la MVE (suspectés et confirmés) ayant reçu un soutien nutritionnel approprié;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+NUT3;P5;Proportion de patients instables ayant bénéficié d'un régime alimentaire et/ou nutritionnel spécifique;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+SS1;P6;Nombre de survivants de la MVB;count;—;État en fin de semaine;;Effectif total de survivants suivis au samedi
+SS2;P6;Taux de suivi mensuel;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+SS3;P6;Exhaustivité des dossiers médicaux (y compris les données psychosociales, biologiques et nutritionnelles);count;—;Valeur pour la semaine (%);X;« Exhaustivité des dossiers » : pourcentage ou score ? Unité à préciser
+SS4;P6;Nombre des survivants décédés pendant le suivi;count;≤ 0.0;Somme de la semaine (total des 7 jours);;
+SS5;P6;Proportion des décès vérifiés pendant le suivi;percent;—;Valeur pour la semaine (%);;
+SS6;P6;Proportion de survivant atteint d'une maladie physique au cours du mois;percent;—;Valeur pour la semaine (%);;
+SS7;P6;Proportion de survivants ayant terminé le suivi psychologique;percent;—;Valeur pour la semaine (%);;
+SS8;P6;Proportion de survivants ayant bénéficié d'un accompagnement psychologique pour la prévention et la transmission sexuelle secondaire;percent;—;Valeur pour la semaine (%);;
+SS9;P6;Proportion d'enfants de moins de 5 ans ayant fait l'objet d'une évaluation de leur état nutritionnel;percent;—;Valeur pour la semaine (%);;
+C1;P7;Nombre des réunions de coordination de la CREC organisées;count;—;Somme de la semaine (total des 7 jours);;
+C2;P7;Nombre des spots radio/émissions télévisées consacrés au virus Ebola;count;—;Somme de la semaine (total des 7 jours);;
+C3;P7;Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services;count;—;Somme de la semaine (total des 7 jours);;
+C4;P7;Nombre d'alertes signalées par les acteurs communautaires;count;—;Somme de la semaine (total des 7 jours);;
+C5;P7;Pourcentage des cas suspects de la MVE rapidement orientés vers un centre des soins (dans les 24h à 48h);percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+C6;P7;Nombre de rumeurs et infodemies collectés, analysés et rapportés;count;—;Somme de la semaine (total des 7 jours);;
+C7;P7;Pourcentage des commentaires (feedback) de la communauté traités dans un délai défini (24 - 48 hrs);percent;—;Valeur pour la semaine (%);;
+C8;P7;Nombre d'acteurs de la communauté briefes/ formés à la prévention du virus Ebola et à l'engagement communautaire;count;—;Somme de la semaine (total des 7 jours);;
+C9;P7;Proportion des leaders engagés et qui sensibilisent leurs communautés (par ZS);percent;≥ 0.9;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+C10;P7;Proportion des personnes sensibilisées qui connaissent au moins 4 symptomes de la MVE (CAP);percent;≥ 0.9;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+C11;P7;% des reocommandations de la rechereche qualitative implementees par rapport aux recommandations developpées;percent;—;Valeur pour la semaine (%);;
+SL1;P8;Couverture des besoins en véhicules;percent;≥ 80;Valeur pour la semaine (%);;Couverture des besoins — cible 80 %
+SL2;P8;Couverture des besoins en motos;percent;≥ 100;Valeur pour la semaine (%);;Couverture des besoins — cible 100 %
+SL3;P8;Couverture des besoins en ambulances;percent;≥ 85;Valeur pour la semaine (%);;Couverture des besoins — cible 85 %
+SL4;P8;Disponibilité de stocks d'équipements et autres matériels d'intervention;count;≥ 1.0;État en fin de semaine;X;Disponibilité : oui/non ou pourcentage ?
+SL5;P8;Pourcentage des piliers bénéficiant d'apport;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+SL6;P8;CTE construits conformément aux normes;count;≥ 1.0;État en fin de semaine;X;Nombre de CTE ou oui/non ?
+SL7;P8;Taux de disponibilité des articles critiques;percent;≥ 95.0;Valeur pour la semaine (%);;
+SL8;P8;Nombre de ruptures de stock critiques;count;≤ 0.0;Somme de la semaine (total des 7 jours);;
+SL9;P8;Nombre de distributions effectuées;count;—;Somme de la semaine (total des 7 jours);;
+SL10;P8;Nombre de partenaires approvisionnés et bénéficiant du support/soutien technique de OSL;count;—;Somme de la semaine (total des 7 jours);;
+SL11;P8;Extension des opérations soutenue par les missions terrain et les évaluations techniques;ratio;—;Ratio de la semaine;;
+SL12;P8;Structures de prise en charge appuyées par l'OSL;count;—;Somme de la semaine (total des 7 jours);;
+SL13;P8;Évaluations techniques pour l'extension de la riposte;count;—;Somme de la semaine (total des 7 jours);;
+SL14;P8;Couverture opérationnelle SDB;percent;≥ 70;Valeur pour la semaine (%);;Couverture opérationnelle — cible 70 %
+SL15;P8;Proportion des besoins en personnel OSL déployé (couverts);percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PS1;P9;Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS);count;—;État en fin de semaine;;Existence : oui = 1 / non = 0
+PS2;P9;Existence d'une carte des canaux de signalement des cas d'EAS/HS;count;—;État en fin de semaine;;Existence : oui = 1 / non = 0
+PS3;P9;Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet;count;—;État en fin de semaine;;Existence : oui = 1 / non = 0
+PS4;P9;Pourcentage des comités de gestion des plaintes (CBCM) mis en place dans les zones de santé concernees par a reponse;percent;≥ 0.8;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PS5;P9;Pourcentage des femmes impliquées dans la gestion/animation des CBCM;percent;≥ 0.8;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PS6;P9;Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte;percent;—;Valeur pour la semaine (%);;
+PS7;P9;Pourcentage de survivants d'EAS pris en charge;percent;—;Valeur pour la semaine (%);;
+PS8;P9;Pourcentage des agents de santé communautaires sensibilisés aux violences sexuelles et sexistes et aux situations d'urgence humanitaire dans les zones qffectees par la MVE;percent;—;Valeur pour la semaine (%);;
+PS9;P9;Pourcentage de répondeurs sensibilisés à l'EAS/HS;percent;≥ 0.9;Valeur pour la semaine (%);X;Le point focal P9 indique que cet indicateur doit être retiré (commentaire du 31/07) · Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PS10;P9;Pourcentage des personnes briefées sur la violence sexiste et l'EAS/HS via des activités/Affichages/médias;percent;≥ 0.8;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+PS11;P9;Nombre de personnes sensibilisées dans la communauté;count;—;Somme de la semaine (total des 7 jours);;
+CX1;P10;Nombre de produits de communication développés;count;—;Somme de la semaine (total des 7 jours);;
+CX2;P10;Nombre de produits validés et transmis à HQ, AFRO et WCO;count;—;Somme de la semaine (total des 7 jours);;
+CX3;P10;Nombre de produits publiés;count;—;Somme de la semaine (total des 7 jours);;
+CX4;P10;Nombre re missions de terrain couvertes;count;—;Somme de la semaine (total des 7 jours);;
+CX5;P10;Communautés mises en valeur;count;—;Somme de la semaine (total des 7 jours);;
+CX6;P10;Nombre Piliers de la riposte mis en valeur (publications de la semaine);count;—;Somme de la semaine (total des 7 jours);;
+CX7;P10;Interviews/interventions médiatiques;count;—;Somme de la semaine (total des 7 jours);;
+CX8;P10;Performance sur les reseaux sociaux;count;—;À définir;X;« Performance sur les réseaux sociaux » : quelle mesure, quelle unité ?
+CX9;P10;Nombre de donateurs mis en valeurs (par mois);count;—;Somme de la semaine (total des 7 jours);;
+ED1;P11;Pourcentage des familles acceptant les EDS;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+ED2;P11;Pourcentage des cas suspects décédés investigués et prelevés/swabés;percent;≥ 100.0;Valeur pour la semaine (%);;
+ED3;P11;Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE);count;—;Somme de la semaine (total des 7 jours);;
+ED4;P11;Nombres d'EDS realise désagrège par lieu de provenance;count;—;Somme de la semaine (total des 7 jours);;
+ED5;P11;Nombre d'échecs désagrège par lieu de provenance;count;—;Somme de la semaine (total des 7 jours);;
+ED6;P11;Nombre de reports désagrège par lieu de provenance;count;—;Somme de la semaine (total des 7 jours);;
+ED7;P11;Nombre de SWAB prélève par lieu de provenance;count;—;Somme de la semaine (total des 7 jours);;
+ED8;P11;Causes des échecs ( insuffisamment renseignée);count;—;À définir;X;Question qualitative saisie comme nombre — à reformuler ou retirer ?
+ED9;P11;Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé;percent;≥ 1.0;Valeur pour la semaine (%);;Cible écrite en fraction dans le formulaire (1 = 100 %) — à corriger en 0–100
+ED10;P11;Nombre d'EDS realisees parrapport au nombre demandes;ratio;—;Ratio de la semaine;;

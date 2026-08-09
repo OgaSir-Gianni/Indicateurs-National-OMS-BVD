@@ -1,77 +1,118 @@
 /* Indicateurs BVD — dashboard logic.
    No build step, no dependencies: two JSON files in, one page out.
 
-   Reporting model: each submission covers ONE pillar's indicators, so
-   completeness is always judged against the pillars that actually reported
-   in the selected period — never against the whole form. */
+   Reporting model (per K. Gausi, Aug 2026): reporting is WEEKLY.
+   - A week runs Sunday..Saturday and is labelled by its closing Saturday.
+   - Each submission is bucketed into the week that contains its reporting
+     date. One report per pillar per week: the most recently *submitted*
+     one wins and wholly replaces earlier ones for that week.
+   - A report submitted after its week's Saturday is flagged "late"
+     (window stays open until Tuesday 23:59 Bunia; the form enforces
+     nothing yet, the dashboard only labels).
+   - Completeness is judged against the pillars that reported, never
+     against the whole form. */
 
 const T = {
   fr: {
     period: "Période", pillar: "Pilier", status: "Statut",
-    export: "Exporter CSV", last: "Dernier jour rapporté", d7: "7 derniers jours",
-    d30: "30 derniers jours", all: "Tout l'historique", allPillars: "Tous les piliers",
+    export: "Exporter CSV", w1: "Semaine en cours", w4: "4 dernières semaines",
+    w12: "12 dernières semaines", all: "Tout l'historique", allPillars: "Tous les piliers",
     stAll: "Tous", stOk: "Cible atteinte", stWatch: "À surveiller", stOff: "Hors cible",
     stNone: "Non renseigné", noTarget: "Sans cible",
     tilePillars: "Piliers ayant rapporté", tileFilled: "Indicateurs renseignés",
-    onTarget: "Cible atteinte", offTarget: "Hors cible", submissions: "Soumissions",
-    evaluated: "des indicateurs évalués", uDays: "j",
+    onTarget: "Cible atteinte", offTarget: "Hors cible", reports: "Rapports reçus",
+    evaluated: "des indicateurs évalués", weekAbbr: "sem. au", late: "En retard",
+    lateN: "en retard", deltaCol: "Δ sem.",
     attnTitle: "Points d'attention",
     attnEmpty: "Rien à signaler : tous les indicateurs rapportés avec cible sont dans la cible.",
     attnOff: "hors cible", attnWatch: "à surveiller",
     coverageTitle: "Complétude du rapportage",
-    coverageSub: "indicateurs renseignés chaque jour, par rapport aux indicateurs du pilier",
+    coverageSub: "indicateurs renseignés par semaine, par rapport aux indicateurs du pilier",
     noReport: "Aucun rapport sur la période",
     code: "Code", indicator: "Indicateur", latest: "Dernière valeur", target: "Cible",
-    trend: "Tendance", none: "—",
+    trend: "Tendance", none: "—", week: "Semaine",
     empty: "Aucun indicateur ne correspond à ces filtres.",
     sample: "Données de démonstration.",
     sampleBody: "Ce tableau de bord affiche un jeu de données fictif. Il sera remplacé par les vraies soumissions dès la première exécution de l'action GitHub <code>refresh-data</code>.",
     scaleWarn: "Cible saisie en fraction (1 = 100 %) dans le formulaire ; affichée ici sur 100.",
     comments: "Commentaires des rapporteurs", history: "Historique", reportedBy: "Rapporté par",
-    generalComment: "Commentaire général du pilier",
     updated: "Données actualisées le", version: "Version du formulaire", openForm: "Ouvrir le formulaire",
     noComment: "Aucun commentaire saisi sur la période.",
-    footer: "Source : formulaire ONA hébergé sur whonghub.org. Les valeurs sont celles saisies par les points focaux des piliers, sans retraitement.",
+    footer: "Source : formulaire ONA hébergé sur whonghub.org. Les valeurs sont celles saisies par les points focaux des piliers, sans retraitement. Rapportage hebdomadaire : semaine du dimanche au samedi, un rapport par pilier et par semaine (le plus récent remplace les précédents).",
   },
   en: {
     period: "Period", pillar: "Pillar", status: "Status",
-    export: "Export CSV", last: "Latest reported day", d7: "Last 7 days",
-    d30: "Last 30 days", all: "Full history", allPillars: "All pillars",
+    export: "Export CSV", w1: "Current week", w4: "Last 4 weeks",
+    w12: "Last 12 weeks", all: "Full history", allPillars: "All pillars",
     stAll: "All", stOk: "On target", stWatch: "Watch", stOff: "Off target",
     stNone: "Not reported", noTarget: "No target",
     tilePillars: "Pillars reporting", tileFilled: "Indicators filled",
-    onTarget: "On target", offTarget: "Off target", submissions: "Submissions",
-    evaluated: "of indicators with a target", uDays: "d",
+    onTarget: "On target", offTarget: "Off target", reports: "Reports received",
+    evaluated: "of indicators with a target", weekAbbr: "week ending", late: "Late",
+    lateN: "late", deltaCol: "Δ week",
     attnTitle: "Needs attention",
     attnEmpty: "Nothing to flag: every reported indicator with a target is on target.",
     attnOff: "off target", attnWatch: "to watch",
     coverageTitle: "Reporting completeness",
-    coverageSub: "indicators filled each day, out of the pillar's own indicators",
+    coverageSub: "indicators filled per week, out of the pillar's own indicators",
     noReport: "No report in this period",
     code: "Code", indicator: "Indicator", latest: "Latest value", target: "Target",
-    trend: "Trend", none: "—",
+    trend: "Trend", none: "—", week: "Week",
     empty: "No indicator matches these filters.",
     sample: "Demonstration data.",
     sampleBody: "This dashboard is showing a fictional dataset. It is replaced by real submissions on the first run of the <code>refresh-data</code> GitHub action.",
     scaleWarn: "Target entered as a fraction (1 = 100%) in the form; shown here out of 100.",
     comments: "Reporter comments", history: "History", reportedBy: "Reported by",
-    generalComment: "Pillar general comment",
     updated: "Data refreshed", version: "Form version", openForm: "Open the form",
     noComment: "No comment recorded for this period.",
-    footer: "Source: ONA form hosted on whonghub.org. Values are as entered by pillar focal points, with no reprocessing.",
+    footer: "Source: ONA form hosted on whonghub.org. Values are as entered by pillar focal points, with no reprocessing. Weekly reporting: weeks run Sunday to Saturday, one report per pillar per week (the most recent replaces earlier ones).",
   },
 };
 
 const state = {
-  lang: "fr", period: "7", pillar: "all", status: "all",
+  lang: "fr", period: "4", pillar: "all", status: "all",
   manual: new Map(),   // pillar id -> user-chosen collapsed state
   openRow: null,
 };
-let REG = null, SUB = null, BY_ID = {}, PILLAR_OF = {}, DATES = [];
+let REG = null, SUB = null, BY_ID = {}, WEEKS = [], CURWEEK = null;
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const t = (key) => T[state.lang][key] ?? key;
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+/* ---------- weeks ---------- */
+
+// The Saturday that closes the Sunday..Saturday week containing dateStr.
+function weekEnd(dateStr) {
+  const d = new Date(`${dateStr.slice(0, 10)}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + (6 - d.getUTCDay()));
+  return d.toISOString().slice(0, 10);
+}
+
+function buildWeeks() {
+  const subWeeks = SUB.submissions.filter((s) => s.date).map((s) => weekEnd(s.date)).sort();
+  const gen = (SUB.generated_at || "").slice(0, 10);
+  // The current reporting week is the one closed by the most recent Saturday
+  // (reports arrive Saturday..Tuesday for the week that just ended).
+  const today = new Date(`${gen}T00:00:00Z`);
+  today.setUTCDate(today.getUTCDate() - ((today.getUTCDay() + 1) % 7));
+  CURWEEK = today.toISOString().slice(0, 10);
+  const last = [CURWEEK, ...subWeeks].sort().at(-1);
+  const first = subWeeks.length ? subWeeks[0] : CURWEEK;
+  const out = [];
+  const cur = new Date(`${first}T00:00:00Z`);
+  const stop = new Date(`${last}T00:00:00Z`);
+  while (cur <= stop) {
+    out.push(cur.toISOString().slice(0, 10));
+    cur.setUTCDate(cur.getUTCDate() + 7);
+  }
+  WEEKS = out;
+}
+
+function periodWeeks() {
+  if (state.period === "all") return WEEKS;
+  return WEEKS.slice(-Number(state.period));
+}
 
 /* ---------- indicator maths ---------- */
 
@@ -108,14 +149,14 @@ function chipLabel(st) {
 function fmt(value, unit) {
   if (value === undefined || value === null) return t("none");
   if (unit === "percent") return `${(Math.round(value * 10) / 10).toLocaleString()}<span class="unit"> %</span>`;
-  if (unit === "days") return `${(Math.round(value * 10) / 10).toLocaleString()}<span class="unit"> ${t("uDays")}</span>`;
+  if (unit === "days") return `${(Math.round(value * 10) / 10).toLocaleString()}<span class="unit"> j</span>`;
   if (unit === "ratio") return (Math.round(value * 100) / 100).toLocaleString();
   return Math.round(value).toLocaleString();
 }
 function fmtPlain(value, unit) {
   if (value === undefined || value === null) return t("none");
   if (unit === "percent") return `${Math.round(value * 10) / 10} %`;
-  if (unit === "days") return `${Math.round(value * 10) / 10} ${t("uDays")}`;
+  if (unit === "days") return `${Math.round(value * 10) / 10} j`;
   if (unit === "ratio") return String(Math.round(value * 100) / 100);
   return String(Math.round(value));
 }
@@ -125,56 +166,58 @@ function targetText(ind) {
   return `${ind.direction === "lower" ? "≤" : "≥"} ${target.toLocaleString()}`;
 }
 
-/* ---------- selection ---------- */
-
-// Calendar days, not just days that have a submission: a day nobody
-// reported must show up as a gap, not silently disappear from the axis.
-// "all" keeps submission dates only, so long histories stay compact.
-function periodDates() {
-  if (!DATES.length) return [];
-  if (state.period === "all") return DATES;
-  if (state.period === "last") return DATES.slice(-1);
-  const latest = DATES[DATES.length - 1];
-  const gen = (SUB.generated_at || "").slice(0, 10);
-  const end = gen > latest ? gen : latest;
-  const out = [];
-  const cur = new Date(`${end}T00:00:00Z`);
-  cur.setUTCDate(cur.getUTCDate() - (Number(state.period) - 1));
-  const stop = new Date(`${end}T00:00:00Z`);
-  while (cur <= stop) {
-    out.push(cur.toISOString().slice(0, 10));
-    cur.setUTCDate(cur.getUTCDate() + 1);
-  }
-  return out;
+// Week-on-week movement, coloured by whether the move is desirable.
+function deltaCell(points, ind) {
+  if (points.length < 2) return `<span class="delta flat">${t("none")}</span>`;
+  const prev = points[points.length - 2].value, curr = points[points.length - 1].value;
+  const diff = curr - prev;
+  if (Math.abs(diff) < 1e-9) return `<span class="delta flat">=</span>`;
+  const good = ind.direction === "lower" ? diff < 0 : diff > 0;
+  const arrow = diff > 0 ? "▲" : "▼";
+  const mag = ind.unit === "ratio" ? Math.round(Math.abs(diff) * 100) / 100 : Math.round(Math.abs(diff) * 10) / 10;
+  return `<span class="delta ${good ? "good" : "bad"}">${arrow} ${mag.toLocaleString()}</span>`;
 }
 
-function activeSubmissions() {
-  const keep = new Set(periodDates());
-  return SUB.submissions.filter((s) => keep.has(s.date));
+/* ---------- weekly selection ---------- */
+
+function pillarOfSub(sub) {
+  if (sub.pillar) return sub.pillar;
+  for (const key of Object.keys(sub.values || {})) if (BY_ID[key]) return BY_ID[key].pillar;
+  return null;
 }
 
-// indicator id -> [{date, value, comment, by}] ordered by date
-function seriesByIndicator(subs) {
-  const out = {};
-  for (const sub of subs) {
-    for (const [key, value] of Object.entries(sub.values)) {
-      (out[key] ||= []).push({ date: sub.date, value, comment: sub.comments[key] || "", by: sub.by });
+// One winning report per pillar per week: latest submitted_at replaces the rest.
+function weeklyWinners(weeks) {
+  const keep = new Set(weeks);
+  const winners = new Map(); // "pillar|week" -> {sub, week, pillar, late}
+  for (const sub of SUB.submissions) {
+    if (!sub.date) continue;
+    const week = weekEnd(sub.date);
+    if (!keep.has(week)) continue;
+    const pillar = pillarOfSub(sub);
+    if (!pillar) continue;
+    const key = `${pillar}|${week}`;
+    const prev = winners.get(key);
+    if (!prev || String(sub.submitted_at) > String(prev.sub.submitted_at)) {
+      const late = String(sub.submitted_at || "").slice(0, 10) > week;
+      winners.set(key, { sub, week, pillar, late });
     }
   }
-  for (const list of Object.values(out)) list.sort((a, b) => a.date.localeCompare(b.date));
-  return out;
+  return winners;
 }
 
-// Pillars that actually sent something in the period — from the submission's
-// own pillar field, plus any pillar whose indicators carry values.
-function reportingPillars(subs, series) {
-  const set = new Set();
-  for (const sub of subs) if (sub.pillar) set.add(sub.pillar);
-  for (const key of Object.keys(series)) {
-    const ind = BY_ID[key];
-    if (ind) set.add(ind.pillar);
+// indicator id -> [{week, value, comment, by, late, rdate}] ordered by week
+function seriesByIndicator(winners) {
+  const out = {};
+  for (const { sub, week, late } of winners.values()) {
+    for (const [key, value] of Object.entries(sub.values)) {
+      (out[key] ||= []).push({
+        week, value, comment: sub.comments[key] || "", by: sub.by, late, rdate: sub.date,
+      });
+    }
   }
-  return set;
+  for (const list of Object.values(out)) list.sort((a, b) => a.week.localeCompare(b.week));
+  return out;
 }
 
 function visibleIndicators(series) {
@@ -215,7 +258,6 @@ function sparkline(points, ind, width = 96, height = 26) {
   </svg>`;
 }
 
-// Round an axis value to something a human reads without squinting.
 const tick = (v) => (Math.abs(v) >= 100 ? Math.round(v) : Math.round(v * 10) / 10).toLocaleString();
 
 function seriesChart(points, ind) {
@@ -237,7 +279,7 @@ function seriesChart(points, ind) {
   const last = points.length - 1;
   const dots = points.map((p, i) => {
     const colour = i === last ? STATUS_COLOR[statusOf(p.value, ind)] : "var(--accent)";
-    const tip = `${p.date}\n${fmtPlain(p.value, ind.unit)}${p.by ? `\n${t("reportedBy")} ${p.by}` : ""}`;
+    const tip = `${t("weekAbbr")} ${p.week}\n${fmtPlain(p.value, ind.unit)}${p.late ? ` · ${t("late")}` : ""}${p.by ? `\n${t("reportedBy")} ${p.by}` : ""}`;
     return `<circle cx="${x(i).toFixed(1)}" cy="${y(p.value).toFixed(1)}" r="4" fill="${colour}" stroke="var(--wash)" stroke-width="2" pointer-events="none"/>
       <circle cx="${x(i).toFixed(1)}" cy="${y(p.value).toFixed(1)}" r="13" fill="transparent" data-tip="${esc(tip)}" tabindex="0"/>`;
   }).join("");
@@ -247,7 +289,7 @@ function seriesChart(points, ind) {
      <text x="${width - padR}" y="${(y(target) - 5).toFixed(1)}" text-anchor="end" font-size="10" fill="var(--thr)">${esc(t("target"))} ${targetText(ind)}</text>`;
 
   const ticks = points.map((p, i) => (i === 0 || i === points.length - 1 || points.length < 9)
-    ? `<text x="${x(i).toFixed(1)}" y="${height - 8}" text-anchor="middle" font-size="9.5" fill="var(--muted)">${p.date.slice(5)}</text>` : "").join("");
+    ? `<text x="${x(i).toFixed(1)}" y="${height - 8}" text-anchor="middle" font-size="9.5" fill="var(--muted)">${p.week.slice(5)}</text>` : "").join("");
 
   return `<svg class="series" viewBox="0 0 ${width} ${height}" role="img" aria-label="${esc(t("history"))}">
     ${grid}${targetLine}
@@ -258,33 +300,43 @@ function seriesChart(points, ind) {
 
 /* ---------- render ---------- */
 
-function renderSummary(series, subs, reporting) {
-  const reported = REG.indicators.filter((i) => series[i.id]?.length);
-  const counts = { ok: 0, watch: 0, off: 0, nt: 0 };
-  for (const ind of reported) {
-    const list = series[ind.id];
-    counts[statusOf(list[list.length - 1].value, ind)]++;
+function renderSummary(series, winners, range) {
+  const week = range[range.length - 1];
+  const weekWinners = [...winners.values()].filter((w) => w.week === week);
+  const reportingNow = new Set(weekWinners.map((w) => w.pillar));
+  const expected = REG.indicators.filter((i) => reportingNow.has(i.pillar)).length;
+
+  let filled = 0;
+  const counts = { ok: 0, watch: 0, off: 0, nt: 0, none: 0 };
+  for (const { sub } of weekWinners) {
+    for (const [key, value] of Object.entries(sub.values)) {
+      const ind = BY_ID[key];
+      if (!ind) continue;
+      filled++;
+      counts[statusOf(value, ind)]++;
+    }
   }
-  const expected = REG.indicators.filter((i) => reporting.has(i.pillar)).length;
   const evaluated = counts.ok + counts.watch + counts.off;
+  const lateN = weekWinners.filter((w) => w.late).length;
+  const weekSub = `${t("weekAbbr")} ${week.slice(5)}`;
+
   const cards = [
-    { k: t("tilePillars"), v: `${reporting.size}<span class="of"> / ${REG.pillars.length}</span>`, s: "", cls: "" },
-    { k: t("tileFilled"), v: `${reported.length}<span class="of"> / ${expected}</span>`,
-      s: expected ? `${Math.round((reported.length / expected) * 100)} %` : t("none"), cls: "" },
+    { k: t("tilePillars"), v: `${reportingNow.size}<span class="of"> / ${REG.pillars.length}</span>`, s: weekSub, cls: "" },
+    { k: t("tileFilled"), v: `${filled}<span class="of">${expected ? ` / ${expected}` : ""}</span>`,
+      s: expected ? `${Math.round((filled / expected) * 100)} % · ${weekSub}` : weekSub, cls: "" },
     { k: t("onTarget"), v: `${counts.ok}`,
-      s: evaluated ? `${Math.round((counts.ok / evaluated) * 100)} % ${t("evaluated")}` : "", cls: "ok" },
-    { k: t("stWatch"), v: `${counts.watch}`, s: "", cls: counts.watch ? "watch" : "" },
-    { k: t("offTarget"), v: `${counts.off}`, s: "", cls: counts.off ? "off" : "" },
-    { k: t("submissions"), v: `${subs.length}`, s: `${periodDates().length} ${t("uDays")}`, cls: "" },
+      s: evaluated ? `${Math.round((counts.ok / evaluated) * 100)} % ${t("evaluated")}` : weekSub, cls: "ok" },
+    { k: t("stWatch"), v: `${counts.watch}`, s: weekSub, cls: counts.watch ? "watch" : "" },
+    { k: t("offTarget"), v: `${counts.off}`, s: weekSub, cls: counts.off ? "off" : "" },
+    { k: t("reports"), v: `${weekWinners.length}`, s: lateN ? `${lateN} ${t("lateN")}` : weekSub, cls: "" },
   ];
   $("#summary").innerHTML = cards.map((c) =>
     `<div class="stat ${c.cls}"><div class="k">${esc(c.k)}</div><div class="v">${c.v}</div><div class="s">${esc(c.s)}</div></div>`).join("");
 }
 
-function renderAttention(series, reporting) {
+function renderAttention(series) {
   const items = [];
   for (const ind of REG.indicators) {
-    if (!reporting.has(ind.pillar)) continue;
     const list = series[ind.id];
     if (!list?.length) continue;
     const lastPoint = list[list.length - 1];
@@ -311,36 +363,27 @@ function renderAttention(series, reporting) {
       <span class="code">${esc(ind.code)}</span>
       <span class="lbl">${esc(ind.label[state.lang] || ind.label.fr)}</span>
       <span class="val">${fmt(lastPoint.value, ind.unit)}</span>
-      <span class="vs">${esc(t("target"))} ${esc(targetText(ind))} · ${esc(lastPoint.date)}</span>
+      <span class="vs">${esc(t("target"))} ${esc(targetText(ind))} · ${esc(t("weekAbbr"))} ${esc(lastPoint.week.slice(5))}</span>
       <span class="tag">P${esc(pillarName)}</span>
     </button>`;
   }).join("");
 }
 
-function renderCoverage(subs, reporting) {
-  const dates = periodDates();
+function renderCoverage(winners, range) {
   const total = {};
   for (const ind of REG.indicators) total[ind.pillar] = (total[ind.pillar] || 0) + 1;
-  const filled = {};
-  for (const sub of subs) {
-    for (const key of Object.keys(sub.values)) {
-      const ind = BY_ID[key];
-      if (!ind) continue;
-      (filled[ind.pillar] ||= {});
-      (filled[ind.pillar][sub.date] ||= new Set()).add(key);
-    }
-  }
-  const bin = (share) => share <= 0 ? 0 : share < .25 ? 1 : share < .5 ? 2 : share < .75 ? 3 : share < .995 ? 4 : 5;
 
-  const head = `<tr><th class="row-head"></th>${dates.map((d) =>
-    `<th class="date-head"><span>${d.slice(5)}</span></th>`).join("")}</tr>`;
+  const head = `<tr><th class="row-head"></th>${range.map((w) =>
+    `<th class="date-head"><span>${w.slice(5)}</span></th>`).join("")}</tr>`;
   const rows = REG.pillars.map((p) => {
     const name = p.label[state.lang] || p.label.fr;
-    const cells = dates.map((d) => {
-      const got = filled[p.id]?.[d]?.size || 0;
+    const cells = range.map((w) => {
+      const winner = winners.get(`${p.id}|${w}`);
+      const got = winner ? Object.keys(winner.sub.values).filter((k) => BY_ID[k]).length : 0;
       const share = total[p.id] ? got / total[p.id] : 0;
-      const tip = `${name}\n${d}\n${got}/${total[p.id] || 0} (${Math.round(share * 100)} %)`;
-      return `<td><span class="cell" style="background:var(--c${bin(share)})" data-tip="${esc(tip)}"></span></td>`;
+      const bin = share <= 0 ? 0 : share < .25 ? 1 : share < .5 ? 2 : share < .75 ? 3 : share < .995 ? 4 : 5;
+      const tip = `${name}\n${t("weekAbbr")} ${w}\n${got}/${total[p.id] || 0} (${Math.round(share * 100)} %)${winner?.late ? `\n${t("late")}` : ""}`;
+      return `<td><span class="cell" style="background:var(--c${bin})" data-tip="${esc(tip)}">${winner?.late ? '<i class="late-dot"></i>' : ""}</span></td>`;
     }).join("");
     return `<tr><th class="row-head" title="${esc(name)}">${esc(name)}<span class="n">${total[p.id] || 0}</span></th>${cells}</tr>`;
   }).join("");
@@ -349,16 +392,17 @@ function renderCoverage(subs, reporting) {
   const covSub = $("#coverage-sub");
   if (covSub) covSub.textContent = t("coverageSub");
   $("#coverage-legend").innerHTML = ["0", "< 25 %", "25–50 %", "50–75 %", "75–99 %", "100 %"]
-    .map((lab, i) => `<span><span class="swatch" style="background:var(--c${i})"></span>${lab}</span>`).join("");
+    .map((lab, i) => `<span><span class="swatch" style="background:var(--c${i})"></span>${lab}</span>`).join("")
+    + `<span><span class="swatch" style="background:var(--c3);position:relative"><i class="late-dot"></i></span>${esc(t("late"))}</span>`;
 }
 
 function isCollapsed(pillarId, hasData) {
   if (state.manual.has(pillarId)) return state.manual.get(pillarId);
   if (state.pillar === pillarId) return false;
-  return !hasData; // pillars with nothing to show start folded
+  return !hasData;
 }
 
-function renderPillars(series, subs, reporting) {
+function renderPillars(series, winners, range) {
   const indicators = visibleIndicators(series);
   if (!indicators.length) {
     $("#pillars").innerHTML = `<div class="panel"><div class="empty">${esc(t("empty"))}</div></div>`;
@@ -373,18 +417,20 @@ function renderPillars(series, subs, reporting) {
     const evaluated = withData.filter((i) => statusOf(series[i.id].at(-1).value, i) !== "nt");
     const ok = evaluated.filter((i) => statusOf(series[i.id].at(-1).value, i) === "ok").length;
     const pct = evaluated.length ? Math.round((ok / evaluated.length) * 100) : 0;
-    const reported = reporting.has(p.id) && withData.length > 0;
     const collapsed = isCollapsed(p.id, withData.length > 0);
     const name = p.label[state.lang] || p.label.fr;
 
-    const general = reported ? [...subs].reverse().find((s) => s.general_comments?.[p.id]) : null;
-    const generalHtml = general && !collapsed
-      ? `<p class="gencomment"><span class="when">${esc(general.date)}</span>${esc(general.general_comments[p.id])}</p>` : "";
+    const pillarWins = range.map((w) => winners.get(`${p.id}|${w}`)).filter(Boolean);
+    const lastWin = pillarWins[pillarWins.length - 1];
 
-    const meta = reported
-      ? `<span class="count">${withData.length}/${list.length} · ${pct} % ${esc(t("onTarget")).toLowerCase()}</span>`
+    const general = lastWin?.sub.general_comments?.[p.id];
+    const generalHtml = general && !collapsed
+      ? `<p class="gencomment"><span class="when">${esc(t("weekAbbr"))} ${esc(lastWin.week.slice(5))}</span>${esc(general)}</p>` : "";
+
+    const meta = lastWin
+      ? `<span class="count">${withData.length}/${list.length} · ${pct} % ${esc(t("onTarget")).toLowerCase()} · ${esc(t("weekAbbr"))} ${esc(lastWin.week.slice(5))}</span>${lastWin.late ? `<span class="tag-late">${esc(t("late"))}</span>` : ""}`
       : `<span class="badge">${esc(t("noReport"))}</span>`;
-    const bar = reported && evaluated.length
+    const bar = lastWin && evaluated.length
       ? `<span class="bar"><i style="width:${pct}%"></i></span>` : `<span class="bar" style="visibility:hidden"></span>`;
 
     const rows = collapsed ? "" : list.map((ind) => indicatorRow(ind, series[ind.id] || [])).join("");
@@ -400,6 +446,7 @@ function renderPillars(series, subs, reporting) {
         <thead><tr>
           <th>${esc(t("code"))}</th><th>${esc(t("indicator"))}</th>
           <th style="text-align:right">${esc(t("latest"))}</th>
+          <th style="text-align:right" class="hide-sm">${esc(t("deltaCol"))}</th>
           <th style="text-align:right" class="hide-sm">${esc(t("target"))}</th>
           <th>${esc(t("status"))}</th><th class="hide-sm">${esc(t("trend"))}</th>
         </tr></thead><tbody>${rows}</tbody></table>`}
@@ -420,6 +467,7 @@ function indicatorRow(ind, points) {
       <td class="code">${esc(ind.code)}</td>
       <td class="label">${esc(label)}${warn}</td>
       <td class="num">${fmt(last?.value, ind.unit)}</td>
+      <td class="num hide-sm">${deltaCell(points, ind)}</td>
       <td class="target hide-sm">${target === null ? t("none") : esc(targetText(ind))}</td>
       <td><span class="chip ${chipClass(st)}">${esc(chipLabel(st))}</span></td>
       <td class="hide-sm">${sparkline(points, ind)}</td>
@@ -431,11 +479,11 @@ function detailRow(ind, points) {
   const chart = points.length ? seriesChart(points, ind) : `<p class="empty">${esc(t("stNone"))}</p>`;
   const list = comments.length
     ? `<ul class="comments">${comments.map((c) =>
-        `<li><span class="when">${c.date}</span>${esc(c.comment)} <em>— ${esc(c.by || "")}</em></li>`).join("")}</ul>`
+        `<li><span class="when">${esc(t("weekAbbr"))} ${c.week.slice(5)}</span>${esc(c.comment)} <em>— ${esc(c.by || "")}</em></li>`).join("")}</ul>`
     : `<p style="color:var(--muted);margin:10px 0 0">${esc(t("noComment"))}</p>`;
   const last = points.at(-1);
-  return `<tr class="detail"><td colspan="6"><div class="inner">
-      <h4>${esc(ind.code)} · ${esc(t("history"))} ${last ? `· ${esc(t("reportedBy"))} ${esc(last.by || "—")} (${last.date})` : ""}</h4>
+  return `<tr class="detail"><td colspan="7"><div class="inner">
+      <h4>${esc(ind.code)} · ${esc(t("history"))} ${last ? `· ${esc(t("reportedBy"))} ${esc(last.by || "—")} (${esc(t("weekAbbr"))} ${last.week.slice(5)}${last.late ? `, ${esc(t("late")).toLowerCase()}` : ""})` : ""}</h4>
       ${chart}
       <h4 style="margin-top:16px">${esc(t("comments"))}</h4>
       ${list}
@@ -452,7 +500,7 @@ function renderChrome() {
   $("#footer-note").textContent = t("footer");
 
   const period = $("#f-period");
-  [["last", t("last")], ["7", t("d7")], ["30", t("d30")], ["all", t("all")]].forEach(([v, lab], i) => {
+  [["1", t("w1")], ["4", t("w4")], ["12", t("w12")], ["all", t("all")]].forEach(([v, lab], i) => {
     period.options[i].value = v; period.options[i].textContent = lab;
   });
   period.value = state.period;
@@ -480,14 +528,14 @@ function renderChrome() {
 }
 
 function render() {
-  const subs = activeSubmissions();
-  const series = seriesByIndicator(subs);
-  const reporting = reportingPillars(subs, series);
+  const range = periodWeeks();
+  const winners = weeklyWinners(range);
+  const series = seriesByIndicator(winners);
   renderChrome();
-  renderSummary(series, subs, reporting);
-  renderAttention(series, reporting);
-  renderCoverage(subs, reporting);
-  renderPillars(series, subs, reporting);
+  renderSummary(series, winners, range);
+  renderAttention(series);
+  renderCoverage(winners, range);
+  renderPillars(series, winners, range);
 }
 
 /* ---------- tooltip ---------- */
@@ -517,7 +565,6 @@ function bindTooltip() {
   document.addEventListener("pointerout", (e) => {
     if (e.target.closest?.("[data-tip]")) tip().style.display = "none";
   });
-  // Keyboard: focused chart dots show the same tooltip near the element.
   document.addEventListener("focusin", (e) => {
     const src = e.target.closest?.("[data-tip]");
     if (!src) return;
@@ -532,14 +579,16 @@ function bindTooltip() {
 /* ---------- export ---------- */
 
 function exportCsv() {
-  const subs = activeSubmissions();
-  const series = seriesByIndicator(subs);
-  const rows = [["pillar", "code", "indicator", "unit", "direction", "target", "date", "value", "status", "reported_by", "comment"]];
+  const range = periodWeeks();
+  const winners = weeklyWinners(range);
+  const series = seriesByIndicator(winners);
+  const rows = [["pillar", "code", "indicator", "unit", "direction", "target", "week_ending", "reporting_date", "late", "value", "status", "reported_by", "comment"]];
   for (const ind of visibleIndicators(series)) {
     for (const point of series[ind.id] || []) {
       rows.push([
         ind.pillar, ind.code, ind.label[state.lang] || ind.label.fr, ind.unit, ind.direction,
-        targetOf(ind) ?? "", point.date, point.value, statusOf(point.value, ind), point.by || "", point.comment || "",
+        targetOf(ind) ?? "", point.week, point.rdate, point.late ? "1" : "0",
+        point.value, statusOf(point.value, ind), point.by || "", point.comment || "",
       ]);
     }
   }
@@ -613,8 +662,7 @@ async function boot() {
   ]);
   REG = reg; SUB = sub;
   BY_ID = Object.fromEntries(REG.indicators.map((i) => [i.id, i]));
-  for (const ind of REG.indicators) PILLAR_OF[ind.id] = ind.pillar;
-  DATES = [...new Set(SUB.submissions.map((s) => s.date).filter(Boolean))].sort();
+  buildWeeks();
   bind();
   render();
 }

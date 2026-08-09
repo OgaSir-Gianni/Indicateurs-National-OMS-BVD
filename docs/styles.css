@@ -286,6 +286,24 @@ table.kpis tr.expandable { cursor: pointer; }
 
 .spark { display: block; }
 
+/* week-on-week movement */
+.delta { font-size: 12px; font-weight: 650; white-space: nowrap; }
+.delta.good { color: var(--chip-ok-tx); }
+.delta.bad { color: var(--chip-off-tx); }
+.delta.flat { color: var(--muted); font-weight: 400; }
+
+/* late-report marker */
+.tag-late {
+  font-size: 10.5px; font-weight: 650; color: var(--chip-watch-tx);
+  background: var(--chip-watch-bg); border-radius: 9px; padding: 2px 8px; white-space: nowrap;
+}
+.matrix .cell { position: relative; }
+.late-dot {
+  position: absolute; right: 2px; top: 2px; width: 5px; height: 5px;
+  border-radius: 50%; background: var(--watch); border: 1px solid var(--card);
+}
+.legend .swatch { position: relative; }
+
 .detail td { background: var(--wash); padding: 0; }
 .detail .inner { padding: 16px 18px 20px; }
 .detail h4 {

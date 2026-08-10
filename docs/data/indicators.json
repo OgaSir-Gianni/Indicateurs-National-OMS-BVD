@@ -1,12 +1,22 @@
 {
  "form": {
-  "title": "Indicateurs National OMS BVD",
+  "title": "Rapport hebdomadaire sur les KPIs – Plan de Riposte OMS contre BVD en RDC",
   "id_string": "bvd_oms_kpis_drc_2026",
   "version": "20260804",
   "default_language": "French",
-  "enketo_url": "https://enketo.whonghub.org/x/PlEb7CW2"
+  "enketo_url": "https://enketo.whonghub.org/x/PlEb7CW2",
+  "notice": {
+   "fr": [
+    "L'épidémie actuelle de la maladie à virus Bundibugyo (MVB) exige une posture opérationnelle accélérée et réactive afin d'appuyer efficacement la stratégie nationale contre l'épidémie. Conformément au plan de riposte de l'OMS, le suivi des indicateurs clés de performance (KPIs) renforce l'agilité opérationnelle et une prise de décision rapide.",
+    "Il est demandé aux team leads de soumettre le rapport de leur pilier pour la semaine qui finit le samedi au plus tard fin de la journée le mardi suivant. Toute soumission faite après cette date sera marquée « en retard »."
+   ],
+   "en": [
+    "The current Bundibugyo virus disease (BVD) outbreak calls for an accelerated, responsive operational posture in support of the national outbreak strategy. In line with the WHO response plan, tracking key performance indicators (KPIs) strengthens operational agility and rapid decision-making.",
+    "Team leads are asked to submit their pillar's report for the week ending Saturday by the end of the day on the following Tuesday. Any submission made after that date will be marked “late”."
+   ]
+  }
  },
- "generated_at": "2026-08-10T16:07:55+00:00",
+ "generated_at": "2026-08-10T16:25:48+00:00",
  "pillars": [
   {
    "id": "pillar_1",

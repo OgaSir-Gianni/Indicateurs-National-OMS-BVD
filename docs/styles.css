@@ -120,6 +120,16 @@ h1 { font-size: 22px; line-height: 1.25; margin: 0; font-weight: 650; letter-spa
 }
 .notice strong { color: var(--ink); font-weight: 650; }
 
+/* Editorial intro note: this is guidance, not a warning, so it takes the brand
+   accent rather than the amber "watch" treatment used for data problems. */
+.notice.intro {
+  border: 1px solid var(--line); border-left: 3px solid var(--navy-2);
+  background: var(--card); color: var(--ink-2); padding: 15px 18px;
+  font-size: 13.5px; line-height: 1.65;
+}
+.notice.intro p { margin: 0; max-width: 92ch; }
+.notice.intro p + p { margin-top: 10px; }
+
 /* ---------- filter row ---------- */
 .controls {
   position: sticky; top: 0; z-index: 20; background: var(--plane);

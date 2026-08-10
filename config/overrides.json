@@ -1,5 +1,20 @@
 {
-  "_comment": "Corrections applied on top of what build_indicators.py infers from the XLSForm. Keys are indicator ids in lower case. Anything you set here wins, and survives a rebuild of the registry.",
+  "_comment": "Corrections applied on top of what build_indicators.py infers from the XLSForm. \"indicators\" keys are indicator ids in lower case; \"form\" patches the form block (title, notice). Anything you set here wins, and survives a rebuild of the registry.",
+  "form": {
+    "title": "Rapport hebdomadaire sur les KPIs – Plan de Riposte OMS contre BVD en RDC",
+    "_why_title": "Title requested by K. Gausi (WHO), 2026-08-02. The XLSForm settings sheet still carries the old form name, so it is overridden here rather than in the form.",
+    "notice": {
+      "fr": [
+        "L'épidémie actuelle de la maladie à virus Bundibugyo (MVB) exige une posture opérationnelle accélérée et réactive afin d'appuyer efficacement la stratégie nationale contre l'épidémie. Conformément au plan de riposte de l'OMS, le suivi des indicateurs clés de performance (KPIs) renforce l'agilité opérationnelle et une prise de décision rapide.",
+        "Il est demandé aux team leads de soumettre le rapport de leur pilier pour la semaine qui finit le samedi au plus tard fin de la journée le mardi suivant. Toute soumission faite après cette date sera marquée « en retard »."
+      ],
+      "en": [
+        "The current Bundibugyo virus disease (BVD) outbreak calls for an accelerated, responsive operational posture in support of the national outbreak strategy. In line with the WHO response plan, tracking key performance indicators (KPIs) strengthens operational agility and rapid decision-making.",
+        "Team leads are asked to submit their pillar's report for the week ending Saturday by the end of the day on the following Tuesday. Any submission made after that date will be marked “late”."
+      ]
+    },
+    "_why_notice": "Introductory note requested by K. Gausi (WHO), 2026-08-02, to appear before the rest of the background information. The French text is his wording verbatim; the English is a translation for the EN toggle."
+  },
   "indicators": {
     "ps6": {
       "direction": "higher",

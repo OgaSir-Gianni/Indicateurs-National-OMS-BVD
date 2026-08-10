@@ -217,6 +217,7 @@ def main(form_path):
             indicators.append(record)
             pending = None
 
+    overrides = {}
     if OVERRIDES.exists():
         overrides = json.loads(OVERRIDES.read_text(encoding="utf-8"))
         by_id = {ind["id"]: ind for ind in indicators}
@@ -225,14 +226,20 @@ def main(form_path):
                 by_id[key.lower()].update(patch)
                 by_id[key.lower()]["overridden"] = True
 
+    form = {
+        "title": settings["form_title"],
+        "id_string": settings["form_id"],
+        "version": str(settings["version"]),
+        "default_language": settings["default_language"],
+        "enketo_url": "https://enketo.whonghub.org/x/PlEb7CW2",
+    }
+    # The displayed title and the entry note are editorial decisions that come
+    # from WHO, not from the XLSForm's settings sheet, so overrides win here and
+    # survive every rebuild. Keys starting with "_" are documentation.
+    form.update({k: v for k, v in overrides.get("form", {}).items() if not k.startswith("_")})
+
     payload = {
-        "form": {
-            "title": settings["form_title"],
-            "id_string": settings["form_id"],
-            "version": str(settings["version"]),
-            "default_language": settings["default_language"],
-            "enketo_url": "https://enketo.whonghub.org/x/PlEb7CW2",
-        },
+        "form": form,
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "pillars": sorted(pillars, key=lambda p: p["order"]),
         "indicators": indicators,

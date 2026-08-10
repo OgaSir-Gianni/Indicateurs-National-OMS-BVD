@@ -523,8 +523,17 @@ function renderChrome() {
   document.querySelectorAll(".langs button").forEach((b) =>
     b.setAttribute("aria-pressed", String(b.dataset.lang === state.lang)));
 
-  $("#notice-slot").innerHTML = SUB.source === "sample"
-    ? `<div class="notice"><strong>${esc(t("sample"))}</strong> ${t("sampleBody")}</div>` : "";
+  // Introductory note from WHO, shown ahead of everything else on the page.
+  // Text lives in config/overrides.json so it survives a registry rebuild.
+  const intro = (REG.form.notice || {})[state.lang] || (REG.form.notice || {}).fr || [];
+  const blocks = [];
+  if (intro.length) {
+    blocks.push(`<div class="notice intro">${intro.map((p) => `<p>${esc(p)}</p>`).join("")}</div>`);
+  }
+  if (SUB.source === "sample") {
+    blocks.push(`<div class="notice"><strong>${esc(t("sample"))}</strong> ${t("sampleBody")}</div>`);
+  }
+  $("#notice-slot").innerHTML = blocks.join("");
 }
 
 function render() {

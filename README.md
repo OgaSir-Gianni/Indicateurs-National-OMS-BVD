@@ -84,13 +84,24 @@ the dashboard never fills a gap with a zero.
 
 ## Personal data
 
-Every submission carries the respondent's name and email. `fetch_data.py` drops the email before
-anything is written to `docs/data/`, because that folder is published. Names are kept, since the
-point of the form is accountable reporting by named focal points, but set the repository variable
-`REDACT_NAMES` to `1` and they become initials.
+Every submission carries the respondent's name and email. `fetch_data.py` drops the email and
+reduces the name to initials before anything is written to `docs/data/`, because that folder is
+published to a URL anyone can read. So the dashboard shows "P. G." rather than the full name.
 
-If the repository is public, everything in `docs/data/` is public: the values, the comments the
-focal points type in, and the names. Comments in particular are free text and are not written with
-publication in mind. For an internal audience, keep the repository private — GitHub Pages on a
-private repository needs a paid plan, and the alternative is to serve the same `docs/` folder from
-any internal host, since it is a plain static folder with no dependencies.
+**Both defaults are on.** To publish full names instead — only if that is a deliberate decision —
+set the repository variable `REDACT_NAMES` to `0`. `scripts/scrub_published.py` runs in CI after
+the fetch as a second check, and can be run by hand to clean files written before this was the
+default:
+
+```bash
+python scripts/scrub_published.py     # idempotent; respects REDACT_NAMES=0
+```
+
+`docs/index.html` also sends `noindex, nofollow, noarchive` so the page is not meant to be indexed.
+
+What that does **not** solve: if the repository is public, everything in `docs/data/` is still
+readable by anyone with the URL — the values and, importantly, the free-text comments the focal
+points type in, which are not written with publication in mind. Redacting names reduces the harm;
+it does not make the folder private. For a genuinely internal audience, keep the repository private
+— GitHub Pages on a private repository needs a paid plan, and the alternative is to serve the same
+`docs/` folder from any internal host, since it is a plain static folder with no dependencies.

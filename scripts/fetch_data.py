@@ -10,7 +10,8 @@ Environment:
     ONA_FORM_ID   optional. Numeric form pk. Resolved from the id_string when absent.
     ONA_BASE      optional. Defaults to https://api.whonghub.org/api/v1
     REDACT_EMAILS optional. "0" keeps respondent emails in the published files.
-    REDACT_NAMES  optional. "1" replaces respondent names with initials.
+    REDACT_NAMES  optional. "0" keeps respondent full names. Defaults to redacting
+                  them to initials, because docs/data is served publicly.
 
 Run locally with:  ONA_TOKEN=xxxx python scripts/fetch_data.py
 """
@@ -74,7 +75,9 @@ def initials(name):
 
 def reshape(raw, registry):
     redact_emails = os.environ.get("REDACT_EMAILS", "1") != "0"
-    redact_names = os.environ.get("REDACT_NAMES", "0") == "1"
+    # Default to redacting: docs/data/*.json and *.csv are published to GitHub
+    # Pages and readable by anyone with the URL. Set REDACT_NAMES=0 to opt out.
+    redact_names = os.environ.get("REDACT_NAMES", "1") != "0"
     indicators = registry["indicators"]
     general_fields = {
         pillar["id"]: f"{pillar['group']}/general_comments_{pillar['group'].split('_')[0]}_{pillar['id'].split('_')[1]}"

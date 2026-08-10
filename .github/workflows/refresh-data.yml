@@ -39,8 +39,16 @@ jobs:
           ONA_TOKEN: ${{ secrets.ONA_TOKEN }}
           ONA_FORM_ID: ${{ vars.ONA_FORM_ID }}
           REDACT_EMAILS: "1"
-          REDACT_NAMES: ${{ vars.REDACT_NAMES || '0' }}
+          REDACT_NAMES: ${{ vars.REDACT_NAMES || '1' }}
         run: python scripts/fetch_data.py
+
+      # Belt and braces. fetch_data.py already redacts by default, but docs/data
+      # is published to a public URL, so re-check rather than trust that the
+      # default survived an edit. Idempotent: a no-op when there is nothing left.
+      - name: Redact respondent names before publishing
+        env:
+          REDACT_NAMES: ${{ vars.REDACT_NAMES || '1' }}
+        run: python scripts/scrub_published.py
 
       - name: Commit the refreshed data
         run: |

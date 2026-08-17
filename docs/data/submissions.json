@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-16T14:19:27+00:00",
+ "generated_at": "2026-08-17T06:49:34+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 5,
+ "submission_count": 6,
  "submissions": [
   {
    "id": 63700169,
@@ -125,6 +125,28 @@
     "sm3": "Nombre des ménages affectées par la MVE ayant bénéficié d'interventions SMSPS pendant la semaine"
    },
    "general_comments": {}
+  },
+  {
+   "id": 64218809,
+   "date": "2026-08-09",
+   "submitted_at": "2026-08-17T03:27:44",
+   "pillar": "pillar_7",
+   "by": "C. H. D.",
+   "values": {
+    "c1": 3.0,
+    "c2": 254.0,
+    "c3": 540825.0,
+    "c4": 2569.0,
+    "c6": 88.0
+   },
+   "comments": {
+    "c1": "Réunion de tous les experts CREC, réunion interne du Team Lead avec les experts basés à Bunia, réunion avec la collègue Team Lead de l'UNICEF",
+    "c2": "En plus du nombre exact de spots diffusés, nous avons ajouté le nombre de radios spécialement mentionnés",
+    "c6": "En réalité, dans ce nombre, il y a aussi des cas rapportés et traités dans les 48h"
+   },
+   "general_comments": {
+    "pillar_7": "La plupart des experts ne rapportent vraiment pas les proportions, mais les noms bruts."
+   }
   }
  ]
 }

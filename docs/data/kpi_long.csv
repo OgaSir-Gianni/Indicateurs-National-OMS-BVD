@@ -38,3 +38,5 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 64218809,2026-08-09,2026-08-17T03:27:44,C. H. D.,pillar_7,C3,Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services,count,higher,,540825.0,
 64218809,2026-08-09,2026-08-17T03:27:44,C. H. D.,pillar_7,C4,Nombre d'alertes signalées par les acteurs communautaires,count,higher,,2569.0,
 64218809,2026-08-09,2026-08-17T03:27:44,C. H. D.,pillar_7,C6,"Nombre de rumeurs et infodemies collectés, analysés et rapportés",count,higher,,88.0,"En réalité, dans ce nombre, il y a aussi des cas rapportés et traités dans les 48h"
+64221630,2026-08-16,2026-08-17T07:52:35,L. F.,pillar_8,SL12,Structures de prise en charge appuyées par l'OSL,count,higher,,-37.0,
+64221630,2026-08-16,2026-08-17T07:52:35,L. F.,pillar_8,SL14,Couverture opérationnelle SDB,percent,higher,70,91.0,

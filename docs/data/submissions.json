@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-17T06:49:34+00:00",
+ "generated_at": "2026-08-17T14:24:44+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 6,
+ "submission_count": 7,
  "submissions": [
   {
    "id": 63700169,
@@ -147,6 +147,19 @@
    "general_comments": {
     "pillar_7": "La plupart des experts ne rapportent vraiment pas les proportions, mais les noms bruts."
    }
+  },
+  {
+   "id": 64221630,
+   "date": "2026-08-16",
+   "submitted_at": "2026-08-17T07:52:35",
+   "pillar": "pillar_8",
+   "by": "L. F.",
+   "values": {
+    "sl12": -37.0,
+    "sl14": 91.0
+   },
+   "comments": {},
+   "general_comments": {}
   }
  ]
 }

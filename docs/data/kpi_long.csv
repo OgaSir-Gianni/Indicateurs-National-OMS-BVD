@@ -38,5 +38,20 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 64218809,2026-08-09,2026-08-17T03:27:44,C. H. D.,pillar_7,C3,Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services,count,higher,,540825.0,
 64218809,2026-08-09,2026-08-17T03:27:44,C. H. D.,pillar_7,C4,Nombre d'alertes signalées par les acteurs communautaires,count,higher,,2569.0,
 64218809,2026-08-09,2026-08-17T03:27:44,C. H. D.,pillar_7,C6,"Nombre de rumeurs et infodemies collectés, analysés et rapportés",count,higher,,88.0,"En réalité, dans ce nombre, il y a aussi des cas rapportés et traités dans les 48h"
+64294532,2026-08-15,2026-08-18T11:57:21,I. G. C.,pillar_9,PS1,Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS),count,higher,,1.0,
+64294532,2026-08-15,2026-08-18T11:57:21,I. G. C.,pillar_9,PS2,Existence d'une carte des canaux de signalement des cas d'EAS/HS,count,higher,,1.0,
+64294532,2026-08-15,2026-08-18T11:57:21,I. G. C.,pillar_9,PS6,Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte,percent,higher,,3.0,
+64294532,2026-08-15,2026-08-18T11:57:21,I. G. C.,pillar_9,PS7,Pourcentage de survivants d'EAS pris en charge,percent,higher,,7.0,
+64294532,2026-08-15,2026-08-18T11:57:21,I. G. C.,pillar_9,PS8,Pourcentage des agents de santé communautaires sensibilisés aux violences sexuelles et sexistes et aux situations d'urgence humanitaire dans les zones qffectees par la MVE,percent,higher,,75.0,
+64294532,2026-08-15,2026-08-18T11:57:21,I. G. C.,pillar_9,PS10,Pourcentage des personnes briefées sur la violence sexiste et l'EAS/HS via des activités/Affichages/médias,percent,higher,0.8,204.0,
+64294532,2026-08-15,2026-08-18T11:57:21,I. G. C.,pillar_9,PS11,Nombre de personnes sensibilisées dans la communauté,count,higher,,2368.0,
 64221630,2026-08-16,2026-08-17T07:52:35,L. F.,pillar_8,SL12,Structures de prise en charge appuyées par l'OSL,count,higher,,-37.0,
 64221630,2026-08-16,2026-08-17T07:52:35,L. F.,pillar_8,SL14,Couverture opérationnelle SDB,percent,higher,70,91.0,
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS1,Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS),count,higher,,1.0,Le Circuit de référencement des victimes est à jour
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS2,Existence d'une carte des canaux de signalement des cas d'EAS/HS,count,higher,,1.0,"Cartographie des mécansimes de plaintes existe, mais cela nécessite une mise à jour"
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS3,Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet,count,higher,,1.0,"Une analyse des risques EAHS existe, mais une mise à jour est nécessaire"
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS6,Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte,percent,higher,,3.0,Un cas concerne OMS
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS7,Pourcentage de survivants d'EAS pris en charge,percent,higher,,0.0,Les coordonnées des victimes ne sont pas complètes - recherche en cours
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS8,Pourcentage des agents de santé communautaires sensibilisés aux violences sexuelles et sexistes et aux situations d'urgence humanitaire dans les zones qffectees par la MVE,percent,higher,,75.0,Nombre des agents communautaires briefés sur la PSEA
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS10,Pourcentage des personnes briefées sur la violence sexiste et l'EAS/HS via des activités/Affichages/médias,percent,higher,0.8,204.0,"Parmi les 204 acteurs humanitaires briefés, 69 sont des femmes"
+64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS11,Nombre de personnes sensibilisées dans la communauté,count,higher,,2368.0,"Parmi les personnes sensibilisées dans la communauté, 1434 sont des filles et des femmes"

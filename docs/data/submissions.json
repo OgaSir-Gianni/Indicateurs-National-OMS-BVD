@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-18T06:37:58+00:00",
+ "generated_at": "2026-08-18T14:30:20+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 7,
+ "submission_count": 9,
  "submissions": [
   {
    "id": 63700169,
@@ -149,6 +149,28 @@
    }
   },
   {
+   "id": 64294532,
+   "date": "2026-08-15",
+   "submitted_at": "2026-08-18T11:57:21",
+   "pillar": "pillar_9",
+   "by": "I. G. C.",
+   "values": {
+    "ps1": 1.0,
+    "ps2": 1.0,
+    "ps6": 3.0,
+    "ps7": 7.0,
+    "ps8": 75.0,
+    "ps10": 204.0,
+    "ps11": 2368.0
+   },
+   "comments": {
+    "ps4": "N/A",
+    "ps5": "N/A",
+    "ps9": "A enlever"
+   },
+   "general_comments": {}
+  },
+  {
    "id": 64221630,
    "date": "2026-08-16",
    "submitted_at": "2026-08-17T07:52:35",
@@ -159,6 +181,37 @@
     "sl14": 91.0
    },
    "comments": {},
+   "general_comments": {}
+  },
+  {
+   "id": 64293739,
+   "date": "2026-08-18",
+   "submitted_at": "2026-08-18T11:51:33",
+   "pillar": "pillar_9",
+   "by": "I. G. C.",
+   "values": {
+    "ps1": 1.0,
+    "ps2": 1.0,
+    "ps3": 1.0,
+    "ps6": 3.0,
+    "ps7": 0.0,
+    "ps8": 75.0,
+    "ps10": 204.0,
+    "ps11": 2368.0
+   },
+   "comments": {
+    "ps1": "Le Circuit de référencement des victimes est à jour",
+    "ps2": "Cartographie des mécansimes de plaintes existe, mais cela nécessite une mise à jour",
+    "ps3": "Une analyse des risques EAHS existe, mais une mise à jour est nécessaire",
+    "ps4": "N/A",
+    "ps5": "N/A",
+    "ps6": "Un cas concerne OMS",
+    "ps7": "Les coordonnées des victimes ne sont pas complètes - recherche en cours",
+    "ps8": "Nombre des agents communautaires briefés sur la PSEA",
+    "ps9": "A enlever",
+    "ps10": "Parmi les 204 acteurs humanitaires briefés, 69 sont des femmes",
+    "ps11": "Parmi les personnes sensibilisées dans la communauté, 1434 sont des filles et des femmes"
+   },
    "general_comments": {}
   }
  ]

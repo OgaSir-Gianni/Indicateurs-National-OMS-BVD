@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-18T14:30:20+00:00",
+ "generated_at": "2026-08-19T06:38:44+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 9,
+ "submission_count": 18,
  "submissions": [
   {
    "id": 63700169,
@@ -149,6 +149,101 @@
    }
   },
   {
+   "id": 64321194,
+   "date": "2026-08-10",
+   "submitted_at": "2026-08-18T18:00:04",
+   "pillar": "pillar_11",
+   "by": "P. G.",
+   "values": {
+    "ed3": 102.0,
+    "ed4": 70.0,
+    "ed5": 15.0,
+    "ed6": 17.0,
+    "ed7": 52.0,
+    "ed9": 0.61,
+    "ed10": 68.63
+   },
+   "comments": {
+    "ed3": "Menage (72), ESS (8), CTE (22)",
+    "ed4": "Menage (43), ESS (6), CTE (21)",
+    "ed5": "Menage (14), ESS (1), CTE (0)",
+    "ed6": "Menage (15), ESS (1), CTE (1)",
+    "ed7": "Menage (44), ESS (8)",
+    "ed9": "Les reports ne sont pas compte comme SUCCES ni comme ECHEC"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64321640,
+   "date": "2026-08-12",
+   "submitted_at": "2026-08-18T18:21:23",
+   "pillar": "pillar_11",
+   "by": "P. G.",
+   "values": {
+    "ed3": 88.0,
+    "ed4": 70.0,
+    "ed5": 9.0,
+    "ed6": 9.0,
+    "ed7": 50.0,
+    "ed9": 0.75,
+    "ed10": 0.8
+   },
+   "comments": {
+    "ed3": "Menage (59), ESS (8), CTE (21)",
+    "ed4": "Menage (43), ESS (7), CTE (20)",
+    "ed5": "Menage (9), ESS (0), CTE (0)",
+    "ed6": "Menage (7), ESS (1), CTE (1)",
+    "ed7": "Menage (43), ESS (7)"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64321813,
+   "date": "2026-08-13",
+   "submitted_at": "2026-08-18T18:28:05",
+   "pillar": "pillar_11",
+   "by": "P. G.",
+   "values": {
+    "ed3": 78.0,
+    "ed4": 50.0,
+    "ed5": 5.0,
+    "ed6": 23.0,
+    "ed7": 47.0,
+    "ed9": 0.6,
+    "ed10": 0.64
+   },
+   "comments": {
+    "ed3": "Menage (55) , ESS (10), CTE (13)",
+    "ed4": "Menage (30) , ESS (9), CTE (11)",
+    "ed5": "Menage (4) , ESS (1), CTE (0)",
+    "ed6": "Menage (21) , ESS (0), CTE (2)",
+    "ed7": "Menage (36) , ESS (11)"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64322038,
+   "date": "2026-08-14",
+   "submitted_at": "2026-08-18T18:35:56",
+   "pillar": "pillar_11",
+   "by": "P. G.",
+   "values": {
+    "ed3": 95.0,
+    "ed4": 76.0,
+    "ed5": 6.0,
+    "ed9": 0.83,
+    "ed10": 0.8
+   },
+   "comments": {
+    "ed3": "Menage (73), ESS (5), CTE (17)",
+    "ed4": "Menage (61), ESS (4), CTE (11)",
+    "ed5": "Menage (5), ESS (1), CTE (0)",
+    "ed6": "Menage (7), ESS (0), CTE (6)",
+    "ed7": "Menage (64), ESS (5)"
+   },
+   "general_comments": {}
+  },
+  {
    "id": 64294532,
    "date": "2026-08-15",
    "submitted_at": "2026-08-18T11:57:21",
@@ -171,6 +266,29 @@
    "general_comments": {}
   },
   {
+   "id": 64322227,
+   "date": "2026-08-15",
+   "submitted_at": "2026-08-18T18:45:27",
+   "pillar": "pillar_11",
+   "by": "P. G.",
+   "values": {
+    "ed3": 112.0,
+    "ed4": 91.0,
+    "ed5": 5.0,
+    "ed6": 16.0,
+    "ed9": 0.8,
+    "ed10": 0.81
+   },
+   "comments": {
+    "ed3": "Menage (64), ESS (27), CTE (21)",
+    "ed4": "Menage (50), ESS (23), CTE (18)",
+    "ed5": "Menage (4), ESS (1), CTE (0)",
+    "ed6": "Menage (10), ESS (3), CTE (3)",
+    "ed7": "Menage (49), ESS (24)"
+   },
+   "general_comments": {}
+  },
+  {
    "id": 64221630,
    "date": "2026-08-16",
    "submitted_at": "2026-08-17T07:52:35",
@@ -181,6 +299,30 @@
     "sl14": 91.0
    },
    "comments": {},
+   "general_comments": {}
+  },
+  {
+   "id": 64322420,
+   "date": "2026-08-16",
+   "submitted_at": "2026-08-18T18:53:40",
+   "pillar": "pillar_11",
+   "by": "P. G.",
+   "values": {
+    "ed3": 100.0,
+    "ed4": 81.0,
+    "ed5": 3.0,
+    "ed6": 16.0,
+    "ed7": 56.0,
+    "ed9": 0.78,
+    "ed10": 0.81
+   },
+   "comments": {
+    "ed3": "Menage (65), ESS (8), CTE (27)",
+    "ed4": "Menage (50), ESS (7), CTE (24)",
+    "ed5": "Menage (3), ESS (0), CTE (0)",
+    "ed6": "Menage (12), ESS (1), CTE (3)",
+    "ed7": "Menage (48), ESS (8)"
+   },
    "general_comments": {}
   },
   {
@@ -211,6 +353,78 @@
     "ps9": "A enlever",
     "ps10": "Parmi les 204 acteurs humanitaires briefés, 69 sont des femmes",
     "ps11": "Parmi les personnes sensibilisées dans la communauté, 1434 sont des filles et des femmes"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64314145,
+   "date": "2026-08-18",
+   "submitted_at": "2026-08-18T15:02:27",
+   "pillar": "pillar_10",
+   "by": "G. H.",
+   "values": {
+    "cx1": 14.0,
+    "cx2": 14.0,
+    "cx3": 5.0,
+    "cx4": 2.0,
+    "cx5": 6.0,
+    "cx6": 5.0,
+    "cx7": 16.0
+   },
+   "comments": {
+    "cx1": "12 posts pour les médias sociaux, 2 articles pour le site web de l'OMS",
+    "cx2": "12 posts pour les médias sociaux, 2 articles pour le site web de l'OMS",
+    "cx3": "4 posts médias sociaux, 1 articles",
+    "cx4": "Nizi, Lita",
+    "cx5": "Bunia, Nyakunde, Rwampara, Lita, Nizi, 23 journalistes locaux (conf de presse)",
+    "cx6": "PEC, PCI, surveillance, administration, management (RD)",
+    "cx7": "Conférence de presse de RD organisé par l'équipe comm externe (8 articles publiés), conférence de presse du DG, Interview IM avec RFI, 2 x interviews pilier surveillance médias locaux, 2 x suivis réponse écrite suite à la conférence de presse,",
+    "cx8": "TBC AFRO GVA",
+    "cx9": "TBC AFRO GVA"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64319214,
+   "date": "2026-08-18",
+   "submitted_at": "2026-08-18T16:56:05",
+   "pillar": "pillar_6",
+   "by": "A. L.",
+   "values": {
+    "ss1": 0.0,
+    "ss2": 0.0,
+    "ss3": 0.0,
+    "ss4": 0.0,
+    "ss5": 0.0,
+    "ss6": 0.0,
+    "ss7": 0.0,
+    "ss8": 0.0,
+    "ss9": 0.0
+   },
+   "comments": {},
+   "general_comments": {
+    "pillar_6": "Le suivi n'a pas encore commencé."
+   }
+  },
+  {
+   "id": 64321432,
+   "date": "2026-08-18",
+   "submitted_at": "2026-08-18T18:12:15",
+   "pillar": "pillar_11",
+   "by": "P. G.",
+   "values": {
+    "ed3": 82.0,
+    "ed4": 59.0,
+    "ed7": 42.0,
+    "ed9": 0.67,
+    "ed10": 0.72
+   },
+   "comments": {
+    "ed3": "Menage (60), ESS (6), CTE (16)",
+    "ed4": "Menage (39), ESS (5), CTE (15)",
+    "ed5": "Menage (5), ESS (1), CTE (0)",
+    "ed6": "Menage (16), ESS (0), CTE (1)",
+    "ed7": "Menage (36), ESS (6)"
    },
    "general_comments": {}
   }

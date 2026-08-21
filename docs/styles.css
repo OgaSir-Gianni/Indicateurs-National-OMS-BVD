@@ -232,6 +232,8 @@ button.ghost:hover { border-color: var(--accent); }
   vertical-align: bottom; padding-bottom: 5px; white-space: nowrap;
 }
 .matrix .date-head span { display: block; transform: rotate(-90deg); transform-origin: center; width: 20px; }
+/* The week still running: its column is incomplete by definition, not by fault. */
+.matrix .date-head.open { font-style: italic; opacity: .65; }
 .legend {
   display: flex; gap: 16px; align-items: center; flex-wrap: wrap;
   font-size: 12px; color: var(--muted); padding: 10px 18px 14px;

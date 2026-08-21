@@ -73,14 +73,38 @@ when the value meets it, *à surveiller* within 20 % of it, off target beyond th
 no target are shown as *sans cible* and are deliberately excluded from the on-target percentage,
 so that percentage always has a defensible denominator.
 
-The completeness grid is the part worth watching daily. Each row is a pillar, each column a day,
-and the shade is the share of that pillar's indicators filled in that day. A blank column across
+The completeness grid is the part worth watching. Each row is a pillar, each column a week, and
+the shade is the share of that pillar's indicators filled in that week. A blank column across
 several pillars usually means a reporting failure rather than an epidemiological one, and it is
-much easier to see there than in a table of values.
+much easier to see there than in a table of values. The column for the week still running is
+italicised: it is incomplete by definition, not by fault.
 
-The pillar filter mirrors the form's own `response_pillar` question. A submission for one pillar
-leaves every other pillar's fields empty, so a missing value means *not reported*, never zero, and
-the dashboard never fills a gap with a zero.
+A missing value means *not reported*, never zero, and the dashboard never fills a gap with a zero.
+
+## The weekly model, and how submissions are combined
+
+Reporting is weekly. A week runs Sunday to Saturday and is named by its closing Saturday; a
+report is due by the end of the following Tuesday, and only a submission arriving after that is
+labelled *en retard*. Each submission is filed under the week containing its `reporting_date`.
+
+Two things about the form make the arithmetic less obvious than it looks, and both are handled in
+`docs/app.js` rather than by asking focal points to change how they work:
+
+*One submission can cover every pillar.* `response_pillar` offers **TOUS / ALL** alongside the
+eleven pillars, and choosing it makes all eleven groups relevant in a single submission. `all` is
+not a pillar, so the dashboard attributes such a submission to each pillar it actually carries
+data for. Read literally, it credited the report to a twelfth pillar that does not exist, and the
+eleven real ones showed *Aucun rapport sur la période*.
+
+*A pillar may send several submissions for one week.* Focal points do submit day by day, or send a
+correction after the fact. The reports for a pillar and week are merged indicator by indicator in
+submission order: a later report replaces the indicators it fills in and leaves the rest of the
+week's values standing. The alternative — letting the newest submission replace the week outright
+— silently discarded every value that a partial follow-up had left blank.
+
+The summary tiles describe one week: the last *closed* week of the selected period. Headlining the
+week still in progress made the six pillars whose reports were not due yet look like six missing
+reports.
 
 ## Personal data
 

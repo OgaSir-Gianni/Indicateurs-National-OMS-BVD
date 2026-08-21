@@ -4,13 +4,21 @@
    Reporting model (per K. Gausi, Aug 2026): reporting is WEEKLY.
    - A week runs Sunday..Saturday and is labelled by its closing Saturday.
    - Each submission is bucketed into the week that contains its reporting
-     date. One report per pillar per week: the most recently *submitted*
-     one wins and wholly replaces earlier ones for that week.
-   - A report submitted after its week's Saturday is flagged "late"
-     (window stays open until Tuesday 23:59 Bunia; the form enforces
-     nothing yet, the dashboard only labels).
+     date, and attributed to every pillar it carries data for. The form's
+     response_pillar answer can be "all" (TOUS), which opens all eleven
+     pillar groups at once, so it is not itself a pillar id.
+   - Several submissions may cover the same pillar and week. They are merged
+     indicator by indicator in submission order: a later report replaces the
+     indicators it fills in and leaves the rest of the week's values
+     standing, so nothing already reported is dropped.
+   - Reports are due the Tuesday after the week's closing Saturday; only a
+     submission arriving after that is flagged "late". The form enforces
+     nothing, the dashboard only labels.
    - Completeness is judged against the pillars that reported, never
-     against the whole form. */
+     against the whole form.
+   - The tiles headline the last *closed* week of the selected period. An
+     in-progress week is labelled as such, because it is always short of the
+     pillars whose reports are not due yet. */
 
 const T = {
   fr: {
@@ -22,7 +30,7 @@ const T = {
     tilePillars: "Piliers ayant rapporté", tileFilled: "Indicateurs renseignés",
     onTarget: "Cible atteinte", offTarget: "Hors cible", reports: "Rapports reçus",
     evaluated: "des indicateurs évalués", weekAbbr: "sem. au", late: "En retard",
-    lateN: "en retard", deltaCol: "Δ sem.",
+    lateN: "en retard", deltaCol: "Δ sem.", openWeek: "semaine en cours",
     attnTitle: "Points d'attention",
     attnEmpty: "Rien à signaler : tous les indicateurs rapportés avec cible sont dans la cible.",
     attnOff: "hors cible", attnWatch: "à surveiller",
@@ -38,7 +46,7 @@ const T = {
     comments: "Commentaires des rapporteurs", history: "Historique", reportedBy: "Rapporté par",
     updated: "Données actualisées le", version: "Version du formulaire", openForm: "Ouvrir le formulaire",
     noComment: "Aucun commentaire saisi sur la période.",
-    footer: "Source : formulaire ONA hébergé sur whonghub.org. Les valeurs sont celles saisies par les points focaux des piliers, sans retraitement. Rapportage hebdomadaire : semaine du dimanche au samedi, un rapport par pilier et par semaine (le plus récent remplace les précédents).",
+    footer: "Source : formulaire ONA hébergé sur whonghub.org. Les valeurs sont celles saisies par les points focaux des piliers, sans retraitement. Rapportage hebdomadaire : semaine du dimanche au samedi, à rapporter au plus tard le mardi suivant. Plusieurs soumissions pour un même pilier et une même semaine sont fusionnées indicateur par indicateur, la saisie la plus récente l'emportant sur la précédente ; aucune valeur déjà rapportée n'est écartée. Une soumission faite avec le pilier « TOUS » alimente les onze piliers.",
   },
   en: {
     period: "Period", pillar: "Pillar", status: "Status",
@@ -49,7 +57,7 @@ const T = {
     tilePillars: "Pillars reporting", tileFilled: "Indicators filled",
     onTarget: "On target", offTarget: "Off target", reports: "Reports received",
     evaluated: "of indicators with a target", weekAbbr: "week ending", late: "Late",
-    lateN: "late", deltaCol: "Δ week",
+    lateN: "late", deltaCol: "Δ week", openWeek: "week in progress",
     attnTitle: "Needs attention",
     attnEmpty: "Nothing to flag: every reported indicator with a target is on target.",
     attnOff: "off target", attnWatch: "to watch",
@@ -65,7 +73,7 @@ const T = {
     comments: "Reporter comments", history: "History", reportedBy: "Reported by",
     updated: "Data refreshed", version: "Form version", openForm: "Open the form",
     noComment: "No comment recorded for this period.",
-    footer: "Source: ONA form hosted on whonghub.org. Values are as entered by pillar focal points, with no reprocessing. Weekly reporting: weeks run Sunday to Saturday, one report per pillar per week (the most recent replaces earlier ones).",
+    footer: "Source: ONA form hosted on whonghub.org. Values are as entered by pillar focal points, with no reprocessing. Weekly reporting: weeks run Sunday to Saturday, due by the following Tuesday. Several submissions for the same pillar and week are merged indicator by indicator, the most recent entry winning; no value already reported is discarded. A submission filed under the pillar \"ALL\" feeds all eleven pillars.",
   },
 };
 
@@ -74,7 +82,7 @@ const state = {
   manual: new Map(),   // pillar id -> user-chosen collapsed state
   openRow: null,
 };
-let REG = null, SUB = null, BY_ID = {}, WEEKS = [], CURWEEK = null;
+let REG = null, SUB = null, BY_ID = {}, PILLARS = new Set(), WEEKS = [], CURWEEK = null;
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const t = (key) => T[state.lang][key] ?? key;
@@ -180,40 +188,74 @@ function deltaCell(points, ind) {
 
 /* ---------- weekly selection ---------- */
 
-function pillarOfSub(sub) {
-  if (sub.pillar) return sub.pillar;
-  for (const key of Object.keys(sub.values || {})) if (BY_ID[key]) return BY_ID[key].pillar;
-  return null;
+// The window stays open until the Tuesday after the week's closing Saturday —
+// the deadline WHO states in the form's own notice. Counting from Saturday
+// instead marked every report filed on the Sunday..Tuesday it was due as late.
+const DEADLINE_DAYS = 3;
+
+function deadlineOf(week) {
+  const d = new Date(`${week}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + DEADLINE_DAYS);
+  return d.toISOString().slice(0, 10);
 }
 
-// One winning report per pillar per week: latest submitted_at replaces the rest.
+// response_pillar carries one pillar, or "all" (TOUS), which makes every pillar
+// group relevant so one submission can cover the whole form. "all" is not a
+// pillar id: attribute the submission to the pillars it actually carries data
+// for, and fall back to the named pillar when it reported no value at all.
+function pillarsOfSub(sub) {
+  const found = new Set();
+  for (const key of Object.keys(sub.values || {})) if (BY_ID[key]) found.add(BY_ID[key].pillar);
+  for (const key of Object.keys(sub.comments || {})) if (BY_ID[key]) found.add(BY_ID[key].pillar);
+  for (const key of Object.keys(sub.general_comments || {})) if (PILLARS.has(key)) found.add(key);
+  if (PILLARS.has(sub.pillar)) found.add(sub.pillar);
+  return [...found];
+}
+
+// One report per pillar per week, merged from every submission covering it in
+// submission order: a later report replaces the indicators it fills in and
+// leaves the others standing. Letting the latest submission replace the week
+// wholesale discarded whatever a partial follow-up had left blank.
 function weeklyWinners(weeks) {
   const keep = new Set(weeks);
-  const winners = new Map(); // "pillar|week" -> {sub, week, pillar, late}
-  for (const sub of SUB.submissions) {
-    if (!sub.date) continue;
+  const winners = new Map(); // "pillar|week" -> merged report
+  const ordered = SUB.submissions
+    .filter((s) => s.date)
+    .slice()
+    .sort((a, b) => String(a.submitted_at).localeCompare(String(b.submitted_at)));
+
+  for (const sub of ordered) {
     const week = weekEnd(sub.date);
     if (!keep.has(week)) continue;
-    const pillar = pillarOfSub(sub);
-    if (!pillar) continue;
-    const key = `${pillar}|${week}`;
-    const prev = winners.get(key);
-    if (!prev || String(sub.submitted_at) > String(prev.sub.submitted_at)) {
-      const late = String(sub.submitted_at || "").slice(0, 10) > week;
-      winners.set(key, { sub, week, pillar, late });
+    const late = String(sub.submitted_at || "").slice(0, 10) > deadlineOf(week);
+    for (const pillar of pillarsOfSub(sub)) {
+      const key = `${pillar}|${week}`;
+      let report = winners.get(key);
+      if (!report) {
+        // "late" describes the pillar's first report for the week: a punctual
+        // report amended afterwards is not retrospectively late.
+        report = { week, pillar, late, values: new Map(), general: "", subs: new Set() };
+        winners.set(key, report);
+      }
+      report.subs.add(sub.id);
+      for (const [id, value] of Object.entries(sub.values || {})) {
+        if (BY_ID[id]?.pillar !== pillar) continue;
+        report.values.set(id, { value, comment: sub.comments?.[id] || "", by: sub.by, late, rdate: sub.date });
+      }
+      const general = sub.general_comments?.[pillar];
+      if (general) report.general = general;
     }
   }
   return winners;
 }
 
-// indicator id -> [{week, value, comment, by, late, rdate}] ordered by week
+// indicator id -> [{week, value, comment, by, late, rdate}] ordered by week.
+// One point per week, since each pillar-week is now a single merged report.
 function seriesByIndicator(winners) {
   const out = {};
-  for (const { sub, week, late } of winners.values()) {
-    for (const [key, value] of Object.entries(sub.values)) {
-      (out[key] ||= []).push({
-        week, value, comment: sub.comments[key] || "", by: sub.by, late, rdate: sub.date,
-      });
+  for (const report of winners.values()) {
+    for (const [id, point] of report.values) {
+      (out[id] ||= []).push({ week: report.week, ...point });
     }
   }
   for (const list of Object.values(out)) list.sort((a, b) => a.week.localeCompare(b.week));
@@ -301,24 +343,29 @@ function seriesChart(points, ind) {
 /* ---------- render ---------- */
 
 function renderSummary(series, winners, range) {
-  const week = range[range.length - 1];
+  // Headline the last CLOSED week of the period. An in-progress week is always
+  // missing the pillars whose reports are not due yet, and putting it in the
+  // tiles reads as a reporting failure that has not happened.
+  const closed = range.filter((w) => w <= CURWEEK);
+  const week = (closed.length ? closed : range).at(-1);
   const weekWinners = [...winners.values()].filter((w) => w.week === week);
   const reportingNow = new Set(weekWinners.map((w) => w.pillar));
   const expected = REG.indicators.filter((i) => reportingNow.has(i.pillar)).length;
 
   let filled = 0;
   const counts = { ok: 0, watch: 0, off: 0, nt: 0, none: 0 };
-  for (const { sub } of weekWinners) {
-    for (const [key, value] of Object.entries(sub.values)) {
-      const ind = BY_ID[key];
+  for (const report of weekWinners) {
+    for (const [id, point] of report.values) {
+      const ind = BY_ID[id];
       if (!ind) continue;
       filled++;
-      counts[statusOf(value, ind)]++;
+      counts[statusOf(point.value, ind)]++;
     }
   }
   const evaluated = counts.ok + counts.watch + counts.off;
   const lateN = weekWinners.filter((w) => w.late).length;
-  const weekSub = `${t("weekAbbr")} ${week.slice(5)}`;
+  const reportsN = new Set(weekWinners.flatMap((w) => [...w.subs])).size;
+  const weekSub = `${t("weekAbbr")} ${week.slice(5)}${week > CURWEEK ? ` · ${t("openWeek")}` : ""}`;
 
   const cards = [
     { k: t("tilePillars"), v: `${reportingNow.size}<span class="of"> / ${REG.pillars.length}</span>`, s: weekSub, cls: "" },
@@ -328,7 +375,7 @@ function renderSummary(series, winners, range) {
       s: evaluated ? `${Math.round((counts.ok / evaluated) * 100)} % ${t("evaluated")}` : weekSub, cls: "ok" },
     { k: t("stWatch"), v: `${counts.watch}`, s: weekSub, cls: counts.watch ? "watch" : "" },
     { k: t("offTarget"), v: `${counts.off}`, s: weekSub, cls: counts.off ? "off" : "" },
-    { k: t("reports"), v: `${weekWinners.length}`, s: lateN ? `${lateN} ${t("lateN")}` : weekSub, cls: "" },
+    { k: t("reports"), v: `${reportsN}`, s: lateN ? `${lateN} ${t("lateN")}` : weekSub, cls: "" },
   ];
   $("#summary").innerHTML = cards.map((c) =>
     `<div class="stat ${c.cls}"><div class="k">${esc(c.k)}</div><div class="v">${c.v}</div><div class="s">${esc(c.s)}</div></div>`).join("");
@@ -373,13 +420,16 @@ function renderCoverage(winners, range) {
   const total = {};
   for (const ind of REG.indicators) total[ind.pillar] = (total[ind.pillar] || 0) + 1;
 
-  const head = `<tr><th class="row-head"></th>${range.map((w) =>
-    `<th class="date-head"><span>${w.slice(5)}</span></th>`).join("")}</tr>`;
+  const head = `<tr><th class="row-head"></th>${range.map((w) => {
+    const open = w > CURWEEK;
+    const tip = `${t("weekAbbr")} ${w}${open ? ` · ${t("openWeek")}` : ""}`;
+    return `<th class="date-head${open ? " open" : ""}" data-tip="${esc(tip)}"><span>${w.slice(5)}</span></th>`;
+  }).join("")}</tr>`;
   const rows = REG.pillars.map((p) => {
     const name = p.label[state.lang] || p.label.fr;
     const cells = range.map((w) => {
       const winner = winners.get(`${p.id}|${w}`);
-      const got = winner ? Object.keys(winner.sub.values).filter((k) => BY_ID[k]).length : 0;
+      const got = winner ? winner.values.size : 0;
       const share = total[p.id] ? got / total[p.id] : 0;
       const bin = share <= 0 ? 0 : share < .25 ? 1 : share < .5 ? 2 : share < .75 ? 3 : share < .995 ? 4 : 5;
       const tip = `${name}\n${t("weekAbbr")} ${w}\n${got}/${total[p.id] || 0} (${Math.round(share * 100)} %)${winner?.late ? `\n${t("late")}` : ""}`;
@@ -423,7 +473,7 @@ function renderPillars(series, winners, range) {
     const pillarWins = range.map((w) => winners.get(`${p.id}|${w}`)).filter(Boolean);
     const lastWin = pillarWins[pillarWins.length - 1];
 
-    const general = lastWin?.sub.general_comments?.[p.id];
+    const general = lastWin?.general;
     const generalHtml = general && !collapsed
       ? `<p class="gencomment"><span class="when">${esc(t("weekAbbr"))} ${esc(lastWin.week.slice(5))}</span>${esc(general)}</p>` : "";
 
@@ -671,6 +721,7 @@ async function boot() {
   ]);
   REG = reg; SUB = sub;
   BY_ID = Object.fromEntries(REG.indicators.map((i) => [i.id, i]));
+  PILLARS = new Set(REG.pillars.map((p) => p.id));
   buildWeeks();
   bind();
   render();

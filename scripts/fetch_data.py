@@ -79,10 +79,6 @@ def reshape(raw, registry):
     # Pages and readable by anyone with the URL. Set REDACT_NAMES=0 to opt out.
     redact_names = os.environ.get("REDACT_NAMES", "1") != "0"
     indicators = registry["indicators"]
-    general_fields = {
-        pillar["id"]: f"{pillar['group']}/general_comments_{pillar['group'].split('_')[0]}_{pillar['id'].split('_')[1]}"
-        for pillar in registry["pillars"]
-    }
 
     records = []
     for row in raw:
@@ -119,7 +115,7 @@ def reshape(raw, registry):
         records.append(record)
 
     records.sort(key=lambda r: (r["date"], r["submitted_at"]))
-    return records, general_fields
+    return records
 
 
 def write_long_csv(records, registry, path):
@@ -155,7 +151,7 @@ def main():
     raw = fetch_all(form_id)
     print(f"{len(raw)} submissions downloaded")
 
-    records, _ = reshape(raw, registry)
+    records = reshape(raw, registry)
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "form_version": registry["form"]["version"],

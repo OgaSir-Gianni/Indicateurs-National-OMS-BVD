@@ -159,6 +159,11 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 64322420,2026-08-16,2026-08-18T18:53:40,P. G.,pillar_11,ED7,Nombre de SWAB prélève par lieu de provenance,count,higher,,56.0,"Menage (48), ESS (8)"
 64322420,2026-08-16,2026-08-18T18:53:40,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.78,
 64322420,2026-08-16,2026-08-18T18:53:40,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,0.81,
+64549389,2026-08-17,2026-08-23T10:03:36,P. G.,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,97.0,"Menage (73), ESS (8), CTE (16)"
+64549389,2026-08-17,2026-08-23T10:03:36,P. G.,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,15.0,"Menage (15), ESS (0), CTE (0)"
+64549389,2026-08-17,2026-08-23T10:03:36,P. G.,pillar_11,ED6,Nombre de reports désagrège par lieu de provenance,count,higher,,9.0,"Menage (9), ESS (0), CTE (0)"
+64549389,2026-08-17,2026-08-23T10:03:36,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.7,
+64549389,2026-08-17,2026-08-23T10:03:36,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,75.26,
 64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS1,Existence d'une carte des prestataires de services liés à la violence basée sur le genre (VBG) pour les risques d'exploitation et d'abus (EAS) et de harcèlement (HS),count,higher,,1.0,Le Circuit de référencement des victimes est à jour
 64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS2,Existence d'une carte des canaux de signalement des cas d'EAS/HS,count,higher,,1.0,"Cartographie des mécansimes de plaintes existe, mais cela nécessite une mise à jour"
 64293739,2026-08-18,2026-08-18T11:51:33,I. G. C.,pillar_9,PS3,Existence des preuves des risques d'EAS/HS liés à la mise en œuvre du projet,count,higher,,1.0,"Une analyse des risques EAHS existe, mais une mise à jour est nécessaire"
@@ -188,6 +193,11 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 64321432,2026-08-18,2026-08-18T18:12:15,P. G.,pillar_11,ED7,Nombre de SWAB prélève par lieu de provenance,count,higher,,42.0,"Menage (36), ESS (6)"
 64321432,2026-08-18,2026-08-18T18:12:15,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.67,
 64321432,2026-08-18,2026-08-18T18:12:15,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,0.72,
+64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,103.0,"Menage (62), ESS (15), CTE (26)"
+64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED4,Nombres d'EDS realise désagrège par lieu de provenance,count,higher,,79.0,"Menage (41), ESS (13), CTE (25)"
+64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,6.0,"Menage (6), ESS (0), CTE (0)"
+64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.7,
+64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,76.7,
 64458758,2026-08-21,2026-08-21T15:47:33,L. F.,pillar_8,SL1,Couverture des besoins en véhicules,percent,higher,80,-11.0,
 64458758,2026-08-21,2026-08-21T15:47:33,L. F.,pillar_8,SL6,CTE construits conformément aux normes,count,higher,1.0,373.0,Nouveaux lits disponibles pour la reponse
 64458758,2026-08-21,2026-08-21T15:47:33,L. F.,pillar_8,SL12,Structures de prise en charge appuyées par l'OSL,count,higher,,46.0,

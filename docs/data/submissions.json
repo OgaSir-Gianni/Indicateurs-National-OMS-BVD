@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-25T06:41:04+00:00",
+ "generated_at": "2026-08-25T14:41:59+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 22,
+ "submission_count": 24,
  "submissions": [
   {
    "id": 63700169,
@@ -669,6 +669,51 @@
    "comments": {
     "sl6": "Nouveaux lits disponibles pour la reponse",
     "sl14": "support en materiels et voitures"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64635817,
+   "date": "2026-08-22",
+   "submitted_at": "2026-08-25T13:15:08",
+   "pillar": "pillar_5",
+   "by": "M. V. M.",
+   "values": {
+    "sm1": 49.81,
+    "sm2": 100.0,
+    "sm3": 54.25
+   },
+   "comments": {
+    "sm1": "Couverture de 9/56 ZS ( 16%), soit 6/28 (21,4%) en Ituri, 3/12 (25%) au Nord Kivu, 0/6 Haut Uele, 0/7 Tshopo, 0/2 Bas Uele",
+    "sm2": "Données de 2 crèches fonctionnelles en ZS de Rwambara",
+    "sm3": "Les interventions d'appui aux menages des guéris sont plus concentrées dans les zone de santé de Bunia et Rwambara avec l'appui de l'Unicef"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64625138,
+   "date": "2026-08-25",
+   "submitted_at": "2026-08-25T09:23:32",
+   "pillar": "pillar_7",
+   "by": "D.",
+   "values": {
+    "c1": 10.0,
+    "c2": 98.0,
+    "c3": 269858.0,
+    "c4": 518.0,
+    "c5": 8.0,
+    "c6": 63.0,
+    "c8": 89.0,
+    "c11": 66.0
+   },
+   "comments": {
+    "c1": "Chaque dimanche il y a réunion de la CREC OMS, mais chaque jours il y a réunions de la CREC dans toutes les zones où les équipes CREC OMS sont présentes",
+    "c2": "Ituri, Tshopo, Nord Kivu et Haut Uele. Inclue principalement les programmes appuyés par le partenaire UNICEF",
+    "c3": "Sans inclure les personnes touchées par les programmes médias",
+    "c7": "Non disponible",
+    "c9": "Non disponible cette semaine. Tous les leaders qui sensibilisent ont été briefés depuis le mois de Juin et juillet",
+    "c10": "Non disponible. Nécessite une étude quantitative sur le terrain",
+    "c11": "6 recommandations au total. Pour la plupart en court de réalisation"
    },
    "general_comments": {}
   }

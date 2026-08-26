@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-26T06:43:05+00:00",
+ "generated_at": "2026-08-26T14:41:40+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 29,
+ "submission_count": 30,
  "submissions": [
   {
    "id": 63700169,
@@ -799,6 +799,28 @@
     "ed5": "Menage (16), ESS (0), CTE (0)",
     "ed6": "Menage (6), ESS (3), CTE (2)",
     "ed7": "Menage (53), ESS (9)"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64666769,
+   "date": "2026-08-23",
+   "submitted_at": "2026-08-26T12:42:19",
+   "pillar": "pillar_4",
+   "by": "G. S. B. N.",
+   "values": {
+    "pc1": 3.0,
+    "pc2": 0.0,
+    "pc3": 8.1,
+    "pc4": 132.0,
+    "pc5": 36.0,
+    "pc6": 89.8
+   },
+   "comments": {
+    "pc1": "3 prestataires de première ligne ont été infectés dans les zones de santé Lita, Mangala, Rwampara à la semaine épidémiologique 34. Il est important que les investigations soient approfondies au tour de ces cas et accompagner ces zones de santé sur la PCI.",
+    "pc3": "Sur les 188 établissements de soins prévus, 160 ont été évalués, soit 85,1% et 8,1% avaient un score card supérieur à 80%",
+    "pc4": "sur les 160 établissements de soins attendus, 132 ont été approvisionnés en kits PCI, soit 82,5%",
+    "pc6": "sur les 177 établissements de soins prévus pour la décontamination, 150 ont été décontaminés, soit 89,8%"
    },
    "general_comments": {}
   },

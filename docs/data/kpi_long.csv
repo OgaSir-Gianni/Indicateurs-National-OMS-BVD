@@ -198,13 +198,39 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,6.0,"Menage (6), ESS (0), CTE (0)"
 64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.7,
 64556612,2026-08-18,2026-08-23T11:28:59,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,76.7,
+64648580,2026-08-19,2026-08-25T17:21:12,P. G.,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,100.0,"Menage (73), ESS (12), CTE (15)"
+64648580,2026-08-19,2026-08-25T17:21:12,P. G.,pillar_11,ED4,Nombres d'EDS realise désagrège par lieu de provenance,count,higher,,77.0,"Menage (58), ESS (4), CTE (15)"
+64648580,2026-08-19,2026-08-25T17:21:12,P. G.,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,13.0,"Menage (8), ESS (5), CTE (0)"
+64648580,2026-08-19,2026-08-25T17:21:12,P. G.,pillar_11,ED6,Nombre de reports désagrège par lieu de provenance,count,higher,,10.0,"Menage (7), ESS (3), CTE (0)"
+64648580,2026-08-19,2026-08-25T17:21:12,P. G.,pillar_11,ED7,Nombre de SWAB prélève par lieu de provenance,count,higher,,62.0,"Menage (56), ESS (6)"
+64648580,2026-08-19,2026-08-25T17:21:12,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.73,
+64648580,2026-08-19,2026-08-25T17:21:12,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,77.0,%
+64649019,2026-08-20,2026-08-25T17:45:52,P. G.,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,91.0,"Menage (61), ESS (6), CTE (24)"
+64649019,2026-08-20,2026-08-25T17:45:52,P. G.,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,15.0,"Menage (14), ESS (1), CTE (0)"
+64649019,2026-08-20,2026-08-25T17:45:52,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.66,
+64649019,2026-08-20,2026-08-25T17:45:52,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,69.23,
 64458758,2026-08-21,2026-08-21T15:47:33,L. F.,pillar_8,SL1,Couverture des besoins en véhicules,percent,higher,80,-11.0,
 64458758,2026-08-21,2026-08-21T15:47:33,L. F.,pillar_8,SL6,CTE construits conformément aux normes,count,higher,1.0,373.0,Nouveaux lits disponibles pour la reponse
 64458758,2026-08-21,2026-08-21T15:47:33,L. F.,pillar_8,SL12,Structures de prise en charge appuyées par l'OSL,count,higher,,46.0,
 64458758,2026-08-21,2026-08-21T15:47:33,L. F.,pillar_8,SL14,Couverture opérationnelle SDB,percent,higher,70,0.8,support en materiels et voitures
+64650402,2026-08-21,2026-08-25T19:13:59,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.66,
+64650402,2026-08-21,2026-08-25T19:13:59,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,68.0,
 64635817,2026-08-22,2026-08-25T13:15:08,M. V. M.,pillar_5,SM1,Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit,percent,higher,1.0,49.81,"Couverture de 9/56 ZS ( 16%), soit 6/28 (21,4%) en Ituri, 3/12 (25%) au Nord Kivu, 0/6 Haut Uele, 0/7 Tshopo, 0/2 Bas Uele"
 64635817,2026-08-22,2026-08-25T13:15:08,M. V. M.,pillar_5,SM2,Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche,percent,higher,1.0,100.0,Données de 2 crèches fonctionnelles en ZS de Rwambara
 64635817,2026-08-22,2026-08-25T13:15:08,M. V. M.,pillar_5,SM3,Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial,percent,higher,1.0,54.25,Les interventions d'appui aux menages des guéris sont plus concentrées dans les zone de santé de Bunia et Rwambara avec l'appui de l'Unicef
+64650488,2026-08-22,2026-08-25T19:20:44,P. G.,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,87.0,"Menage (61), ESS (5), CTE (21)"
+64650488,2026-08-22,2026-08-25T19:20:44,P. G.,pillar_11,ED4,Nombres d'EDS realise désagrège par lieu de provenance,count,higher,,61.0,"Menage (40), ESS (3), CTE (18)"
+64650488,2026-08-22,2026-08-25T19:20:44,P. G.,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,12.0,"Menage (11), ESS (1), CTE (0)"
+64650488,2026-08-22,2026-08-25T19:20:44,P. G.,pillar_11,ED7,Nombre de SWAB prélève par lieu de provenance,count,higher,,47.0,"Menage (42), ESS (5)"
+64650488,2026-08-22,2026-08-25T19:20:44,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.65,
+64650488,2026-08-22,2026-08-25T19:20:44,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,70.0,
+64650547,2026-08-23,2026-08-25T19:26:46,P. G.,pillar_11,ED3,"Nombre d'alertes reçu désagrège par lieux de provenance (ménages, Établissement de Soins de Santé, et CTE)",count,higher,,97.0,"Menage (71), ESS (9), CTE (17)"
+64650547,2026-08-23,2026-08-25T19:26:46,P. G.,pillar_11,ED4,Nombres d'EDS realise désagrège par lieu de provenance,count,higher,,70.0,"Menage (49), ESS (6), CTE (15)"
+64650547,2026-08-23,2026-08-25T19:26:46,P. G.,pillar_11,ED5,Nombre d'échecs désagrège par lieu de provenance,count,lower,,16.0,"Menage (16), ESS (0), CTE (0)"
+64650547,2026-08-23,2026-08-25T19:26:46,P. G.,pillar_11,ED6,Nombre de reports désagrège par lieu de provenance,count,higher,,11.0,"Menage (6), ESS (3), CTE (2)"
+64650547,2026-08-23,2026-08-25T19:26:46,P. G.,pillar_11,ED7,Nombre de SWAB prélève par lieu de provenance,count,higher,,62.0,"Menage (53), ESS (9)"
+64650547,2026-08-23,2026-08-25T19:26:46,P. G.,pillar_11,ED9,Proportion de décès dans la communauté ayant bénéficié d'un enterrement digne et sécurisé,percent,higher,1.0,0.69,
+64650547,2026-08-23,2026-08-25T19:26:46,P. G.,pillar_11,ED10,Nombre d'EDS realisees parrapport au nombre demandes,ratio,higher,,72.0,
 64625138,2026-08-25,2026-08-25T09:23:32,D.,pillar_7,C1,Nombre des réunions de coordination de la CREC organisées,count,higher,,10.0,"Chaque dimanche il y a réunion de la CREC OMS, mais chaque jours il y a réunions de la CREC dans toutes les zones où les équipes CREC OMS sont présentes"
 64625138,2026-08-25,2026-08-25T09:23:32,D.,pillar_7,C2,Nombre des spots radio/émissions télévisées consacrés au virus Ebola,count,higher,,98.0,"Ituri, Tshopo, Nord Kivu et Haut Uele. Inclue principalement les programmes appuyés par le partenaire UNICEF"
 64625138,2026-08-25,2026-08-25T09:23:32,D.,pillar_7,C3,Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services,count,higher,,269858.0,Sans inclure les personnes touchées par les programmes médias

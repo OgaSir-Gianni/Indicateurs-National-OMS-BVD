@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-30T11:14:07+00:00",
+ "generated_at": "2026-08-30T17:53:55+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 30,
+ "submission_count": 31,
  "submissions": [
   {
    "id": 63700169,
@@ -848,6 +848,24 @@
     "c9": "Non disponible cette semaine. Tous les leaders qui sensibilisent ont été briefés depuis le mois de Juin et juillet",
     "c10": "Non disponible. Nécessite une étude quantitative sur le terrain",
     "c11": "6 recommandations au total. Pour la plupart en court de réalisation"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64852907,
+   "date": "2026-08-30",
+   "submitted_at": "2026-08-30T12:19:05",
+   "pillar": "pillar_5",
+   "by": "M. V. M.",
+   "values": {
+    "sm1": 50.6,
+    "sm2": 100.0,
+    "sm3": 84.1
+   },
+   "comments": {
+    "sm1": "Couverture 36.2%;  1039 interventions supplementaires menés auprès des cas en cours de suivi",
+    "sm2": "2 crèches sont fonctionnelles en ZS de Rwambara",
+    "sm3": "Activités menés majoritairement dans les ZS de Bunia et Rwambara"
    },
    "general_comments": {}
   }

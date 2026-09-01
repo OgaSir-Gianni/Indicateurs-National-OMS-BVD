@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-08-31T19:49:43+00:00",
+ "generated_at": "2026-09-01T11:04:51+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 31,
+ "submission_count": 32,
  "submissions": [
   {
    "id": 63700169,
@@ -866,6 +866,36 @@
     "sm1": "Couverture 36.2%;  1039 interventions supplementaires menés auprès des cas en cours de suivi",
     "sm2": "2 crèches sont fonctionnelles en ZS de Rwambara",
     "sm3": "Activités menés majoritairement dans les ZS de Bunia et Rwambara"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64889755,
+   "date": "2026-08-31",
+   "submitted_at": "2026-08-31T19:52:51",
+   "pillar": "pillar_7",
+   "by": "D. K.",
+   "values": {
+    "c1": 27.0,
+    "c2": 15.0,
+    "c3": 137907.0,
+    "c4": 659.0,
+    "c5": 14.0,
+    "c7": 59.0,
+    "c8": 30.0,
+    "c11": 67.0
+   },
+   "comments": {
+    "c1": "Une réunion hebdo de la CREC OMS et des réunions journalières des coordinations de la CREC à Rwampara (5), Bunia (5), Isiro (4), Butembo (3), Beni (4), Niania (3), Fataki (2))",
+    "c2": "Rediffusés plusieurs fois (15 émissions interactives aussi réalisées)",
+    "c3": "Ce chiffre n'inclue pas les personnes touchées par les émissions radios ainsi que les caravanes motorisées et crieurs publics. Complétude faible. Données portant sur 16 Zones de santé",
+    "c4": "Complétude faible. Données portant sur 16 Zones de santé",
+    "c5": "Pourcentage encore trop bas suite au faible niveau de rapportage des alertes orientées par les acteurs de terrain",
+    "c7": "Les autres feedbacks non répondus sont ceux portant sur des demandes des services dont la réalisation exigent des moyens conséquents et à long terme (demande de vaccin, kits de lavage des mains, CT/CTE, kits alimentaires, inclusion des acteurs locaux, etc.)",
+    "c8": "Membres des piliers zonaux de la CREC",
+    "c9": "Non disponible. Nécessite une étude",
+    "c10": "Non disponible. Nécessite une étude",
+    "c11": "4/6 Recommandations du premier cycle de l'évaluation qualitative rapide sont déjà réalisées"
    },
    "general_comments": {}
   }

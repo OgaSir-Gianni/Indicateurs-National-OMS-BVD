@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-01T17:35:06+00:00",
+ "generated_at": "2026-09-02T10:36:45+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 32,
+ "submission_count": 33,
  "submissions": [
   {
    "id": 63700169,
@@ -866,6 +866,32 @@
     "sm1": "Couverture 36.2%;  1039 interventions supplementaires menés auprès des cas en cours de suivi",
     "sm2": "2 crèches sont fonctionnelles en ZS de Rwambara",
     "sm3": "Activités menés majoritairement dans les ZS de Bunia et Rwambara"
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 64910748,
+   "date": "2026-08-30",
+   "submitted_at": "2026-09-02T09:30:37",
+   "pillar": "pillar_9",
+   "by": "C. I. G.",
+   "values": {
+    "ps1": 1.0,
+    "ps2": 1.0,
+    "ps3": 1.0,
+    "ps4": 12.0,
+    "ps6": 0.0,
+    "ps11": 1551.0
+   },
+   "comments": {
+    "ps4": "12 CBCM redynamisés en Ituri",
+    "ps5": "N/A",
+    "ps6": "Pas de signalement reçu cette semaine",
+    "ps7": "N/A",
+    "ps8": "70 agents de santé communautaire sensibilisés sur les principes PSEA",
+    "ps9": "137 acteurs humanitaires",
+    "ps10": "207 personnes au total",
+    "ps11": "1551 Personnes sensibilisées sur la PSEA dont 874 Femmes"
    },
    "general_comments": {}
   },

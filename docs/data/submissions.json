@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-09-10T17:28:51+00:00",
+ "generated_at": "2026-09-11T10:35:14+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 34,
+ "submission_count": 38,
  "submissions": [
   {
    "id": 63700169,
@@ -896,6 +896,51 @@
    "general_comments": {}
   },
   {
+   "id": 65197041,
+   "date": "2026-08-30",
+   "submitted_at": "2026-09-10T18:17:28",
+   "pillar": "pillar_1",
+   "by": "P. A.",
+   "values": {
+    "s1": 516.0,
+    "s2": 0.0,
+    "s3": 6100.0,
+    "s4": 2505.0,
+    "s5": 3.0,
+    "s9": 86.3,
+    "s15": 84.1,
+    "s16": 86.5,
+    "s18": 18.3,
+    "s19": 100.0,
+    "s21": 76.7,
+    "s23": 4.0,
+    "s25": 100.0
+   },
+   "comments": {
+    "s16": "Not necessarily within 24 hours",
+    "s18": "Not necessarily within 24 hours",
+    "s19": "Not necessarily within 24 hours",
+    "s20": "Indicator measurement not possible. Not all validated alerts are evacuated to CT/CTE. Only living suspects are evacuated and that is covered in Indicator S22",
+    "s23": "value is from WHO Collaboratory",
+    "s25": "All daily SitReps are produced and published."
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 65197046,
+   "date": "2026-08-30",
+   "submitted_at": "2026-09-10T18:18:28",
+   "pillar": "pillar_2",
+   "by": "P. A.",
+   "values": {
+    "pe1": 97.9,
+    "pe2": 98.6,
+    "pe3": 67.0
+   },
+   "comments": {},
+   "general_comments": {}
+  },
+  {
    "id": 64889755,
    "date": "2026-08-31",
    "submitted_at": "2026-08-31T19:52:51",
@@ -941,6 +986,52 @@
     "sm2": "Pas de crèche fonctionnelle au Nord Kivu, Tshopo, Haut Uele, Bas Uele",
     "sm3": "Pas d'activité dans les ménages des gueris dans les nouvelles zones de santé affectées"
    },
+   "general_comments": {}
+  },
+  {
+   "id": 65196777,
+   "date": "2026-09-06",
+   "submitted_at": "2026-09-10T17:57:21",
+   "pillar": "pillar_1",
+   "by": "P. A.",
+   "values": {
+    "s1": 586.0,
+    "s2": 0.0,
+    "s3": 6686.0,
+    "s4": 2480.0,
+    "s5": 1.0,
+    "s9": 85.3,
+    "s15": 86.9,
+    "s16": 89.4,
+    "s18": 18.1,
+    "s19": 100.0,
+    "s21": 77.9,
+    "s23": 5.0,
+    "s25": 100.0
+   },
+   "comments": {
+    "s5": "Newly affected health zones are used as the agreed proxy",
+    "s16": "Not necessarily within 24 hours",
+    "s18": "Not necessarily within 24 hours",
+    "s19": "Not necessarily within 24 hours",
+    "s20": "Indicator measurement not possible. Not all validated alerts are evacuated to CT/CTE. Only living suspects are evacuated and that is covered in Indicator S22",
+    "s23": "EW36 value is from WHO Collaboratory",
+    "s25": "All daily SitReps are produced and published."
+   },
+   "general_comments": {}
+  },
+  {
+   "id": 65196798,
+   "date": "2026-09-06",
+   "submitted_at": "2026-09-10T18:00:07",
+   "pillar": "pillar_2",
+   "by": "P. A.",
+   "values": {
+    "pe1": 98.2,
+    "pe2": 98.8,
+    "pe3": 49.0
+   },
+   "comments": {},
    "general_comments": {}
   }
  ]

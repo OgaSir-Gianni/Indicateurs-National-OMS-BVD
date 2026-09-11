@@ -254,6 +254,22 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 64910748,2026-08-30,2026-09-02T09:30:37,C. I. G.,pillar_9,PS4,Pourcentage des comités de gestion des plaintes (CBCM) mis en place dans les zones de santé concernees par a reponse,percent,higher,0.8,12.0,12 CBCM redynamisés en Ituri
 64910748,2026-08-30,2026-09-02T09:30:37,C. I. G.,pillar_9,PS6,Pourcentage des cas d'EAS/HS signalés via le mécanisme de plainte,percent,higher,,0.0,Pas de signalement reçu cette semaine
 64910748,2026-08-30,2026-09-02T09:30:37,C. I. G.,pillar_9,PS11,Nombre de personnes sensibilisées dans la communauté,count,higher,,1551.0,1551 Personnes sensibilisées sur la PSEA dont 874 Femmes
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S1,Nombre de nouveaux cas confirmés,count,lower,0.0,516.0,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S2,Nombre de nouveaux cas probables,count,lower,0.0,0.0,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S3,Nombre cumulé de cas depuis le début de l'épidémie,count,higher,,6100.0,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S4,Nombre de nouveaux cas suspects,count,lower,,2505.0,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S5,Nombre de nouvelles aires de santé touchées,count,lower,,3.0,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S9,Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes,percent,higher,1.0,86.3,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S15,Taux de suivi de contacts,percent,higher,90.0,84.1,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S16,% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees),percent,higher,1.0,86.5,Not necessarily within 24 hours
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S18,Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées),percent,higher,90.0,18.3,Not necessarily within 24 hours
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S19,Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification,percent,higher,90.0,100.0,Not necessarily within 24 hours
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S21,Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées,percent,higher,100.0,76.7,
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S23,Délai moyen entre l'apparition des symptomes et la détection (date de notification),days,lower,4.0,4.0,value is from WHO Collaboratory
+65197041,2026-08-30,2026-09-10T18:17:28,P. A.,pillar_1,S25,Proportion de rapports de situation (sitreps) produits,percent,higher,100.0,100.0,All daily SitReps are produced and published.
+65197046,2026-08-30,2026-09-10T18:18:28,P. A.,pillar_2,PE1,Pourcentage des voyageurs examinés aux PoE / PoC,percent,higher,0.9,97.9,
+65197046,2026-08-30,2026-09-10T18:18:28,P. A.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,98.6,
+65197046,2026-08-30,2026-09-10T18:18:28,P. A.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,67.0,
 64889755,2026-08-31,2026-08-31T19:52:51,D. K.,pillar_7,C1,Nombre des réunions de coordination de la CREC organisées,count,higher,,27.0,"Une réunion hebdo de la CREC OMS et des réunions journalières des coordinations de la CREC à Rwampara (5), Bunia (5), Isiro (4), Butembo (3), Beni (4), Niania (3), Fataki (2))"
 64889755,2026-08-31,2026-08-31T19:52:51,D. K.,pillar_7,C2,Nombre des spots radio/émissions télévisées consacrés au virus Ebola,count,higher,,15.0,Rediffusés plusieurs fois (15 émissions interactives aussi réalisées)
 64889755,2026-08-31,2026-08-31T19:52:51,D. K.,pillar_7,C3,Nombre des personnes touchées par les messages de sensibilisation à la prévention du virus Ebola et à d'autres services,count,higher,,137907.0,Ce chiffre n'inclue pas les personnes touchées par les émissions radios ainsi que les caravanes motorisées et crieurs publics. Complétude faible. Données portant sur 16 Zones de santé
@@ -265,3 +281,19 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 65074202,2026-09-05,2026-09-06T14:24:12,M. V. M.,pillar_5,SM1,Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit,percent,higher,1.0,60.99,"Couverture 36.2%;  966 interventions supplementaires menés auprès des cas en cours de suivi; faible remonté des données du Nord Kivu, Tshopo, Haut Uele, Bas Uele"
 65074202,2026-09-05,2026-09-06T14:24:12,M. V. M.,pillar_5,SM2,Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche,percent,higher,1.0,100.0,"Pas de crèche fonctionnelle au Nord Kivu, Tshopo, Haut Uele, Bas Uele"
 65074202,2026-09-05,2026-09-06T14:24:12,M. V. M.,pillar_5,SM3,Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial,percent,higher,1.0,94.21,Pas d'activité dans les ménages des gueris dans les nouvelles zones de santé affectées
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S1,Nombre de nouveaux cas confirmés,count,lower,0.0,586.0,
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S2,Nombre de nouveaux cas probables,count,lower,0.0,0.0,
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S3,Nombre cumulé de cas depuis le début de l'épidémie,count,higher,,6686.0,
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S4,Nombre de nouveaux cas suspects,count,lower,,2480.0,
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S5,Nombre de nouvelles aires de santé touchées,count,lower,,1.0,Newly affected health zones are used as the agreed proxy
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S9,Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes,percent,higher,1.0,85.3,
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S15,Taux de suivi de contacts,percent,higher,90.0,86.9,
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S16,% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees),percent,higher,1.0,89.4,Not necessarily within 24 hours
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S18,Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées),percent,higher,90.0,18.1,Not necessarily within 24 hours
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S19,Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification,percent,higher,90.0,100.0,Not necessarily within 24 hours
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S21,Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées,percent,higher,100.0,77.9,
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S23,Délai moyen entre l'apparition des symptomes et la détection (date de notification),days,lower,4.0,5.0,EW36 value is from WHO Collaboratory
+65196777,2026-09-06,2026-09-10T17:57:21,P. A.,pillar_1,S25,Proportion de rapports de situation (sitreps) produits,percent,higher,100.0,100.0,All daily SitReps are produced and published.
+65196798,2026-09-06,2026-09-10T18:00:07,P. A.,pillar_2,PE1,Pourcentage des voyageurs examinés aux PoE / PoC,percent,higher,0.9,98.2,
+65196798,2026-09-06,2026-09-10T18:00:07,P. A.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,98.8,
+65196798,2026-09-06,2026-09-10T18:00:07,P. A.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,49.0,

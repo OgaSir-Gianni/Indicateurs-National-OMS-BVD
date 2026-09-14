@@ -297,3 +297,6 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 65196798,2026-09-06,2026-09-10T18:00:07,P. A.,pillar_2,PE1,Pourcentage des voyageurs examinés aux PoE / PoC,percent,higher,0.9,98.2,
 65196798,2026-09-06,2026-09-10T18:00:07,P. A.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,98.8,
 65196798,2026-09-06,2026-09-10T18:00:07,P. A.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,49.0,
+65228677,2026-09-12,2026-09-13T21:22:13,M. V. M.,pillar_5,SM1,Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit,percent,higher,1.0,41.16,Couverture 34.4%;  1031 interventions supplementaires menés auprès des cas en cours de suivi
+65228677,2026-09-12,2026-09-13T21:22:13,M. V. M.,pillar_5,SM2,Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche,percent,higher,1.0,100.0,
+65228677,2026-09-12,2026-09-13T21:22:13,M. V. M.,pillar_5,SM3,Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial,percent,higher,1.0,68.33,Activités menés majoritairement dans les ZS de Bunia et Rwambara

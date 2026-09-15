@@ -300,3 +300,19 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 65228677,2026-09-12,2026-09-13T21:22:13,M. V. M.,pillar_5,SM1,Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit,percent,higher,1.0,41.16,Couverture 34.4%;  1031 interventions supplementaires menés auprès des cas en cours de suivi
 65228677,2026-09-12,2026-09-13T21:22:13,M. V. M.,pillar_5,SM2,Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche,percent,higher,1.0,100.0,
 65228677,2026-09-12,2026-09-13T21:22:13,M. V. M.,pillar_5,SM3,Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial,percent,higher,1.0,68.33,Activités menés majoritairement dans les ZS de Bunia et Rwambara
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S1,Nombre de nouveaux cas confirmés,count,lower,0.0,572.0,
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S2,Nombre de nouveaux cas probables,count,lower,0.0,0.0,
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S3,Nombre cumulé de cas depuis le début de l'épidémie,count,higher,,7258.0,
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S4,Nombre de nouveaux cas suspects,count,lower,,2720.0,
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S5,Nombre de nouvelles aires de santé touchées,count,lower,,1.0,One newly affected health zone Bulu (Sud-Ubangi)
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S9,Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes,percent,higher,1.0,78.6,21935/27905
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S15,Taux de suivi de contacts,percent,higher,90.0,85.8,"157,971/184,073"
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S16,% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees),percent,higher,1.0,82.9,"11,366/13,709"
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S18,Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées),percent,higher,90.0,19.8,Not necessarily in 24 hours
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S19,Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification,percent,higher,90.0,100.0,Not necessarily in 24 hours
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S21,Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées,percent,higher,100.0,71.8,"1,370/1,908"
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S23,Délai moyen entre l'apparition des symptomes et la détection (date de notification),days,lower,4.0,5.0,from the WHO Collaboratory platform
+65623507,2026-09-13,2026-09-15T15:42:26,A. P. M.,pillar_1,S25,Proportion de rapports de situation (sitreps) produits,percent,higher,100.0,100.0,
+65624352,2026-09-13,2026-09-15T15:44:29,A. P. M.,pillar_2,PE1,Pourcentage des voyageurs examinés aux PoE / PoC,percent,higher,0.9,98.0,
+65624352,2026-09-13,2026-09-15T15:44:29,A. P. M.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,98.9,
+65624352,2026-09-13,2026-09-15T15:44:29,A. P. M.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,30.0,

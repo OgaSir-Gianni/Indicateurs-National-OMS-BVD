@@ -316,3 +316,6 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 65624352,2026-09-13,2026-09-15T15:44:29,A. P. M.,pillar_2,PE1,Pourcentage des voyageurs examinés aux PoE / PoC,percent,higher,0.9,98.0,
 65624352,2026-09-13,2026-09-15T15:44:29,A. P. M.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,98.9,
 65624352,2026-09-13,2026-09-15T15:44:29,A. P. M.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,30.0,
+65880088,2026-09-19,2026-09-20T15:04:48,M. V. M.,pillar_5,SM1,Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit,percent,higher,1.0,44.0,Couverture 33.3%;  862 interventions supplementaires menés auprès des cas en cours de suivi
+65880088,2026-09-19,2026-09-20T15:04:48,M. V. M.,pillar_5,SM2,Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche,percent,higher,1.0,100.0,
+65880088,2026-09-19,2026-09-20T15:04:48,M. V. M.,pillar_5,SM3,Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial,percent,higher,1.0,90.9,

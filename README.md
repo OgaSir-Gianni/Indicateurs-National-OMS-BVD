@@ -12,7 +12,6 @@ scripts/     build_indicators.py (form → registry) · fetch_data.py (Ona → d
 config/      overrides.json — your corrections to what the parser infers
 docs/        the site itself, served by GitHub Pages
 docs/data/   indicators.json (registry) · submissions.json (values) · kpi_long.csv (tidy export)
-             kpi_export.xlsx (the same data as an Excel workbook, behind the download button)
 ```
 
 ## Setting it up once
@@ -81,18 +80,6 @@ much easier to see there than in a table of values. The column for the week stil
 italicised: it is incomplete by definition, not by fault.
 
 A missing value means *not reported*, never zero, and the dashboard never fills a gap with a zero.
-
-## Downloading the data
-
-Two buttons in the filter row. **CSV (vue filtrée)** builds a CSV in the browser from exactly
-what the filters show — one period, one pillar, one status. **Excel (toutes les données)**
-downloads `docs/data/kpi_export.xlsx`, which `fetch_data.py` writes on every refresh: an *À
-propos* sheet with provenance, *Valeurs* (one row per value entered, with dates as real Excel
-dates so pivot tables work), *Soumissions* (one row per submission), and *Indicateurs* (the
-registry). The workbook goes through the same redaction as the JSON — names as initials, and
-emails are never written to it regardless of `REDACT_EMAILS`, because a downloaded file gets
-forwarded. The button only appears once the file exists, so demo mode and repositories that have
-not yet run the updated action simply do not show it.
 
 ## The weekly model, and how submissions are combined
 

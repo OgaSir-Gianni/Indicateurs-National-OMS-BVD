@@ -20,7 +20,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from fetch_data import XLSX_NAME_HEADER, initials  # noqa: E402
+from fetch_data import initials  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "data"
@@ -72,28 +72,6 @@ def scrub_csv(path):
     return changed
 
 
-def scrub_xlsx(path):
-    from openpyxl import load_workbook
-
-    book = load_workbook(path)
-    changed = []
-    for sheet in book.worksheets:
-        for col, cell in enumerate(sheet[1], start=1):
-            if cell.value != XLSX_NAME_HEADER:
-                continue
-            for row in sheet.iter_rows(min_row=2, min_col=col, max_col=col):
-                before = row[0].value
-                if before is None:
-                    continue
-                after = redact(before)
-                if after != before:
-                    changed.append(before)
-                    row[0].value = after
-    if changed:
-        book.save(path)
-    return changed
-
-
 def main():
     if os.environ.get("REDACT_NAMES") == "0":
         print("REDACT_NAMES=0 — names are meant to be published here, nothing to do.")
@@ -101,8 +79,7 @@ def main():
 
     total = set()
     for path, fn in ((DATA / "submissions.json", scrub_submissions),
-                     (DATA / "kpi_long.csv", scrub_csv),
-                     (DATA / "kpi_export.xlsx", scrub_xlsx)):
+                     (DATA / "kpi_long.csv", scrub_csv)):
         if not path.exists():
             print(f"note: {path.name} absent, skipped")
             continue

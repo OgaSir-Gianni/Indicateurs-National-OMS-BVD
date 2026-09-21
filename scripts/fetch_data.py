@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """
-Pull submissions from Ona (whonghub.org) and write the files the dashboard reads.
+Pull submissions from Ona (whonghub.org) and write the two files the dashboard reads.
 
     docs/data/submissions.json   one record per submission, values keyed by indicator id
     docs/data/kpi_long.csv       tidy long format, one row per indicator per submission
-    docs/data/kpi_export.xlsx    the same data as an Excel workbook, for the
-                                 download button on the dashboard
 
 Environment:
     ONA_TOKEN     required. Account settings -> API token on https://whonghub.org
@@ -27,9 +25,6 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 import requests
-from openpyxl import Workbook
-from openpyxl.styles import Font
-from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "docs" / "data"
@@ -143,114 +138,6 @@ def write_long_csv(records, registry, path):
                 ])
 
 
-# Column header for respondent names in the workbook. scrub_published.py finds
-# the column by this exact string, so keep the two in step.
-XLSX_NAME_HEADER = "Rapporté par"
-
-
-def _date(text):
-    try:
-        return datetime.strptime(str(text)[:10], "%Y-%m-%d").date()
-    except ValueError:
-        return None
-
-
-def _datetime(text):
-    try:
-        return datetime.strptime(str(text)[:19], "%Y-%m-%dT%H:%M:%S")
-    except ValueError:
-        return None
-
-
-def _sheet(book, title, columns):
-    """columns: list of (header, width). Returns the styled worksheet."""
-    sheet = book.create_sheet(title)
-    for i, (header, width) in enumerate(columns, start=1):
-        cell = sheet.cell(row=1, column=i, value=header)
-        cell.font = Font(bold=True)
-        sheet.column_dimensions[get_column_letter(i)].width = width
-    sheet.freeze_panes = "A2"
-    return sheet
-
-
-def write_xlsx(records, registry, path):
-    """One workbook: provenance, values in long form, one row per submission,
-    and the indicator registry. Respondent emails are never written here,
-    whatever REDACT_EMAILS says — the workbook is made to be passed around."""
-    by_id = {ind["id"]: ind for ind in registry["indicators"]}
-    pillar_name = {p["id"]: p["label"]["fr"] for p in registry["pillars"]}
-    book = Workbook()
-
-    about = book.active
-    about.title = "À propos"
-    about.column_dimensions["A"].width = 24
-    about.column_dimensions["B"].width = 90
-    rows = [
-        ("Formulaire", registry["form"]["title"]),
-        ("Identifiant", registry["form"]["id_string"]),
-        ("Version", registry["form"]["version"]),
-        ("Extrait le", datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")),
-        ("Soumissions", len(records)),
-        ("Source", "Formulaire ONA hébergé sur whonghub.org ; valeurs telles que saisies par les points focaux, sans retraitement."),
-        ("Confidentialité", "Les noms des rapporteurs sont réduits à leurs initiales ; les adresses e-mail ne figurent jamais dans ce fichier."),
-    ]
-    for r, (key, value) in enumerate(rows, start=1):
-        about.cell(row=r, column=1, value=key).font = Font(bold=True)
-        about.cell(row=r, column=2, value=value)
-
-    values = _sheet(book, "Valeurs", [
-        ("ID soumission", 13), ("Date de rapportage", 17), ("Soumis le", 18),
-        (XLSX_NAME_HEADER, 14), ("Pilier", 30), ("Code", 8), ("Indicateur", 60),
-        ("Unité", 9), ("Sens", 8), ("Cible", 8), ("Valeur", 10), ("Commentaire", 60),
-    ])
-    for record in records:
-        for key, value in record["values"].items():
-            ind = by_id[key]
-            values.append([
-                record["id"], _date(record["date"]), _datetime(record["submitted_at"]),
-                record["by"], pillar_name.get(ind["pillar"], ind["pillar"]),
-                ind["code"], ind["label"]["fr"], ind["unit"], ind["direction"],
-                ind["target"] if ind["has_target"] else None, value,
-                record["comments"].get(key) or None,
-            ])
-    values.auto_filter.ref = f"A1:L{max(values.max_row, 2)}"
-
-    subs = _sheet(book, "Soumissions", [
-        ("ID", 13), ("Date de rapportage", 17), ("Soumis le", 18),
-        ("Pilier choisi", 18), (XLSX_NAME_HEADER, 14),
-        ("Indicateurs renseignés", 20), ("Commentaires généraux", 90),
-    ])
-    for record in records:
-        general = " · ".join(
-            f"{pillar_name.get(pid, pid)} : {text}"
-            for pid, text in record["general_comments"].items()
-        )
-        subs.append([
-            record["id"], _date(record["date"]), _datetime(record["submitted_at"]),
-            record["pillar"], record["by"], len(record["values"]), general or None,
-        ])
-    subs.auto_filter.ref = f"A1:G{max(subs.max_row, 2)}"
-
-    registry_sheet = _sheet(book, "Indicateurs", [
-        ("Code", 8), ("Pilier", 30), ("Indicateur", 60),
-        ("Unité", 9), ("Sens", 8), ("Cible", 10),
-    ])
-    for ind in registry["indicators"]:
-        registry_sheet.append([
-            ind["code"], pillar_name.get(ind["pillar"], ind["pillar"]),
-            ind["label"]["fr"], ind["unit"], ind["direction"],
-            ind["target"] if ind["has_target"] else "—",
-        ])
-    registry_sheet.auto_filter.ref = f"A1:F{max(registry_sheet.max_row, 2)}"
-
-    for sheet in (values, subs):
-        for row in sheet.iter_rows(min_row=2):
-            row[1].number_format = "yyyy-mm-dd"
-            row[2].number_format = "yyyy-mm-dd hh:mm"
-
-    book.save(path)
-
-
 def main():
     if not TOKEN:
         raise SystemExit("ONA_TOKEN is not set. Export it, or add it as the repository secret ONA_TOKEN.")
@@ -277,11 +164,10 @@ def main():
         json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8"
     )
     write_long_csv(records, registry, DATA / "kpi_long.csv")
-    write_xlsx(records, registry, DATA / "kpi_export.xlsx")
 
     dates = sorted({r["date"] for r in records if r["date"]})
     filled = sum(len(r["values"]) for r in records)
-    print(f"wrote docs/data/submissions.json, kpi_long.csv and kpi_export.xlsx")
+    print(f"wrote docs/data/submissions.json and docs/data/kpi_long.csv")
     print(f"  reporting dates : {dates[0] if dates else '—'} to {dates[-1] if dates else '—'}")
     print(f"  values captured : {filled}")
 

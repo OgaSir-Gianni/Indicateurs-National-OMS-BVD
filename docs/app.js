@@ -23,7 +23,8 @@
 const T = {
   fr: {
     period: "Période", pillar: "Pilier", status: "Statut",
-    export: "Exporter CSV", w1: "Semaine en cours", w4: "4 dernières semaines",
+    export: "CSV (vue filtrée)", exportAll: "Excel (toutes les données)",
+    w1: "Semaine en cours", w4: "4 dernières semaines",
     w12: "12 dernières semaines", all: "Tout l'historique", allPillars: "Tous les piliers",
     stAll: "Tous", stOk: "Cible atteinte", stWatch: "À surveiller", stOff: "Hors cible",
     stNone: "Non renseigné", noTarget: "Sans cible",
@@ -50,7 +51,8 @@ const T = {
   },
   en: {
     period: "Period", pillar: "Pillar", status: "Status",
-    export: "Export CSV", w1: "Current week", w4: "Last 4 weeks",
+    export: "CSV (filtered view)", exportAll: "Excel (all data)",
+    w1: "Current week", w4: "Last 4 weeks",
     w12: "Last 12 weeks", all: "Full history", allPillars: "All pillars",
     stAll: "All", stOk: "On target", stWatch: "Watch", stOff: "Off target",
     stNone: "Not reported", noTarget: "No target",
@@ -549,6 +551,14 @@ function renderChrome() {
     `<a href="${esc(REG.form.enketo_url)}" target="_blank" rel="noopener">${esc(t("openForm"))}</a>`;
   $("#footer-note").textContent = t("footer");
 
+  // The Excel export is a static file the refresh action commits alongside the
+  // JSON. Label it here; boot() unhides it once a HEAD request confirms it
+  // exists (it does not in demo mode, or before the first run of the new code).
+  const xlsx = $("#btn-xlsx");
+  xlsx.textContent = t("exportAll");
+  xlsx.setAttribute("href", `data/kpi_export.xlsx?v=${encodeURIComponent(SUB.generated_at || "")}`);
+  xlsx.setAttribute("download", `kpi_${REG.form.id_string}_${(SUB.generated_at || "").slice(0, 10)}.xlsx`);
+
   const period = $("#f-period");
   [["1", t("w1")], ["4", t("w4")], ["12", t("w12")], ["all", t("all")]].forEach(([v, lab], i) => {
     period.options[i].value = v; period.options[i].textContent = lab;
@@ -725,6 +735,9 @@ async function boot() {
   buildWeeks();
   bind();
   render();
+  fetch("data/kpi_export.xlsx", { method: "HEAD" })
+    .then((r) => { if (r.ok) $("#btn-xlsx").hidden = false; })
+    .catch(() => {});
 }
 
 boot().catch((err) => {

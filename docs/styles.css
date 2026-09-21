@@ -148,12 +148,13 @@ select, input[type="search"] {
 }
 input[type="search"] { min-width: 220px; }
 .spacer { flex: 1 1 auto; }
-button.ghost {
+button.ghost, a.ghost {
   font: inherit; font-size: 13px; font-weight: 600; padding: 8px 14px;
   border: 1px solid var(--line); background: var(--card); border-radius: 6px;
   cursor: pointer; color: var(--accent);
+  text-decoration: none; display: inline-block;
 }
-button.ghost:hover { border-color: var(--accent); }
+button.ghost:hover, a.ghost:hover { border-color: var(--accent); }
 
 /* ---------- summary tiles ---------- */
 .summary {

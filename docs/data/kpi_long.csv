@@ -336,3 +336,21 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 66006655,2026-09-26,2026-09-27T13:55:15,M. V. M.,pillar_5,SM1,Proportion des patients ayant bénéficié des soins SMSPS pendant leur séjour dans les CTE et les centres de transit,percent,higher,1.0,57.4,Couverture 33.3%; 1155 interventions supplementaires menés auprès des cas en cours de suivi
 66006655,2026-09-26,2026-09-27T13:55:15,M. V. M.,pillar_5,SM2,Proportion d'enfants séparés de leurs parents atteints de la MVE qui ont bénéficié d'un soutien psychosociale à la crèche,percent,higher,1.0,100.0,11 Nouvelles admissions en crèche
 66006655,2026-09-26,2026-09-27T13:55:15,M. V. M.,pillar_5,SM3,Proportion de ménages de patients guéris ayant bénéficié d'un soutien psychosocial,percent,higher,1.0,78.0,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S1,Nombre de nouveaux cas confirmés,count,lower,0.0,374.0,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S2,Nombre de nouveaux cas probables,count,lower,0.0,0.0,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S3,Nombre cumulé de cas depuis le début de l'épidémie,count,higher,,8116.0,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S4,Nombre de nouveaux cas suspects,count,lower,,2420.0,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S5,Nombre de nouvelles aires de santé touchées,count,lower,,0.0,Health Zones
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S9,Pourcentage de contacts suivis et vus avec succès au cours des 24 heures précédentes,percent,higher,1.0,75.9,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S15,Taux de suivi de contacts,percent,higher,90.0,79.1,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S16,% des alertes vérifiées terminées dans les 24 heures (N: alertes verifies/alertes remontees),percent,higher,1.0,96.4,Not necessarily within 24 hours
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S18,Proportion d'alertes validées dans les 24 heures suivant leur notification (alertes repondant a la defn des cas/alertes nootifiées),percent,higher,90.0,16.3,Not necessarily within 24 hours
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S19,Proportion cas suspects (d'alertes validees) investiguées dans les 24 heures suivant leur notification,percent,higher,90.0,97.1,Not necessarily within 24 hours
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S21,Proportion cas suspects (d'alertes validées) vivants isolés au CT/CTE normées,percent,higher,100.0,75.0,
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S23,Délai moyen entre l'apparition des symptomes et la détection (date de notification),days,lower,4.0,4.0,From collaboratory platform
+66070754,2026-09-27,2026-09-29T18:40:15,A. P. M.,pillar_1,S25,Proportion de rapports de situation (sitreps) produits,percent,higher,100.0,100.0,
+66070865,2026-09-27,2026-09-29T18:44:19,A. P. M.,pillar_2,PE1,Pourcentage des voyageurs examinés aux PoE / PoC,percent,higher,0.9,97.6,
+66070865,2026-09-27,2026-09-29T18:44:19,A. P. M.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,98.9,
+66070865,2026-09-27,2026-09-29T18:44:19,A. P. M.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,26.0,
+66070865,2026-09-27,2026-09-29T18:44:19,A. P. M.,pillar_2,PE4,Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours,count,higher,1.0,100.0,
+66070865,2026-09-27,2026-09-29T18:44:19,A. P. M.,pillar_2,PE5,Nombre des contacts interceptés au point d'entrée/point de contrôle,count,higher,,0.0,

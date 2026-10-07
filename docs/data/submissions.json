@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-06T19:18:05+00:00",
+ "generated_at": "2026-10-07T12:37:57+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 48,
+ "submission_count": 49,
  "submissions": [
   {
    "id": 63700169,
@@ -1236,6 +1236,28 @@
    },
    "comments": {},
    "general_comments": {}
+  },
+  {
+   "id": 66293845,
+   "date": "2026-10-04",
+   "submitted_at": "2026-10-07T11:09:04",
+   "pillar": "pillar_2",
+   "by": "A. K. S.",
+   "values": {
+    "pe1": 98.0,
+    "pe2": 99.0,
+    "pe3": 48.0,
+    "pe5": 0.0
+   },
+   "comments": {
+    "pe1": "1 073 204 voyageurs examinés sur 1 100 822 passages rapportés, soit 97,5 %. La cible de 90 % est atteinte sur les données disponibles. Le Tableau 5 porte sur la SE40 en cours (4 jours) ; Bas-Uélé et Sud-Ubangi ne rapportent pas ces données.",
+    "pe2": "Sensibilisation proche de la cible de 100 %. Résultat limité à quatre jours et cinq provinces ; les données du Bas-Uélé et du Sud-Ubangi sont manquantes.",
+    "pe4": "NC: Fonctionnement continu déclaré pour 110 sites parmi les 116 activés dans cinq provinces. Les données du Bas-Uélé et du Sud-Ubangi sont manquantes ; la proportion nationale ne peut pas être établie.",
+    "pe5": "NR"
+   },
+   "general_comments": {
+    "pillar_2": "169 PoE/PoC sont activés dans sept provinces. Le dépistage et la sensibilisation restent élevés dans les cinq provinces qui rapportent, mais les données de mobilité ne couvrent que quatre jours. Les données du Bas-Uélé et du Sud-Ubangi sont manquantes et le total des alertes reste à réconcilier. Les principales difficultés sont l’insécurité et les retards de réponse aux alertes au Nord-Kivu, la faible saisie des alertes en Ituri, le manque de moyens de communication et les dispositifs d’isolement insuffisants au Sud-Kivu."
+   }
   }
  ]
 }

@@ -368,3 +368,7 @@ submission_id,reporting_date,submitted_at,reported_by,pillar,indicator_code,indi
 66414301,2026-10-11,2026-10-15T12:02:55,A. K. S.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,94.0,
 66414301,2026-10-11,2026-10-15T12:02:55,A. K. S.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,38.0,
 66414301,2026-10-11,2026-10-15T12:02:55,A. K. S.,pillar_2,PE4,Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours,count,higher,1.0,94.0,"Sites désignés devant fonctionner inconnus. Mesure liée : 112/119 sites activés dans cinq provinces (94,1 %). Continuité NR au Bas-Uélé et Sud-Ubangi."
+66577222,2026-10-19,2026-10-23T14:38:08,A. K. S.,pillar_2,PE1,Pourcentage des voyageurs examinés aux PoE / PoC,percent,higher,0.9,98.0,
+66577222,2026-10-19,2026-10-23T14:38:08,A. K. S.,pillar_2,PE2,Proportion des personnes sensibilisées au point d'entrée/point de contrôle,percent,higher,1.0,99.0,
+66577222,2026-10-19,2026-10-23T14:38:08,A. K. S.,pillar_2,PE3,Nombre d'alertes detectées et signalées par les points d'entrée/point de contrôle au pilier surveillance de l'IMS MVE,count,higher,80.0,47.0,
+66577222,2026-10-19,2026-10-23T14:38:08,A. K. S.,pillar_2,PE4,Point d'entrée/point de contrôle ayant fonctionné sans interruption au cours des 7 derniers jours,count,higher,1.0,94.0,

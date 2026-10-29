@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-28T19:19:27+00:00",
+ "generated_at": "2026-10-29T12:16:37+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 52,
+ "submission_count": 53,
  "submissions": [
   {
    "id": 63700169,
@@ -1310,6 +1310,29 @@
    },
    "general_comments": {
     "pillar_2": "SE42 : 173 PoE/PoC activés dans sept provinces ; 113/120 sites sans interruption (94,2 %). 1 915 831 voyageurs dépistés sur 1 954 948 passages (98,0 %) ; sensibilisation 98,9–99,3 % par jour (SitReps). 47 alertes notifiées, 21 alertes vivantes validées, 16 corps interceptés. Données de mobilité non transmises par le Bas-Uélé, le Sud-Ubangi et le Nord-Ubangi."
+   }
+  },
+  {
+   "id": 66827578,
+   "date": "2026-10-25",
+   "submitted_at": "2026-10-29T09:40:39",
+   "pillar": "pillar_2",
+   "by": "A. K. S.",
+   "values": {
+    "pe1": 98.0,
+    "pe2": 99.0,
+    "pe3": 90.0,
+    "pe4": 96.0
+   },
+   "comments": {
+    "pe1": "2 076 905/2 121 870 dépistés (97,9 %) ; SE42 : 98,0 %.",
+    "pe2": "98,6–99,3 % par jour ; Nord-Kivu 96,1–98,4 % ; Bas-Uélé 88–93 %.",
+    "pe3": "90 alertes ; 26 vivantes validées ; 15 corps (SE42 : 47).",
+    "pe4": "136/142 sites sans interruption sur 7 jours (95,8 % ; SE42 : 94,2 %) ; 181 sites activés.",
+    "pe5": "Aucun contact intercepté rapporté. 15 corps interceptés."
+   },
+   "general_comments": {
+    "pillar_2": "181 PoE/PoC activés dans sept provinces ; 136/142 sites sans interruption (95,8 %), de 8 h à 17 h. \n2 076 905 voyageurs dépistés sur 2 121 870 passages (97,9 %) ; sensibilisation 98,6–99,3 % par jour. \n90 alertes notifiées, dont 49 au Bas-Uélé ; 26 alertes vivantes validées et 15 corps interceptés, dont un enfant confirmé au PoC Foner Kasindi. \nUn cas confirmé intercepté à Mavivi. \nRefus de dépistage de 30 à 39 % aux PoC Pluto et Nzebi. Données non transmises par le Sud-Ubangi et le Nord-Ubangi."
    }
   }
  ]

@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-10-31T18:09:34+00:00",
+ "generated_at": "2026-11-01T12:39:35+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 53,
+ "submission_count": 54,
  "submissions": [
   {
    "id": 63700169,
@@ -1334,6 +1334,20 @@
    "general_comments": {
     "pillar_2": "181 PoE/PoC activés dans sept provinces ; 136/142 sites sans interruption (95,8 %), de 8 h à 17 h. \n2 076 905 voyageurs dépistés sur 2 121 870 passages (97,9 %) ; sensibilisation 98,6–99,3 % par jour. \n90 alertes notifiées, dont 49 au Bas-Uélé ; 26 alertes vivantes validées et 15 corps interceptés, dont un enfant confirmé au PoC Foner Kasindi. \nUn cas confirmé intercepté à Mavivi. \nRefus de dépistage de 30 à 39 % aux PoC Pluto et Nzebi. Données non transmises par le Sud-Ubangi et le Nord-Ubangi."
    }
+  },
+  {
+   "id": 67317952,
+   "date": "2026-11-01",
+   "submitted_at": "2026-11-01T10:26:58",
+   "pillar": "pillar_5",
+   "by": "M. V. M.",
+   "values": {
+    "sm1": 59.07,
+    "sm2": 100.0,
+    "sm3": 55.8
+   },
+   "comments": {},
+   "general_comments": {}
   }
  ]
 }

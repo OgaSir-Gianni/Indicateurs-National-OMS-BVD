@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-08T18:38:44+00:00",
+ "generated_at": "2026-11-09T15:08:22+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 55,
+ "submission_count": 56,
  "submissions": [
   {
    "id": 63700169,
@@ -1371,6 +1371,23 @@
    "general_comments": {
     "pillar_2": "SE44 : 147 PoE/PoC activés dans sept provinces ; 133 sans interruption sur sept jours (90,5 %), de 8 h à 17 h. 2 104 950 voyageurs dépistés sur 2 161 117 passages (97,4 %) ; sensibilisation 98–99 % par jour. 66 alertes notifiées, dont 31 en Ituri et 15 au Bas-Uélé ; 36 alertes vivantes validées et 10 corps interceptés, dont 7 au Sud-Kivu. 71e cas positif PoE/PoC détecté le 29/10 à Kasenyi (Tchomia). 15 alertes validées à Biakato May et Bela (Mandima) non transférées faute d’ambulance. Complétude des rapports 78 % (84 % en SE43), en baisse au Bas-Uélé et au Haut-Uélé ; démotivation et menaces de grève des prestataires. Sud-Ubangi transmet pour la première fois ; Nord-Ubangi sans données."
    }
+  },
+  {
+   "id": 68423624,
+   "date": "2026-11-08",
+   "submitted_at": "2026-11-08T20:08:06",
+   "pillar": "pillar_5",
+   "by": "M. V. M.",
+   "values": {
+    "sm1": 52.0,
+    "sm2": 100.0,
+    "sm3": 49.0
+   },
+   "comments": {
+    "sm1": "708 interventions SMSPS suplementaires auprès des patients en cours de suivis.",
+    "sm3": "Il s'agit du nombre des ménages où les personnes guéries ont été reinserés. Le denominateur pour calculer la proportion n'a pas été disponible"
+   },
+   "general_comments": {}
   }
  ]
 }

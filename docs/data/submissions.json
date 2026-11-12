@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-11T21:02:55+00:00",
+ "generated_at": "2026-11-12T14:36:06+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 56,
+ "submission_count": 57,
  "submissions": [
   {
    "id": 63700169,
@@ -1388,6 +1388,29 @@
     "sm3": "Il s'agit du nombre des ménages où les personnes guéries ont été reinserés. Le denominateur pour calculer la proportion n'a pas été disponible"
    },
    "general_comments": {}
+  },
+  {
+   "id": 68822297,
+   "date": "2026-11-08",
+   "submitted_at": "2026-11-12T11:24:04",
+   "pillar": "pillar_2",
+   "by": "A. K. S.",
+   "values": {
+    "pe1": 97.0,
+    "pe2": 98.0,
+    "pe3": 47.0,
+    "pe4": 88.0
+   },
+   "comments": {
+    "pe1": "1 911 631/1 965 729 dépistés (97,2 %) ; SE44 : 97,4 %.",
+    "pe2": "1 935 163/1 965 729 sensibilisés (98,4 %) ; Nord-Kivu 96,6 % ; Bas-Uélé 76,0 %.",
+    "pe3": "47 alertes ; 20 vivantes validées ; 19 corps (SE44 : 66).",
+    "pe4": "132/150 sites sans interruption sur 7 jours (88,0 % ; SE44 : 90,5 %) ; complétude 75 %.",
+    "pe5": "Aucun contact intercepté rapporté. 19 corps interceptés ; 72e cas positif PoE/PoC (Mudzi Bala, Bunia)."
+   },
+   "general_comments": {
+    "pillar_2": "SE45 : 150 PoE/PoC activés dans sept provinces ; 132 sans interruption sur sept jours (88,0 %), de 8 h à 17 h. 1 911 631 voyageurs dépistés sur 1 965 729 passages (97,2 %) ; 98,4 % sensibilisés. 47 alertes notifiées (66 en SE44), dont 19 en Ituri et 12 au Nord-Kivu ; 20 alertes vivantes validées et 19 corps interceptés, dont 9 au Nord-Kivu. 72e cas positif PoE/PoC : corps intercepté au PoC Mudzi Bala (Bunia). Complétude des rapports 75 % (78 % en SE44), Bas-Uélé 54 % et Sud-Kivu 56 % ; grèves aux PoC de l’axe Butembo et de Viadana pour impayés. PoC Bolebole (Pawa) activé. Nord-Ubangi sans données PoE/PoC ; suspect notifié à l’aéroport de Gbadolite le 06/11."
+   }
   }
  ]
 }

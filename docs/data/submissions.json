@@ -1,8 +1,8 @@
 {
- "generated_at": "2026-11-18T15:04:28+00:00",
+ "generated_at": "2026-11-19T15:13:59+00:00",
  "form_version": "20260804",
  "source": "ona",
- "submission_count": 57,
+ "submission_count": 58,
  "submissions": [
   {
    "id": 63700169,
@@ -1410,6 +1410,61 @@
    },
    "general_comments": {
     "pillar_2": "SE45 : 150 PoE/PoC activés dans sept provinces ; 132 sans interruption sur sept jours (88,0 %), de 8 h à 17 h. 1 911 631 voyageurs dépistés sur 1 965 729 passages (97,2 %) ; 98,4 % sensibilisés. 47 alertes notifiées (66 en SE44), dont 19 en Ituri et 12 au Nord-Kivu ; 20 alertes vivantes validées et 19 corps interceptés, dont 9 au Nord-Kivu. 72e cas positif PoE/PoC : corps intercepté au PoC Mudzi Bala (Bunia). Complétude des rapports 75 % (78 % en SE44), Bas-Uélé 54 % et Sud-Kivu 56 % ; grèves aux PoC de l’axe Butembo et de Viadana pour impayés. PoC Bolebole (Pawa) activé. Nord-Ubangi sans données PoE/PoC ; suspect notifié à l’aéroport de Gbadolite le 06/11."
+   }
+  },
+  {
+   "id": 68973284,
+   "date": "2026-11-15",
+   "submitted_at": "2026-11-19T12:12:04",
+   "pillar": "pillar_1",
+   "by": "K. S. A.",
+   "values": {
+    "s1": 442.0,
+    "s3": 11432.0,
+    "s4": 3384.0,
+    "s5": 1.0,
+    "s6": 13.0,
+    "s9": 85.0,
+    "s15": 83.0,
+    "s16": 99.0,
+    "s17": 26949.0,
+    "s18": 13.0,
+    "s19": 98.0,
+    "s20": 49.0,
+    "s21": 69.0,
+    "s22": 58.0,
+    "s23": 4.0,
+    "s25": 100.0
+   },
+   "comments": {
+    "s1": "442 cas (SE45 : 458 ; −3,5 %).",
+    "s2": "Cas probables non dénombrés au niveau national en SE46.",
+    "s3": "11 432 cas ; 5 593 décès ; létalité 48,9 % (15/11).",
+    "s4": "3 384 suspects validés (2 410 vivants, 974 décédés) ; SE45 : 3 435.",
+    "s5": "1 nouvelle aire de santé (247 → 248 le 11/11) ; 1 nouvelle ZS : Watsa (68/178).",
+    "s6": "13 % (Aperçu ; SE45 : 16 % selon l’Aperçu, non publié dans les sources SE45).",
+    "s7": "Délai de listage non documenté ; Lubero : aucun contact listé autour d’un cas.",
+    "s8": "Non rapporté au niveau national ; 15/27 ZS exploitables à 100 %.",
+    "s9": "30 243/35 559 (85,1 %) au 15/11 ; 08/11 : 79,2 %.",
+    "s10": "Non rapporté au niveau national ; Mabalako 1 977, Beni 143 perdus de vue.",
+    "s11": "Non rapporté ; Bas-Uélé : plus aucun contact sous suivi.",
+    "s12": "Non rapporté au niveau national; Beni 1 353 jamais vus (1 330 dans l’Aperçu).",
+    "s13": "Contacts devenus suspects non dénombrés au niveau national.",
+    "s14": "Contacts devenus confirmés non dénombrés.",
+    "s15": "200 443/241 649 (82,9 %) ; SE45 : 79,9 % (+3,0 pts).",
+    "s16": "26 897/26 949 alertes vérifiées, validées ou invalidées (99,8 %). Délai de 24 h non publié.",
+    "s17": "26 949 alertes reçues (SE45 : 25 853 ; +4,2 %).",
+    "s18": "3 384/26 949 alertes validées (12,6 %). Délai de 24 h non publié.",
+    "s19": "3 310/3 384 suspects investigués (97,8 % ; SE45 : 99,2 %).",
+    "s20": "1 650/3 384 suspects validés transférés en CT/CTE (48,8 % ; SE45 : 49,5 %).",
+    "s21": "1 650/2 410 suspects vivants transférés en CT/CTE (68,5 % ; SE45 : 73,0 %).",
+    "s22": "57,8 % des décès notifiés prélevés (SE45 : 67,7 %).",
+    "s23": "4 jours (SE45 : 5 jours).",
+    "s24": "Non rapporté au niveau national ; 16/25 ZS exploitables à 90 % ou plus.",
+    "s25": "7/7 SitReps (179–185 ; 100 %)."
+   },
+   "general_comments": {
+    "pillar_1": "SE46 (09/11–15/11/2026), 7/7 jours. 442 cas confirmés (−3,5 %), troisième semaine de baisse, et 239 décès (+4,8 %), dont 142 communautaires (59,4 % ; 65,4 % en SE45). Cumul de 11 432 cas et 5 593 décès (létalité 48,9 %). Ituri 227 (+1,8 %), Nord-Kivu 169 (−16,3 %), Haut-Uélé 35 (+45,8 %), Tshopo 10, Nord-Ubangi 1 ; Beni 71, Mandima 65, Bunia 51, Mangala 31, Oicha 25 (55,0 % des cas). Nouvelle ZS : Watsa (68/178 ; 9 cas dont 7 PPL) ; une nouvelle aire de santé (248) ; Komanda réactivée après 18 jours. 26 949 alertes (+4,2 %), 99,8 % vérifiées ; 3 384 suspects validés, dont 28,8 % déjà décédés ; 97,8 % investigués ; transfert des suspects vivants 68,5 % (73,0 % en SE45). Suivi des contacts 82,9 % (+3,0 pts), sous la cible ≥90 % ; Nord-Kivu 76,7 % le 15/11, Beni 1 330 contacts jamais vus, Mangala 940 contacts non suivis. 13 % des nouveaux cas issus des contacts connus. 57,8 % des décès notifiés prélevés (67,7 % en SE45) ; délai symptômes–notification de 4 jours. Positivité 11,2 % (442/3 963). 21 structures saturées (CT HGR Masereka 700 %, CT Kalunguta 433 %, CT Biakato 273 %) ; décès en CTE 97 (79). Riposte suspendue à Bafwasende ; 5 AS de Mangala inaccessibles ; PoC Mudzi Bala forcé le 13/11. Rapports des ZS (37 ZS évaluées) : suivi des contacts ≥95 % dans 16 des 32 zones ; 0 % de recherche des contacts dans 8 zones ayant des cas, dont Mangala ; isolement ≥90 % dans 20 des 34 zones ; narratifs ≥90 % dans 16 des 25 zones (Nia Nia 0 % pour la sixième semaine)."
    }
   }
  ]
